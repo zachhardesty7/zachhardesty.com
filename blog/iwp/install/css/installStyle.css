@@ -1,0 +1,71 @@
+body {
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 12px;
+    color: #555;
+  }
+.loading{
+    font-size: 12px;
+    font-family: 'Droid Sans', sans-serif;
+    position: absolute;
+    left: 820px;
+    z-index: 1;
+    top: 10px;
+    font-weight: 600;
+    color: #555;
+  }
+.loading:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
+  animation: ellipsis steps(4,end) 900ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 20px;    
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 20px;    
+  }
+}
+
+.install_folder_msg {
+  background-color: #efdede;
+  border-radius: 3px;
+  border: 1px solid #c48889;
+  color: #a72b2d;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+  top: 180px;
+  position:relative;
+}
+.success_area{
+  background-color: #DEEFE0;
+  border-radius: 3px;
+  border: 1px solid #1DA60D;
+  color:#21A603;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+  top: 180px;
+  position:relative;
+}
+.location_install{
+  position: relative;
+  top: 25px;
+  left: -199px;
+  text-transform: none !important;
+  display: inline-block;
+  width:180px;
+
+}
+.error_cont{
+  word-wrap: break-word;
+}

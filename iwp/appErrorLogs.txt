@@ -1,0 +1,10 @@
+2016-09-24 05:40:28 ERR: errno:2 (unlink(/home/fcshar5/public_html/zachhardesty.com/iwp/uploads/cache/.css): No such file or directory) file:/home/fcshar5/public_html/zachhardesty.com/iwp/includes/HTMLHeadCache.php, line:271.
+2016-09-24 05:40:28 ERR: errno:2 (unlink(/home/fcshar5/public_html/zachhardesty.com/iwp/uploads/cache/.js): No such file or directory) file:/home/fcshar5/public_html/zachhardesty.com/iwp/includes/HTMLHeadCache.php, line:272.
+2016-09-24 05:50:27 ERR: errno:2 (unlink(/home/fcshar5/public_html/zachhardesty.com/iwp/uploads/cache/.css): No such file or directory) file:/home/fcshar5/public_html/zachhardesty.com/iwp/includes/HTMLHeadCache.php, line:271.
+2016-09-24 05:50:27 ERR: errno:2 (unlink(/home/fcshar5/public_html/zachhardesty.com/iwp/uploads/cache/.js): No such file or directory) file:/home/fcshar5/public_html/zachhardesty.com/iwp/includes/HTMLHeadCache.php, line:272.
+2016-09-24 05:50:49 ERR: errno:2 (unlink(/home/fcshar5/public_html/zachhardesty.com/iwp/uploads/cache/.css): No such file or directory) file:/home/fcshar5/public_html/zachhardesty.com/iwp/includes/HTMLHeadCache.php, line:271.
+2016-09-24 05:50:49 ERR: errno:2 (unlink(/home/fcshar5/public_html/zachhardesty.com/iwp/uploads/cache/.js): No such file or directory) file:/home/fcshar5/public_html/zachhardesty.com/iwp/includes/HTMLHeadCache.php, line:272.
+2016-09-24 08:57:01 ERR: errno:2 (mysqli::mysqli(): (HY000/2002): No such file or directory) file:/home/fcshar5/public_html/zachhardesty.com/iwp/includes/dbDrivers/mysqli.php, line:29.
+2016-09-24 09:15:01 ERR: errno:2 (mysqli::mysqli(): (HY000/2002): No such file or directory) file:/home/fcshar5/public_html/zachhardesty.com/iwp/includes/dbDrivers/mysqli.php, line:29.
+2016-09-24 09:36:01 ERR: errno:2 (mysqli::mysqli(): (HY000/2002): No such file or directory) file:/home/fcshar5/public_html/zachhardesty.com/iwp/includes/dbDrivers/mysqli.php, line:29.
+2016-09-24 11:15:01 ERR: errno:2 (mysqli::mysqli(): (HY000/2002): No such file or directory) file:/home/fcshar5/public_html/zachhardesty.com/iwp/includes/dbDrivers/mysqli.php, line:29.
