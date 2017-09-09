@@ -1,0 +1,43 @@
+/*#root {
+	width: 100%;
+	display: flex;
+	align-items    : center;
+	justify-content: center;
+}*/
+
+body {
+	display: flex;
+}
+
+.App {
+	padding        : 0;
+	margin         : 0;
+	display        : flex;
+	align-items    : center;
+	justify-content: center;
+	flex-direction : column;
+	text-align: center;
+}
+
+ul,
+li {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.skill {
+	display: inline-block;
+}
+
+.card {
+}
+
+.thumbnail-container {
+	height: 250px;
+  overflow: hidden;
+}
+
+.thumbnail {
+  width: 70%;
+}
