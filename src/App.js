@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Radium from 'radium';
 import logo from './logo.svg';
 import './App.css';
 
@@ -57,7 +58,7 @@ let data = [
     // image: require(''),
     link: 'http://zachhardesty.com',
     github: 'https://github.com/zachhardesty7/zachhardesty.com',
-    skills: ['react.js', 'javascript', 'radium.js', 'css']
+    skills: ['react.js', 'javascript', 'radium.js', 'css', 'css grid']
   },
   {
     type: 'website',
@@ -98,6 +99,31 @@ let data = [
 ]
 
 class App extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     home: true,
+  //   };
+  // }
+  // handleScroll = (state) => {
+  //   this.setState({home: state})
+  // }
+	componentDidMount() {
+    window.addEventListener('mousewheel', this.handleScroll);
+	}
+	handleScroll = (event) => {
+    console.log(event);
+    console.log(event.srcElement.scrollTop);
+
+    console.log(event.srcElement.scrollHeight);
+
+    console.log(event.srcElement.clientHeight);
+
+    console.log(event.srcElement.offsetHeight);
+
+		let scrollTop = document.body.scrollTop;
+		!scrollTop && event.deltaY > 0 ? console.log("Success") : console.log("false");;
+	}
   render() {
     let websites = data.map(website => {
       if (website.type === 'website') {
@@ -107,26 +133,46 @@ class App extends Component {
             info={website}
           />
         )
-      }
+      } else { return false }
     })
     return (
-      <div className='App'>
-        <Title />
+      <div
+        className='App'
+        style={{
+          display: 'grid',
+          textAlign: 'center',
+          gridTemplateColumns: '15% auto 15%',
+          gridTemplateRows: 'auto ',
+          // height: '100vh'
+        }}
+      >
+        <Title
+          // display={this.state.home ? 'flex' : 'none'}
+          // onScroll={this.handleScroll}
+        />
         <Header />
-        <p>
-          Hello! I’m UTCS student striving to specialize in the forefront of web development. From 2015 to present, I’ve worked for a small business owner and have been given many opportunities to learn and grow in web development. During my time with that company, my coworkers described me as an eager-minded intern that they depended on to bring innovation and a fresh attitude to projects. I am passionate about creating elegant and effective websites for my clients. Please visit my portfolio for more details about my past projects and feel free to contact me!
+        <main style={{
+          gridRow: '2 / 3',
+          gridColumn: '2 / 3',
+          // display: this.state.home ? 'none' : '',
+        }}>
+          <p id='about'>
+            Hello! I’m UTCS student striving to specialize in the forefront of web development. From 2015 to present, I’ve worked for a small business owner and have been given many opportunities to learn and grow in web development. During my time with that company, my coworkers described me as an eager-minded intern that they depended on to bring innovation and a fresh attitude to projects. I am passionate about creating elegant and effective websites for my clients. Please visit my portfolio for more details about my past projects and feel free to contact me!
 
-          I have seen multiple websites to completion from the ground up, including SEO, marketing, and content creation. I seek to communicate with clients to determine the best method for accomplishing their goals. I'm honest about my skills and will not hesitate to explain the difficulty of a situation I'm unfamiliar with.
-        </p>
-        {websites}
-        <p>
-          Proficient with: JavaScript (incl. ES6+), WordPress, jQuery, git, HTML, CSS
-          Familiar with: React, PHP, MATLAB, Java
-        </p>
-        <p>
-          contact me:
-          <a href='mailto:hello@zachhardesty.com'>hello@zachhardesty.com</a>
-        </p>
+            I have seen multiple websites to completion from the ground up, including SEO, marketing, and content creation. I seek to communicate with clients to determine the best method for accomplishing their goals. I'm honest about my skills and will not hesitate to explain the difficulty of a situation I'm unfamiliar with.
+          </p>
+          <div id='projects'>
+            {websites}
+          </div>
+          <p>
+            Proficient with: JavaScript (incl. ES6+), WordPress, jQuery, git, HTML, CSS
+            Familiar with: React, PHP, MATLAB, Java
+          </p>
+          <p id='contact'>
+            contact me:
+            <a href='mailto:hello@zachhardesty.com'>hello@zachhardesty.com</a>
+          </p>
+        </main>
         <Footer />
       </div>
     );
@@ -134,35 +180,98 @@ class App extends Component {
 }
 
 class Title extends Component {
-  render() {
-    return (
-      <div>
-        <h1>zach hardesty</h1>
-        <h2>front-end web developer</h2>
-        <Icons />
-      </div>
-    )
-  }
+  // future dynamic react homepage
+	// componentDidMount() {
+	// 	window.addEventListener('mousewheel', this.handleScroll);
+	// }
+	// componentWillUnmount() {
+	// 	window.removeEventListener('mousewheel', this.handleScroll);
+	// }
+	// handleScroll = (event) => {
+  //   console.log(event);
+	// 	let scrollTop = event.srcElement.scrollTop;
+	// 	scrollTop ? this.props.onScroll(true) : this.props.onScroll(false);
+	// }
+	render() {
+		return (
+			<div style={{
+				gridRow: '1 / 2',
+        gridColumn: '2 / 3',
+				// display: this.props.display,
+				display: 'flex',
+				justifyContent: 'center',
+				flexDirection: 'column',
+        height: '100vh',
+			}}>
+				<h1>zach hardesty</h1>
+				<h2>front-end web developer</h2>
+				<Icons/>
+			</div>
+		)
+	}
 }
 
 class Header extends Component {
   render() {
+    var styles = {
+      nav: {
+        // gridRow: '1 / 2',
+        // gridColumn: '2 / 3',
+        // display: 'flex',
+        position: 'fixed',
+        display: 'grid',
+        gridTemplateColumns: '1fr auto 1fr',
+        alignContent: 'center',
+        width: '100%',
+        top: '0',
+        alignItems: 'center',
+        zIndex: '9',
+      },
+      link: {
+        textDecoration: 'none',
+        color: '#e0479e',
+        padding: '5px 5px',
+        ':hover': {
+          backgroundColor: '#9ebc9e',
+          padding: '50px',
+        },
+      },
+      left: {
+        justifySelf: 'end',
+      },
+      right: {
+        justifySelf: 'start',
+      },
+      logo: {
+        padding: '0 5px'
+      },
+    }
     return (
-      <nav>
-        <a href='#'>about</a>
-        <a href='#'>projects</a>
-        <a href='#'><object type='image/svg+xml' data={logo}>zh logo</object></a>
-        <a href='#'>experience / skills</a>
-        <a href='#'>contact</a>
+      <nav style={styles.nav}>
+        <div style={styles.left}>
+          <a style={styles.link} className='link' href='#about'>about</a>
+          <a style={styles.link} className='link' href='#projects'>projects</a>
+        </div>
+        <div>
+          <a style={styles.logo} href='#title'><object type='image/svg+xml' data={logo} width='40px'>zh logo</object></a>
+        </div>
+        <div style={styles.right}>
+          <a style={styles.link} className='link' href='#experience'>experience</a>
+          <a style={styles.link} className='link' href='#contact'>contact</a>
+        </div>
       </nav>
     )
   }
 }
+Header = Radium(Header);
 
 class Footer extends Component {
   render() {
     return (
-      <div>
+      <div style={{
+        gridArea: '3 / 2 / 3 / 2',
+        alignSelf: 'end',
+      }}>
         <p>website designed and developed by zach hardesty || copyright 2017</p>
         <Icons />
       </div>
@@ -173,17 +282,15 @@ class Footer extends Component {
 class Icons extends Component {
   render() {
     return (
-
         <div>
-          <a href='#'>email</a>
-          <a href='#'>github</a>
-          <a href='#'>linkedin</a>
+          <a href='mailto:hello@zachhardesty.com'><i className="fa fa-envelope fa-lg fa-fw" aria-hidden="true" aria-label="Email"></i></a>
+          <a href='https://github.com/zachhardesty7'><i className="fa fa-github fa-lg fa-fw" aria-hidden="true" aria-label="Github"></i></a>
+          <a href='https://www.linkedin.com/in/zachhardesty7/'><i className="fa fa-linkedin fa-lg fa-fw" aria-hidden="true" aria-label="LinkedIn"></i></a>
         </div>
-
     );
   }
 }
-
+Icons = Radium(Icons);
 
 
 class Card extends Component {
@@ -192,8 +299,11 @@ class Card extends Component {
       <div className='card'>
         <h3>{this.props.info.title}</h3>
         <p>{this.props.info.description}</p>
-        <div className='thumbnail-container'>
-          <img className='thumbnail' src={this.props.info.image} />
+        <div style={{
+          height: '400px',
+          overflow: 'hidden',
+        }}>
+          <img className='thumbnail' alt='thumbnail' style={{width: '75%'}} src={this.props.info.image} />
         </div>
         {this.props.info.link &&
           <p><a href={this.props.info.link}>LINK</a></p>
@@ -204,4 +314,4 @@ class Card extends Component {
   }
 }
 
-export default App;
+export default Radium(App);

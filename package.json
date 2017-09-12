@@ -1,9 +1,10 @@
 {
   "name": "zachhardesty-web-portfolio",
   "version": "1.0.0",
-  "homepage" : "http://zachhardesty.com",
+  "homepage": "http://zachhardesty.com",
   "private": true,
   "dependencies": {
+    "radium": "^0.19.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.11"
