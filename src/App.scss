@@ -62,6 +62,9 @@ body {
     left: 50%;
 		color: $white;
 		animation: bounce 4s ease-in-out infinite;
+		&:hover {
+			cursor: pointer;
+		}
 	}
 }
 
@@ -123,14 +126,21 @@ nav {
 		// display: flex;
 		align-content: center;
 		align-items: center;
+		.active {
+			border-bottom: 5px solid $accent;
+		}
 		a {
 			font-size: 1.25rem;
 			margin: 0 10px;
 			padding: 10px 0;
+			&:hover {
+				cursor: pointer;
+				&:not(.active) {
+					border-bottom: 2px solid $accent;
+				}
+			}
 		}
-		.active {
-			border-bottom: 5px solid $accent;
-		}
+
 	}
 
 }

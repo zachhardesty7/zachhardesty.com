@@ -48,6 +48,8 @@ body {
     left: 50%;
     color: #FFF;
     animation: bounce 4s ease-in-out infinite; }
+    #title .chevron:hover {
+      cursor: pointer; }
 
 @keyframes bounce {
   0%,
@@ -87,12 +89,16 @@ nav {
   padding: 1rem 0;
   align-content: center;
   align-items: center; }
+  #projects .tabs .active {
+    border-bottom: 5px solid #e0479e; }
   #projects .tabs a {
     font-size: 1.25rem;
     margin: 0 10px;
     padding: 10px 0; }
-  #projects .tabs .active {
-    border-bottom: 5px solid #e0479e; }
+    #projects .tabs a:hover {
+      cursor: pointer; }
+      #projects .tabs a:hover:not(.active) {
+        border-bottom: 2px solid #e0479e; }
 
 .card {
   display: flex;

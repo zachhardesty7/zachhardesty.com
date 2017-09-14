@@ -8,6 +8,8 @@ Here lies the source code for my web porfolio, currently built with [React](http
 
 ### Change Log
 
+- 2.1.2 hover cursor & style fix
+
 - 2.1.1 broken commit, fixed w actual changes. added rough desktop styling.
 
 - 2.1.0 massive styling update, mobile first. uses SCSS instead of planned Radium.js, inline styling is kinda dumb
