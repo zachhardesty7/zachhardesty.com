@@ -146,8 +146,8 @@ class App extends Component {
           </div>
           <div id='skills'>
             <h5>Skills</h5>
-            <p>Proficient with: JavaScript (incl. ES6+), WordPress, jQuery, git, HTML, CSS</p>
-            <p>Familiar with: React, PHP, MATLAB, Java</p>
+            <p>Proficient with: JavaScript (incl. ES6+), WordPress, HTML, CSS</p>
+            <p>Familiar with: React, PHP, Bootstrap 4, CLI, SCSS, Git, jQuery, Webpack, MATLAB, Python, Java</p>
           </div>
           <div id='projects'>
             <h3>Projects</h3>
