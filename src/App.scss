@@ -345,13 +345,29 @@ h6 {
 
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {  }
+@media (min-width: 576px) {
+	.App {
+		grid-column-gap: 10%;
+	}
+}
 //
 // // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {  }
+@media (min-width: 768px) {
+	.App {
+		grid-column-gap: 15%;
+	}
+}
 //
 // // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {  }
+@media (min-width: 992px) {
+	.App {
+		grid-column-gap: 25%;
+	}
+}
 //
 // // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {  }
+@media (min-width: 1200px) {
+	.App {
+		grid-column-gap: 30%;
+	}
+}

@@ -8,6 +8,10 @@ Here lies the source code for my web porfolio, currently built with [React](http
 
 ### Change Log
 
+- 2.1.1 broken commit, fixed w actual changes. added rough desktop styling.
+
+- 2.1.0 massive styling update, mobile first. uses SCSS instead of planned Radium.js, inline styling is kinda dumb
+
 - 2.0.0 new website written in React, initial purely structural release, styling coming soon
 
 - 1.0.0 old website build with Adobe Dreamweaver (eww) - can now be found at [old.zachhardesty.com](http://old.zachhardesty.com)

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Radium from 'radium';
-import logo from './logo.svg';
+import Scroll from 'react-scroll';
 import './App.css';
+let Link = Scroll.Link;
 
 let data = [
   /*
@@ -16,7 +16,7 @@ let data = [
   },
   */
   {
-    type: 'project',
+    type: 'app',
     title: 'WooCommerce Widget Interface',
     description: 'Okay, so I have a super cool widget for our affiliates or vendors to use, but how to I generate the embed code? This project features a simple React.js app that allows a user to generate a snippet from their chosen settings. Express mode enables only affiliate tracking while locking the other values to their dynamic setting. Advanced enables customization of all attributes. Custom serves as a middle ground between the two. (Project is not currently publically accessible)',
     // image: require(''),
@@ -25,7 +25,7 @@ let data = [
     skills: []
   },
   {
-    type: 'project',
+    type: 'app',
     title: 'WooCommerce Widget',
     description: 'Allowing affiliates or vendors to embed products from your WooCommerce store is nigh impossible. This project brings a widget that enables a super customizable dynamic iFrame widget that can be embedded in any website. It can track and report various things back to the host store upon completion of a sale. (Project is not currently publically accessible but a demo can be viewed at following link)',
     image: require('./img/mpl-widget.png'),
@@ -34,7 +34,7 @@ let data = [
     skills: []
   },
   {
-    type: 'project',
+    type: 'app',
     title: 'WooCommerce MPL Plugin',
     description: 'WordPress plugin to extend the functionality of WooCommerce. It includes a collection of tweaks that modify various layouts and styles, CRON jobs for checking active users in Litmos LMS, and Constant Contact integration. Developed for http://MarkPorterLive.com.',
     // image: require(''),
@@ -43,7 +43,7 @@ let data = [
     skills: []
   },
   {
-    type: 'project',
+    type: 'app',
     title: 'UT Austin Web Tweaks',
     description: 'This extension to the Chrome browser adds additional features to UT\'s website. The primary goal is to making registering for classes through UT\'s outdated interface much easier. It provides numerous quick links and options to speed simplify the process and eliminate stress. A handful of other tweaks are also included and configurable through the options page. A full scheduling system will eventually be built in along with a system to automatically generate a schedule to your constraints from the classes you\'re interested in. (Project is not currently publically accessible)',
     // image: require(''),
@@ -52,7 +52,7 @@ let data = [
     skills: ['javascript', 'css', 'materialize.css', 'chrome extension libraries']
   },
   {
-    type: 'project',
+    type: 'app',
     title: 'My Personal Portfolio Website',
     description: 'The website you\'re looking at right now! This website is built with React.js to allow easy updating by just pumping in new data. It also utilizes Radium.js for better styling in React and entirely custom CSS.',
     // image: require(''),
@@ -99,79 +99,64 @@ let data = [
 ]
 
 class App extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     home: true,
-  //   };
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      // home: true,
+      disp: 'app'
+    };
+  }
   // handleScroll = (state) => {
   //   this.setState({home: state})
   // }
-	componentDidMount() {
-    window.addEventListener('mousewheel', this.handleScroll);
-	}
-	handleScroll = (event) => {
-    console.log(event);
-    console.log(event.srcElement.scrollTop);
-
-    console.log(event.srcElement.scrollHeight);
-
-    console.log(event.srcElement.clientHeight);
-
-    console.log(event.srcElement.offsetHeight);
-
-		let scrollTop = document.body.scrollTop;
-		!scrollTop && event.deltaY > 0 ? console.log("Success") : console.log("false");;
-	}
+	// componentDidMount() {
+  //   window.addEventListener('mousewheel', this.handleScroll);
+	// }
+	// handleScroll = (event) => {
+  //   console.log(event);
+  //   console.log(event.srcElement.scrollTop);
+  //
+  //   console.log(event.srcElement.scrollHeight);
+  //
+  //   console.log(event.srcElement.clientHeight);
+  //
+  //   console.log(event.srcElement.offsetHeight);
+  //
+	// 	let scrollTop = document.body.scrollTop;
+	// 	!scrollTop && event.deltaY > 0 ? console.log('Success') : console.log('false');;
+	// }
+  handleClick = (e) => {
+    document.querySelectorAll('.tabs > a').forEach(tab => {
+      tab.className = tab.className.split(' ')[0];
+    });
+    this.setState({disp: e.target.className});
+    e.target.className = e.target.className + ' active';
+  }
   render() {
-    let websites = data.map(website => {
-      if (website.type === 'website') {
-        return (
-          <Card
-            key={website.title.replace(/\s+/g, '-').toLowerCase()}
-            info={website}
-          />
-        )
-      } else { return false }
-    })
     return (
-      <div
-        className='App'
-        style={{
-          display: 'grid',
-          textAlign: 'center',
-          gridTemplateColumns: '15% auto 15%',
-          gridTemplateRows: 'auto ',
-          // height: '100vh'
-        }}
-      >
-        <Title
-          // display={this.state.home ? 'flex' : 'none'}
-          // onScroll={this.handleScroll}
-        />
+      <div className='App'>
+        <Title />
         <Header />
-        <main style={{
-          gridRow: '2 / 3',
-          gridColumn: '2 / 3',
-          // display: this.state.home ? 'none' : '',
-        }}>
-          <p id='about'>
-            Hello! I’m UTCS student striving to specialize in the forefront of web development. From 2015 to present, I’ve worked for a small business owner and have been given many opportunities to learn and grow in web development. During my time with that company, my coworkers described me as an eager-minded intern that they depended on to bring innovation and a fresh attitude to projects. I am passionate about creating elegant and effective websites for my clients. Please visit my portfolio for more details about my past projects and feel free to contact me!
-
-            I have seen multiple websites to completion from the ground up, including SEO, marketing, and content creation. I seek to communicate with clients to determine the best method for accomplishing their goals. I'm honest about my skills and will not hesitate to explain the difficulty of a situation I'm unfamiliar with.
-          </p>
-          <div id='projects'>
-            {websites}
+        <main className='main'>
+          <div id='about'>
+            <h3>About Me</h3>
+            <p><img className='portrait' alt='portrait' src={require('./img/portrait.jpg')} /></p>
+            <p>Hello! I’m UTCS student striving to specialize in the forefront of web development but very open to other fields, including startups and machine learning-driven positions. From 2015 to present, I’ve worked for a small business owner and have been given many opportunities to learn and grow in web development. During my time with that company, my coworkers described me as an eager-minded intern that they depended on to bring innovation and a fresh attitude to projects. I am passionate about creating elegant and effective websites for my clients. Please visit my portfolio for more details about my past projects and feel free to contact me!</p>
+            <p>I have seen multiple websites to completion from the ground up, including SEO, marketing, and content creation. I seek to communicate with clients to determine the best method for accomplishing their goals. I'm honest about my skills and will not hesitate to explain the difficulty of a situation I'm unfamiliar with.</p>
           </div>
-          <p>
-            Proficient with: JavaScript (incl. ES6+), WordPress, jQuery, git, HTML, CSS
-            Familiar with: React, PHP, MATLAB, Java
-          </p>
-          <p id='contact'>
-            contact me:
-            <a href='mailto:hello@zachhardesty.com'>hello@zachhardesty.com</a>
-          </p>
+          <div id='skills'>
+            <h5>Skills</h5>
+            <p>Proficient with: JavaScript (incl. ES6+), WordPress, jQuery, git, HTML, CSS</p>
+            <p>Familiar with: React, PHP, MATLAB, Java</p>
+          </div>
+          <div id='projects'>
+            <h3>Projects</h3>
+            <div className='tabs'>
+              <a className='app active' onClick={this.handleClick}>Apps</a>
+              <a className='website' onClick={this.handleClick}>Websites</a>
+            </div>
+            <Portfolio disp={this.state.disp}/>
+          </div>
         </main>
         <Footer />
       </div>
@@ -194,124 +179,132 @@ class Title extends Component {
 	// }
 	render() {
 		return (
-			<div style={{
-				gridRow: '1 / 2',
-        gridColumn: '2 / 3',
-				// display: this.props.display,
-				display: 'flex',
-				justifyContent: 'center',
-				flexDirection: 'column',
-        height: '100vh',
-			}}>
-				<h1>zach hardesty</h1>
-				<h2>front-end web developer</h2>
-				<Icons/>
-			</div>
+      <div id='title'>
+        <h2>zach hardesty</h2>
+        <Icons/>
+        <Link activeClass='active' className='chevron' offset={-60} to='about' spy={true} smooth={true} duration={800}><i className='fa fa-chevron-down fa-2x' aria-hidden='true'></i></Link>
+      </div>
 		)
 	}
 }
 
 class Header extends Component {
+  calcDistance = (scrollDistanceInPx) => {
+  	let min = 600,
+  		max = 2500,
+  		duration = Math.min( Math.max( Math.abs(scrollDistanceInPx) * 2, min ), max );
+  	return duration;
+  }
   render() {
-    var styles = {
-      nav: {
-        // gridRow: '1 / 2',
-        // gridColumn: '2 / 3',
-        // display: 'flex',
-        position: 'fixed',
-        display: 'grid',
-        gridTemplateColumns: '1fr auto 1fr',
-        alignContent: 'center',
-        width: '100%',
-        top: '0',
-        alignItems: 'center',
-        zIndex: '9',
-      },
-      link: {
-        textDecoration: 'none',
-        color: '#e0479e',
-        padding: '5px 5px',
-        ':hover': {
-          backgroundColor: '#9ebc9e',
-          padding: '50px',
-        },
-      },
-      left: {
-        justifySelf: 'end',
-      },
-      right: {
-        justifySelf: 'start',
-      },
-      logo: {
-        padding: '0 5px'
-      },
-    }
+    let offset = -60;
     return (
-      <nav style={styles.nav}>
-        <div style={styles.left}>
-          <a style={styles.link} className='link' href='#about'>about</a>
-          <a style={styles.link} className='link' href='#projects'>projects</a>
-        </div>
+      <nav>
         <div>
-          <a style={styles.logo} href='#title'><object type='image/svg+xml' data={logo} width='40px'>zh logo</object></a>
+          <Link activeClass='active' className='link' to='about' offset={offset} spy={true} smooth={true} duration={this.calcDistance}>about</Link>
+          <Link activeClass='active' className='link' to='projects' offset={offset} spy={true} smooth={true} duration={this.calcDistance}>projects</Link>
         </div>
-        <div style={styles.right}>
-          <a style={styles.link} className='link' href='#experience'>experience</a>
-          <a style={styles.link} className='link' href='#contact'>contact</a>
+        <Link activeClass='active' className='logo' to='title' spy={true} smooth={true} duration={this.calcDistance}>
+          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 934 934'>
+            <title>
+              ZH Logo V4
+            </title>
+            <path className='line' d='M189.51 244.81l299.37-.75-299.46 299.46L745 544M487.53 371.47v343.59M694.34 371.34v343.85'/>
+            <circle className='outline' cx='467' cy='467' r='437'/>
+          </svg>
+        </Link>
+        <div>
+          <Link activeClass='active' className='link' to='experience' offset={offset} spy={true} smooth={true} duration={this.calcDistance}>experience</Link>
+          <Link activeClass='active' className='link' to='contact' offset={offset} spy={true} smooth={true} duration={this.calcDistance}>contact</Link>
         </div>
       </nav>
     )
   }
 }
-Header = Radium(Header);
 
 class Footer extends Component {
+	render() {
+		return (
+			<footer>
+				<div id='contact'>
+					<h4>contact me:</h4>
+					<a href='mailto:hello@zachhardesty.com'>hello@zachhardesty.com</a>
+					<Icons/>
+				</div>
+				<div id='bottom'>
+					<p>website designed and developed by zach hardesty || copyright 2017</p>
+				</div>
+			</footer>
+		);
+	}
+}
+
+class Icons extends Component {
+	render() {
+		return (
+			<div className='icons'>
+				<a href='mailto:hello@zachhardesty.com'>
+					<i className='fa fa-envelope fa-lg fa-fw' aria-hidden='true' aria-label='Email'></i>
+				</a>
+				<a href='https://github.com/zachhardesty7'>
+					<i className='fa fa-github fa-lg fa-fw' aria-hidden='true' aria-label='Github'></i>
+				</a>
+				<a href='https://www.linkedin.com/in/zachhardesty7/'>
+					<i className='fa fa-linkedin fa-lg fa-fw' aria-hidden='true' aria-label='LinkedIn'></i>
+				</a>
+			</div>
+		);
+	}
+}
+
+class Portfolio extends Component {
   render() {
+    let projects = data.map(project => {
+      if (project.type === this.props.disp) {
+        return (
+          <Card
+            key={project.title.replace(/\s+/g, '-').toLowerCase()}
+            info={project}
+          />
+        )
+      } else { return false }
+    })
     return (
-      <div style={{
-        gridArea: '3 / 2 / 3 / 2',
-        alignSelf: 'end',
-      }}>
-        <p>website designed and developed by zach hardesty || copyright 2017</p>
-        <Icons />
+      <div>
+        {projects}
       </div>
     );
   }
 }
-
-class Icons extends Component {
-  render() {
-    return (
-        <div>
-          <a href='mailto:hello@zachhardesty.com'><i className="fa fa-envelope fa-lg fa-fw" aria-hidden="true" aria-label="Email"></i></a>
-          <a href='https://github.com/zachhardesty7'><i className="fa fa-github fa-lg fa-fw" aria-hidden="true" aria-label="Github"></i></a>
-          <a href='https://www.linkedin.com/in/zachhardesty7/'><i className="fa fa-linkedin fa-lg fa-fw" aria-hidden="true" aria-label="LinkedIn"></i></a>
-        </div>
-    );
-  }
-}
-Icons = Radium(Icons);
-
 
 class Card extends Component {
   render() {
     return (
       <div className='card'>
-        <h3>{this.props.info.title}</h3>
-        <p>{this.props.info.description}</p>
-        <div style={{
-          height: '400px',
-          overflow: 'hidden',
-        }}>
-          <img className='thumbnail' alt='thumbnail' style={{width: '75%'}} src={this.props.info.image} />
-        </div>
-        {this.props.info.link &&
-          <p><a href={this.props.info.link}>LINK</a></p>
+        {this.props.info.image &&
+          <div className='thumbnail'>
+            <img alt='thumbnail' src={this.props.info.image} />
+          </div>
         }
-        <ul className='skills'>{this.props.info.skills.map(skill => <li className='skill'>{skill}</li>)}</ul>
+        <div className='card-stacked'>
+          <div className='content'>
+            <h5 className='title'>{this.props.info.title}</h5>
+            <p>{this.props.info.description}</p>
+            <div className='skills'>
+              <ul>{this.props.info.skills.map(skill => <li key={skill} className='skill'>{skill}</li>)}</ul>
+            </div>
+          </div>
+          <div className='actions'>
+            {this.props.info.link &&
+              <a href={this.props.info.link}>View Project</a>
+            }
+            {this.props.info.github &&
+              <a href={this.props.info.github}>View Source Code</a>
+            }
+          </div>
+        </div>
       </div>
     )
   }
 }
 
-export default Radium(App);
+export default App;
