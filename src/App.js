@@ -1,130 +1,16 @@
 import React, { Component } from 'react';
 import Scroll from 'react-scroll';
 import './App.css';
+import data from './data.json'
 let Link = Scroll.Link;
-
-let data = [
-  /*
-  {
-    type: '',
-    title: '',
-    description: '',
-    image: require(''),
-    link: '',
-    github: '',
-    skills: []
-  },
-  */
-  {
-    type: 'app',
-    title: 'WooCommerce Widget Interface',
-    description: 'Okay, so I have a super cool widget for our affiliates or vendors to use, but how to I generate the embed code? This project features a simple React.js app that allows a user to generate a snippet from their chosen settings. Express mode enables only affiliate tracking while locking the other values to their dynamic setting. Advanced enables customization of all attributes. Custom serves as a middle ground between the two. (Project is not currently publically accessible)',
-    // image: require(''),
-    link: '',
-    github: 'https://github.com/zachhardesty7/woocommerce-widget-interface',
-    skills: []
-  },
-  {
-    type: 'app',
-    title: 'WooCommerce Widget',
-    description: 'Allowing affiliates or vendors to embed products from your WooCommerce store is nigh impossible. This project brings a widget that enables a super customizable dynamic iFrame widget that can be embedded in any website. It can track and report various things back to the host store upon completion of a sale. (Project is not currently publically accessible but a demo can be viewed at following link)',
-    image: require('./img/mpl-widget.png'),
-    link: 'http://mpl.zachhardesty.com/',
-    github: 'https://github.com/zachhardesty7/woocommerce-widget',
-    skills: []
-  },
-  {
-    type: 'app',
-    title: 'WooCommerce MPL Plugin',
-    description: 'WordPress plugin to extend the functionality of WooCommerce. It includes a collection of tweaks that modify various layouts and styles, CRON jobs for checking active users in Litmos LMS, and Constant Contact integration. Developed for http://MarkPorterLive.com.',
-    // image: require(''),
-    link: 'https://markporterlive.com',
-    github: 'https://github.com/zachhardesty7/woocommerce-mpl',
-    skills: []
-  },
-  {
-    type: 'app',
-    title: 'UT Austin Web Tweaks',
-    description: 'This extension to the Chrome browser adds additional features to UT\'s website. The primary goal is to making registering for classes through UT\'s outdated interface much easier. It provides numerous quick links and options to speed simplify the process and eliminate stress. A handful of other tweaks are also included and configurable through the options page. A full scheduling system will eventually be built in along with a system to automatically generate a schedule to your constraints from the classes you\'re interested in. (Project is not currently publically accessible)',
-    // image: require(''),
-    link: '',
-    github: 'https://github.com/zachhardesty7/UT-Austin-Website-Tweaks',
-    skills: ['javascript', 'css', 'materialize.css', 'chrome extension libraries']
-  },
-  {
-    type: 'app',
-    title: 'My Personal Portfolio Website',
-    description: 'The website you\'re looking at right now! This website is built with React.js to allow easy updating by just pumping in new data. It also utilizes Radium.js for better styling in React and entirely custom CSS.',
-    // image: require(''),
-    link: 'http://zachhardesty.com',
-    github: 'https://github.com/zachhardesty7/zachhardesty.com',
-    skills: ['react.js', 'javascript', 'radium.js', 'css', 'css grid']
-  },
-  {
-    type: 'website',
-    title: 'Mark Porter Live',
-    description: 'homepage for all things related to MPL, also includes eCommerce capabilities',
-    image: require('./img/mpl.png'),
-    link: 'https://markporterlive.com',
-    github: '',
-    skills: ['wordpress', 'html', 'css', 'divi', 'php']
-  },
-  {
-    type: 'website',
-    title: 'TSA Roadie',
-    description: 'simple one page website to sell single product',
-    image: require('./img/tsaroadie.png'),
-    link: 'http://tsaroadie.com',
-    github: '',
-    skills: ['wordpress', 'html', 'css', 'divi']
-  },
-  {
-    type: 'website',
-    title: 'shehatesme',
-    description: 'simple website proof of concept to easily sell products using shopify "buy button"',
-    image: require('./img/shm.png'),
-    link: 'http://shehatesme.zachhardesty.com',
-    github: '',
-    skills: ['wordpress', 'html', 'css', 'divi']
-  },
-  {
-    type: 'website',
-    title: 'Keynote Community',
-    description: 'website with user system to serve as hub for Keynote Series',
-    image: require('./img/keynote.png'),
-    link: 'http://keynotecommunity.com',
-    github: '',
-    skills: ['wordpress', 'html', 'css', 'divi']
-  },
-]
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // home: true,
-      disp: 'app'
+      disp: 'app',
     };
   }
-  // handleScroll = (state) => {
-  //   this.setState({home: state})
-  // }
-	// componentDidMount() {
-  //   window.addEventListener('mousewheel', this.handleScroll);
-	// }
-	// handleScroll = (event) => {
-  //   console.log(event);
-  //   console.log(event.srcElement.scrollTop);
-  //
-  //   console.log(event.srcElement.scrollHeight);
-  //
-  //   console.log(event.srcElement.clientHeight);
-  //
-  //   console.log(event.srcElement.offsetHeight);
-  //
-	// 	let scrollTop = document.body.scrollTop;
-	// 	!scrollTop && event.deltaY > 0 ? console.log('Success') : console.log('false');;
-	// }
   handleClick = (e) => {
     document.querySelectorAll('.tabs > a').forEach(tab => {
       tab.className = tab.className.split(' ')[0];
@@ -140,7 +26,7 @@ class App extends Component {
         <main className='main'>
           <div id='about'>
             <h3>About Me</h3>
-            <p><img className='portrait' alt='portrait' src={require('./img/portrait.jpg')} /></p>
+            <div><img id='portrait' alt='portrait' src={require('./img/portrait.jpg')} /></div>
             <p>Hello! I’m UTCS student striving to specialize in the forefront of web development but very open to other fields, including startups and machine learning-driven positions. From 2015 to present, I’ve worked for a small business owner and have been given many opportunities to learn and grow in web development. During my time with that company, my coworkers described me as an eager-minded intern that they depended on to bring innovation and a fresh attitude to projects. I am passionate about creating elegant and effective websites for my clients. Please visit my portfolio for more details about my past projects and feel free to contact me!</p>
             <p>I have seen multiple websites to completion from the ground up, including SEO, marketing, and content creation. I seek to communicate with clients to determine the best method for accomplishing their goals. I'm honest about my skills and will not hesitate to explain the difficulty of a situation I'm unfamiliar with.</p>
           </div>
@@ -149,6 +35,7 @@ class App extends Component {
             <p>Proficient with: JavaScript (incl. ES6+), WordPress, HTML, CSS</p>
             <p>Familiar with: React, PHP, Bootstrap 4, CLI, SCSS, Git, jQuery, Webpack, MATLAB, Python, Java</p>
           </div>
+          <Experience />
           <div id='projects'>
             <h3>Projects</h3>
             <div className='tabs'>
@@ -165,18 +52,6 @@ class App extends Component {
 }
 
 class Title extends Component {
-  // future dynamic react homepage
-	// componentDidMount() {
-	// 	window.addEventListener('mousewheel', this.handleScroll);
-	// }
-	// componentWillUnmount() {
-	// 	window.removeEventListener('mousewheel', this.handleScroll);
-	// }
-	// handleScroll = (event) => {
-  //   console.log(event);
-	// 	let scrollTop = event.srcElement.scrollTop;
-	// 	scrollTop ? this.props.onScroll(true) : this.props.onScroll(false);
-	// }
 	render() {
 		return (
       <div id='title'>
@@ -191,8 +66,8 @@ class Title extends Component {
 class Header extends Component {
   calcDistance = (scrollDistanceInPx) => {
   	let min = 600,
-  		max = 2500,
-  		duration = Math.min( Math.max( Math.abs(scrollDistanceInPx) * 2, min ), max );
+  		  max = 2500,
+  		  duration = Math.min( Math.max( Math.abs(scrollDistanceInPx) * 2, min ), max );
   	return duration;
   }
   render() {
@@ -276,13 +151,40 @@ class Portfolio extends Component {
   }
 }
 
+class Experience extends Component {
+  render() {
+    let experience = data.map(job => {
+      if (job.type === 'experience') {
+        return (
+          <div className='card'>
+            <div className='card-stacked'>
+              <div className='content'>
+                <h5 className='position'>{job.position + ' || ' + job.employer + ' || ' + job.location}</h5>
+                <div className='bullets'>
+                  <ul>{job.bullets.map(bullet => <li key={bullet} className='bullet'>{bullet}</li>)}</ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        )
+      } else { return false }
+    })
+    return (
+      <div id='experience'>
+        <h3>Experience</h3>
+        {experience}
+      </div>
+    );
+  }
+}
+
 class Card extends Component {
   render() {
     return (
       <div className='card'>
         {this.props.info.image &&
           <div className='thumbnail'>
-            <img alt='thumbnail' src={this.props.info.image} />
+            <img alt='thumbnail' src={require(`${this.props.info.image}`)} />
           </div>
         }
         <div className='card-stacked'>

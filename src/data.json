@@ -1,0 +1,153 @@
+[
+  {
+    "type": "app",
+    "title": "WooCommerce Widget Interface",
+    "description": "Okay, so you have a super cool widget for our affiliates or vendors to use, but how do you generate the embed code? This project features a simple React app that allows a user to generate a snippet from their chosen settings. Express mode enables only affiliate tracking while locking the other values to their dynamic setting. Advanced enables customization of all attributes. Custom serves as a middle ground between the two. (Project is not currently publicly accessible)",
+    "link": "",
+    "github": "https://github.com/zachhardesty7/woocommerce-widget-interface",
+    "skills": [
+      "React",
+      "JavaScript",
+      "SCSS",
+      "WooCommerce API"
+    ]
+  },
+  {
+    "type": "app",
+    "title": "WooCommerce Widget",
+    "description": "Allowing affiliates or vendors to embed products from your WooCommerce store is nigh impossible. This project brings a widget that enables a super customizable dynamic iFrame widget that can be embedded in any website. It can track and report various things back to the host store upon completion of a sale. (Project is not currently publicly accessible but a demo can be viewed)",
+    "image": "./img/mpl-widget.png",
+    "link": "http://mpl.zachhardesty.com/",
+    "github": "https://github.com/zachhardesty7/woocommerce-widget",
+    "skills": [
+      "JavaScript",
+      "PHP",
+      "HTML5",
+      "CSS"
+    ]
+  },
+  {
+    "type": "app",
+    "title": "WooCommerce MPL Plugin",
+    "description": "WordPress plugin to extend the functionality of WooCommerce. It includes a collection of tweaks that modify various layouts and styles, CRON jobs for checking active users in Litmos LMS, and Constant Contact integration. Developed for http://MarkPorterLive.com.",
+    "image": "./img/mpl-plugin.png",
+    "link": "https://markporterlive.com",
+    "github": "https://github.com/zachhardesty7/woocommerce-mpl",
+    "skills": [
+      "WordPress Plugin",
+      "PHP",
+      "jQuery",
+      "JavaScript"
+    ]
+  },
+  {
+    "type": "app",
+    "title": "UT Austin Web Tweaks",
+    "description": "This extension to the Chrome browser adds additional features to UT's website. The primary goal is to making registering for classes through UT's outdated interface much easier. It provides numerous quick links and options to speed simplify the process and eliminate stress. A handful of other tweaks are also included and configurable through the options page. A full scheduling system will eventually be built in along with a system to automatically generate a schedule to your constraints from the classes you're interested in. (Project is not currently publicly accessible)",
+    "link": "",
+    "github": "https://github.com/zachhardesty7/UT-Austin-Website-Tweaks",
+    "skills": [
+      "JavaScript",
+      "CSS",
+      "Materialize CSS",
+      "Chrome Extension"
+    ]
+  },
+  {
+    "type": "app",
+    "title": "My Personal Portfolio Website",
+    "description": "The website you're looking at right now! This website is built with React.js to allow easy updating by just pumping in new JSON data. It also utilizes entirely custom SCSS and is inspired by material design standards.",
+    "image": "./img/zhapps.png",
+    "link": "http://zachhardesty.com",
+    "github": "https://github.com/zachhardesty7/zachhardesty.com",
+    "skills": [
+      "React",
+      "JavaScript",
+      "SCSS",
+      "CSS Grid",
+      "Material Design",
+      "HTML5",
+      "Webpack"
+    ]
+  },
+  {
+    "type": "website",
+    "title": "Mark Porter Live",
+    "description": "Employer's homepage developed with WordPress and includes eCommerce capabilities.",
+    "image": "./img/mpl.png",
+    "link": "https://markporterlive.com",
+    "github": "",
+    "skills": [
+      "WordPress",
+      "CSS",
+      "Divi",
+      "PHP",
+      "WordPress Plugin"
+    ]
+  },
+  {
+    "type": "website",
+    "title": "TSA Roadie",
+    "description": "Simple one page website to sell single product.",
+    "image": "./img/tsaroadie.png",
+    "link": "http://tsaroadie.com",
+    "github": "",
+    "skills": [
+      "WordPress",
+      "CSS",
+      "Divi"
+    ]
+  },
+  {
+    "type": "website",
+    "title": "shehatesme",
+    "description": "Simple website proof of concept to easily sell products using Shopify \"buy button.\"",
+    "image": "./img/shm.png",
+    "link": "http://shehatesme.zachhardesty.com",
+    "github": "",
+    "skills": [
+      "WordPress",
+      "CSS",
+      "Divi"
+    ]
+  },
+  {
+    "type": "website",
+    "title": "Keynote Community",
+    "description": "Website with user system to serve as hub for Keynote Series.",
+    "image": "./img/keynote.png",
+    "link": "http://keynotecommunity.com",
+    "github": "",
+    "skills": [
+      "WordPress",
+      "CSS",
+      "Divi"
+    ]
+  },
+  {
+    "type": "experience",
+    "employer": "Mark Porter Inc.",
+    "position": "Front End Developer",
+    "location": "Dallas, TX",
+    "date": "May 2016 - Present",
+    "bullets": [
+      "Independently managed time and resources when given high-level project assignments",
+      "Developed simple React.js app to improve UX by generating an iFrame embed snippet",
+      "Boosted sales by creating WooCommerce embeddable iFrame widget using Bootstrap 4",
+      "Implemented PHP-customized WooCommerce system to easily accept sales",
+      "Experimented with gamification to improve user retention using Angular & a RESTful API"
+    ]
+  },
+  {
+    "type": "experience",
+    "employer": "Mark Porter Inc.",
+    "position": "Front End Developer (Internship)",
+    "location": "Dallas, TX",
+    "date": "May 2015 - Aug 2015",
+    "bullets": [
+      "Overhauled and redesigned company website with a highly customized WordPress theme",
+      "Optimized company website for performance and Search Engine Optimization (SEO)",
+      "Collaborated with coworkers and continually adapted and exceeded expectations"
+    ]
+  }
+]

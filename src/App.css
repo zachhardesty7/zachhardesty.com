@@ -16,20 +16,29 @@ body {
   grid-template-columns: auto auto auto;
   grid-template-rows: auto; }
 
-#about, #projects, .App .main > div:nth-child(2) {
+a:hover, .link {
+  cursor: pointer; }
+
+#about, #projects, #experience {
   padding-top: 1rem;
   margin-top: 2rem; }
+
+#skills {
+  padding-top: 1rem; }
+  #skills p {
+    text-align: left; }
+
+#about > p {
+  text-align: left; }
 
 .main {
   grid-row: 2 / 3;
   grid-column: 2 / 3; }
 
-.portrait {
-  display: none;
-  width: 100%; }
-
-#skills p {
-  text-align: left; }
+#portrait {
+  width: 15rem;
+  border-radius: 100%;
+  text-align: center; }
 
 #title {
   grid-row: 1 / 2;
@@ -84,6 +93,9 @@ nav {
   .icons a {
     color: #FFF; }
 
+.bullet::before {
+  content: " - "; }
+
 #projects .tabs {
   color: #4d7298;
   padding: 1rem 0;
@@ -92,13 +104,12 @@ nav {
   #projects .tabs .active {
     border-bottom: 5px solid #e0479e; }
   #projects .tabs a {
+    transition: border .4s;
     font-size: 1.25rem;
     margin: 0 10px;
     padding: 10px 0; }
-    #projects .tabs a:hover {
-      cursor: pointer; }
-      #projects .tabs a:hover:not(.active) {
-        border-bottom: 2px solid #e0479e; }
+    #projects .tabs a:hover:not(.active) {
+      border-bottom: 2px solid #e0479e; }
 
 .card {
   display: flex;
@@ -137,7 +148,6 @@ nav {
       .card .card-stacked .actions a {
         color: #e0479e;
         margin: 0 12px;
-        -webkit-transition: color .3s ease;
         transition: color .3s ease;
         text-transform: uppercase; }
         .card .card-stacked .actions a:hover {
@@ -216,7 +226,6 @@ h6 {
   display: inline-block;
   overflow: hidden;
   user-select: none;
-  -webkit-tap-highlight-color: transparent;
   margin: 0 .25rem;
   z-index: 1;
   transition: .3s ease-out;
