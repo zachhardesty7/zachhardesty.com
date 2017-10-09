@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Scroll from 'react-scroll';
+import { Image, Transformation } from 'cloudinary-react';
 import './App.css';
 import data from './data.json'
 let Link = Scroll.Link;
@@ -26,9 +27,19 @@ class App extends Component {
         <main className='main'>
           <div id='about'>
             <h3>About Me</h3>
-            <div><img id='portrait' alt='portrait' src={require('./img/portrait.jpg')} /></div>
+            <div>
+              <Image id='portrait' cloudName="zachhardesty" publicId="portrait_llepmw" format="jpg">
+                <Transformation crop="fill" gravity="faces" width="210" height="210" radius='max'/>
+              </Image>
+            </div>
             <p>Hello! I’m UTCS student striving to specialize in the forefront of web development but very open to other fields, including startups and machine learning-driven positions. From 2015 to present, I’ve worked for a small business owner and have been given many opportunities to learn and grow in web development. During my time with that company, my coworkers described me as an eager-minded intern that they depended on to bring innovation and a fresh attitude to projects. I am passionate about creating elegant and effective websites for my clients. Please visit my portfolio for more details about my past projects and feel free to contact me!</p>
             <p>I have seen multiple websites to completion from the ground up, including SEO, marketing, and content creation. I seek to communicate with clients to determine the best method for accomplishing their goals. I'm honest about my skills and will not hesitate to explain the difficulty of a situation I'm unfamiliar with.</p>
+          </div>
+          <div>
+            <div>
+              <p>Contact me or download my resume with the icons below!</p>
+              <Icons color='black'/>
+            </div>
           </div>
           <div id='skills'>
             <h5>Skills</h5>
@@ -52,23 +63,23 @@ class App extends Component {
 }
 
 class Title extends Component {
-	render() {
-		return (
+  render() {
+    return (
       <div id='title'>
         <h2>zach hardesty</h2>
         <Icons/>
         <Link activeClass='active' className='chevron' offset={-60} to='about' spy={true} smooth={true} duration={800}><i className='fa fa-chevron-down fa-2x' aria-hidden='true'></i></Link>
       </div>
-		)
-	}
+    )
+  }
 }
 
 class Header extends Component {
   calcDistance = (scrollDistanceInPx) => {
-  	let min = 600,
-  		  max = 2500,
-  		  duration = Math.min( Math.max( Math.abs(scrollDistanceInPx) * 2, min ), max );
-  	return duration;
+    let min = 600,
+    max = 2500,
+    duration = Math.min( Math.max( Math.abs(scrollDistanceInPx) * 2, min ), max );
+    return duration;
   }
   render() {
     let offset = -60;
@@ -97,18 +108,18 @@ class Header extends Component {
 }
 
 class Footer extends Component {
-	render() {
-		return (
-			<footer>
-				<div id='contact'>
-					<h4>contact me:</h4>
-					<a href='mailto:hello@zachhardesty.com'>hello@zachhardesty.com</a>
-					<Icons/>
-				</div>
-				<div id='bottom'>
-					<p>website designed and developed by zach hardesty || copyright 2017</p>
-				</div>
-			</footer>
+  render() {
+    return (
+      <footer>
+        <div id='contact'>
+          <h4>Contact Me:</h4>
+          <a href='mailto:hello@zachhardesty.com'>hello@zachhardesty.com</a>
+          <Icons/>
+        </div>
+        <div id='bottom'>
+          <p>website designed and developed by zach hardesty || copyright 2017</p>
+        </div>
+      </footer>
 		);
 	}
 }
@@ -118,13 +129,16 @@ class Icons extends Component {
 		return (
 			<div className='icons'>
 				<a href='mailto:hello@zachhardesty.com'>
-					<i className='fa fa-envelope fa-lg fa-fw' aria-hidden='true' aria-label='Email'></i>
+					<i className='fa fa-envelope fa-lg fa-fw' aria-hidden='true' aria-label='Email' title='Email' style={{color: this.props.color}}></i>
 				</a>
 				<a href='https://github.com/zachhardesty7'>
-					<i className='fa fa-github fa-lg fa-fw' aria-hidden='true' aria-label='Github'></i>
+					<i className='fa fa-github fa-lg fa-fw' aria-hidden='true' aria-label='Github' title='Github' style={{color: this.props.color}}></i>
 				</a>
 				<a href='https://www.linkedin.com/in/zachhardesty7/'>
-					<i className='fa fa-linkedin fa-lg fa-fw' aria-hidden='true' aria-label='LinkedIn'></i>
+					<i className='fa fa-linkedin fa-lg fa-fw' aria-hidden='true' aria-label='LinkedIn' title='LinkedIn' style={{color: this.props.color}}></i>
+				</a>
+        <a href='https://docs.google.com/document/d/1JluScSVuuTK9wMS2gK6ygd-4tRxCO73tvwR3lvDe1hI/edit?usp=sharing'>
+					<i className='fa fa-briefcase fa-lg fa-fw' aria-hidden='true' aria-label='Resume' title='Resume' style={{verticalAlign: '-25%', color: this.props.color}}></i>
 				</a>
 			</div>
 		);
@@ -184,7 +198,10 @@ class Card extends Component {
       <div className='card'>
         {this.props.info.image &&
           <div className='thumbnail'>
-            <img alt='thumbnail' src={require(`${this.props.info.image}`)} />
+            <Image alt='thumbnail' cloudName="zachhardesty" publicId={this.props.info.image} format="jpg">
+              <Transformation crop="fill" gravity='north' width="500" height="500" />
+            </Image>
+            {/* <img alt='thumbnail' src={require(`${this.props.info.image}`)} /> */}
           </div>
         }
         <div className='card-stacked'>

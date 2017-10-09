@@ -4,6 +4,7 @@
   "homepage": "http://zachhardesty.com",
   "private": true,
   "dependencies": {
+    "cloudinary-react": "^1.0.4",
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.1.1",
     "react": "^15.6.1",
@@ -17,7 +18,7 @@
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
-    "deploy" : "npm run build && gh-pages -d build",
+    "deploy": "npm run build && gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
