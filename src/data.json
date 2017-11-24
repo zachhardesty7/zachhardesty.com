@@ -1,15 +1,19 @@
 [
   {
     "type": "app",
-    "title": "WooCommerce Widget Interface",
-    "description": "Okay, so you have a super cool widget for our affiliates or vendors to use, but how do you generate the embed code? This project features a simple React app that allows a user to generate a snippet from their chosen settings. Express mode enables only affiliate tracking while locking the other values to their dynamic setting. Advanced enables customization of all attributes. Custom serves as a middle ground between the two. (Project is not currently publicly accessible)",
-    "link": "",
-    "github": "https://github.com/zachhardesty7/woocommerce-widget-interface",
+    "title": "My Personal Portfolio Website",
+    "description": "This is the website you're looking at right now! This website is built with React.js to allow easy updating by just pumping in new JSON data. It also utilizes entirely custom SCSS and is inspired by material design standards.",
+    "image": "website",
+    "link": "http://zachhardesty.com",
+    "github": "https://github.com/zachhardesty7/zachhardesty.com",
     "skills": [
       "React",
       "JavaScript",
       "SCSS",
-      "WooCommerce API"
+      "CSS Grid",
+      "Material Design",
+      "HTML5",
+      "Webpack"
     ]
   },
   {
@@ -28,8 +32,21 @@
   },
   {
     "type": "app",
+    "title": "WooCommerce Widget Interface",
+    "description": "Okay, so you have a super cool widget for our affiliates or vendors to use, but how do you generate the embed code? This project features a simple React app that allows a user to generate a snippet from their chosen settings. Express mode enables only affiliate tracking while locking the other values to their dynamic setting. Advanced enables customization of all attributes. Custom serves as a middle ground between the two. (Project is not currently publicly accessible)",
+    "link": "",
+    "github": "https://github.com/zachhardesty7/woocommerce-widget-interface",
+    "skills": [
+      "React",
+      "JavaScript",
+      "SCSS",
+      "WooCommerce API"
+    ]
+  },
+  {
+    "type": "app",
     "title": "WooCommerce MPL Plugin",
-    "description": "WordPress plugin to extend the functionality of WooCommerce. It includes a collection of tweaks that modify various layouts and styles, CRON jobs for checking active users in Litmos LMS, and Constant Contact integration. Developed for http://MarkPorterLive.com.",
+    "description": "WordPress plugin to extend the functionality of WooCommerce. It includes a collection of tweaks that modify various layouts and styles, CRON jobs for checking active users in Litmos LMS, and Constant Contact integration. Developed for Mark Porter Live",
     "image": "mpl-plugin_tezxxo",
     "link": "https://markporterlive.com",
     "github": "https://github.com/zachhardesty7/woocommerce-mpl",
@@ -43,8 +60,8 @@
   {
     "type": "app",
     "title": "UT Austin Web Tweaks",
-    "description": "This extension to the Chrome browser adds additional features to UT's website. The primary goal is to making registering for classes through UT's outdated interface much easier. It provides numerous quick links and options to speed simplify the process and eliminate stress. A handful of other tweaks are also included and configurable through the options page. A full scheduling system will eventually be built in along with a system to automatically generate a schedule to your constraints from the classes you're interested in. (Project is not currently publicly accessible)",
-    "link": "",
+    "description": "This extension to the Chrome browser adds additional features to UT's website. The primary goal is to making registering for classes through UT's outdated interface much easier. It provides numerous quick links and options to speed up, simplify the process, and eliminate stress. A handful of other tweaks are also included and configurable through the options page. An interface to UT's new schedule generator will eventually be fully built in.",
+    "link": "https://chrome.google.com/webstore/detail/ut-austin-website-tweaks/kmedjmjpdobbbepllffnimejfmbdicef",
     "github": "https://github.com/zachhardesty7/UT-Austin-Website-Tweaks",
     "skills": [
       "JavaScript",
@@ -55,16 +72,14 @@
   },
   {
     "type": "app",
-    "title": "My Personal Portfolio Website",
-    "description": "The website you're looking at right now! This website is built with React.js to allow easy updating by just pumping in new JSON data. It also utilizes entirely custom SCSS and is inspired by material design standards.",
-    "image": "zhwebsites_cqbudm",
-    "link": "http://zachhardesty.com",
-    "github": "https://github.com/zachhardesty7/zachhardesty.com",
+    "title": "QCI Mobile App",
+    "description": "React Native cross platform app to visualize probability of quantum circuits. Also the first mobile app to provide access to quantum computations (through IBM’s QISKit API). Project is currently private.",
+    "link": "",
+    "github": "https://github.com/VikramSundaram/QCI_HackTX_17",
     "skills": [
-      "React",
+      "React Native",
       "JavaScript",
       "SCSS",
-      "CSS Grid",
       "Material Design",
       "HTML5",
       "Webpack"

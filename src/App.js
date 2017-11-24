@@ -32,19 +32,22 @@ class App extends Component {
                 <Transformation crop="fill" gravity="faces" width="210" height="210" radius='max'/>
               </Image>
             </div>
-            <p>Hello! I’m UTCS student striving to specialize in the forefront of web development but very open to other fields, including startups and machine learning-driven positions. From 2015 to present, I’ve worked for a small business owner and have been given many opportunities to learn and grow in web development. During my time with that company, my coworkers described me as an eager-minded intern that they depended on to bring innovation and a fresh attitude to projects. I am passionate about creating elegant and effective websites for my clients. Please visit my portfolio for more details about my past projects and feel free to contact me!</p>
-            <p>I have seen multiple websites to completion from the ground up, including SEO, marketing, and content creation. I seek to communicate with clients to determine the best method for accomplishing their goals. I'm honest about my skills and will not hesitate to explain the difficulty of a situation I'm unfamiliar with.</p>
+            <p>Welcome to my web portfolio!</p>
+            <p>First, let me tell you a little bit about myself. I am currently enrolled in the University of Texas at Austin's computer science degree plan but my journey began much earlier. From a very young age I've always had a deep fascination in understanding the "why" and the "how" of everyday things, modern marvels, and everything in between. Naturally, once I recevied my parents old computer I began tinkering and familiarizing myself. It's safe to say that I've quite literally grown up with computers.</p>
+            <p>As the next logical step, I wanted to learn the underlying fundamentals that make computer programs function. While some might consider me ambitious, learning programming seemed daunting. I took the first step of learning the basics of HTML, CSS, and JavaScript and occassionally studied in my free time.</p>
+            <p>One day my father suggested that my neighbor hire me as a technologist intern. I had virtually no experience but I had had my blazing passion on my side. I initially began by redesigning and modernizing his WordPress website. My coworkers described me as an eager-minded intern that they depended on to bring innovation and a fresh attitude to projects, even when I lacked familiarity. I now freelance develop websites and I am passionate about creating elegant and effective websites for my clients and employees.</p>
+            <p>I have seen multiple websites to completion from the ground up, including SEO, marketing, and content creation. I seek to communicate with clients to determine the method best suited for accomplishing their goals. I'm honest about my skills and will not hesitate to explain the difficulty of a situation I lack familiarity with.</p>
           </div>
           <div>
             <div>
-              <p>Contact me or download my resume with the icons below!</p>
-              <Icons color='black'/>
+              <p>Please Connect with Me!</p>
+              <Icons color='black' text={true}/>
             </div>
           </div>
           <div id='skills'>
             <h5>Skills</h5>
-            <p>Proficient with: JavaScript (incl. ES6+), WordPress, HTML, CSS</p>
-            <p>Familiar with: React, PHP, Bootstrap 4, CLI, SCSS, Git, jQuery, Webpack, MATLAB, Python, Java</p>
+            <p>Proficient with: React (incl. React Native), JavaScript (incl. ES6+), WordPress, HTML, CSS</p>
+            <p>Familiar with: Bootstrap 4, CLI, REST, PHP, SCSS, Git, jQuery, Webpack, MATLAB, Java, Python</p>
           </div>
           <Experience />
           <div id='projects'>
@@ -128,18 +131,38 @@ class Icons extends Component {
 	render() {
 		return (
 			<div className='icons'>
-				<a href='mailto:hello@zachhardesty.com'>
-					<i className='fa fa-envelope fa-lg fa-fw' aria-hidden='true' aria-label='Email' title='Email' style={{color: this.props.color}}></i>
-				</a>
-				<a href='https://github.com/zachhardesty7'>
-					<i className='fa fa-github fa-lg fa-fw' aria-hidden='true' aria-label='Github' title='Github' style={{color: this.props.color}}></i>
-				</a>
-				<a href='https://www.linkedin.com/in/zachhardesty7/'>
-					<i className='fa fa-linkedin fa-lg fa-fw' aria-hidden='true' aria-label='LinkedIn' title='LinkedIn' style={{color: this.props.color}}></i>
-				</a>
-        <a href='https://docs.google.com/document/d/1JluScSVuuTK9wMS2gK6ygd-4tRxCO73tvwR3lvDe1hI/edit?usp=sharing'>
-					<i className='fa fa-briefcase fa-lg fa-fw' aria-hidden='true' aria-label='Resume' title='Resume' style={{verticalAlign: '-25%', color: this.props.color}}></i>
-				</a>
+        <div className='icon'>
+          <a href='mailto:hello@zachhardesty.com' target='blank_'>
+            <i className='fa fa-envelope fa-lg fa-fw' aria-hidden='true' aria-label='Email' title='Email' style={{color: this.props.color}}></i>
+            {this.props.text &&
+              <span className='icon-text' style={{color: this.props.color}}>Email</span>
+            }
+          </a>
+        </div>
+        <div className='icon'>
+          <a href='https://github.com/zachhardesty7' target='blank_'>
+            <i className='fa fa-github fa-lg fa-fw' aria-hidden='true' aria-label='Github' title='Github' style={{color: this.props.color}}></i>
+            {this.props.text &&
+              <span className='icon-text' style={{color: this.props.color}}>Github</span>
+            }
+          </a>
+        </div>
+				<div className='icon'>
+          <a href='https://www.linkedin.com/in/zachhardesty7/' target='blank_'>
+            <i className='fa fa-linkedin fa-lg fa-fw' aria-hidden='true' aria-label='LinkedIn' title='LinkedIn' style={{color: this.props.color}}></i>
+            {this.props.text &&
+              <span className='icon-text' style={{color: this.props.color}}>LinkedIn</span>
+            }
+          </a>
+        </div>
+        <div className='icon'>
+          <a href='https://docs.google.com/document/d/1JluScSVuuTK9wMS2gK6ygd-4tRxCO73tvwR3lvDe1hI/edit?usp=sharing' target='blank_'>
+            <i className='fa fa-briefcase fa-lg fa-fw' aria-hidden='true' aria-label='Resume' title='Resume' style={{transform: 'translateY(7.5%)', color: this.props.color}}></i>
+            {this.props.text &&
+              <span className='icon-text' style={{color: this.props.color}}>Resume</span>
+            }
+          </a>
+        </div>
 			</div>
 		);
 	}
@@ -170,7 +193,7 @@ class Experience extends Component {
     let experience = data.map(job => {
       if (job.type === 'experience') {
         return (
-          <div className='card'>
+          <div key={job.position.toLowerCase().replace(/ /g, '-')} className='card'>
             <div className='card-stacked'>
               <div className='content'>
                 <h5 className='position'>{job.position + ' || ' + job.employer + ' || ' + job.location}</h5>
@@ -199,9 +222,8 @@ class Card extends Component {
         {this.props.info.image &&
           <div className='thumbnail'>
             <Image alt='thumbnail' cloudName="zachhardesty" publicId={this.props.info.image} format="jpg">
-              <Transformation crop="fill" gravity='north' width="500" height="500" />
+              <Transformation crop="fill" gravity='north' width="750" height="750" />
             </Image>
-            {/* <img alt='thumbnail' src={require(`${this.props.info.image}`)} /> */}
           </div>
         }
         <div className='card-stacked'>
@@ -214,10 +236,10 @@ class Card extends Component {
           </div>
           <div className='actions'>
             {this.props.info.link &&
-              <a href={this.props.info.link}>View Project</a>
+              <a href={this.props.info.link} target='blank_'>View Project</a>
             }
             {this.props.info.github &&
-              <a href={this.props.info.github}>View Source Code</a>
+              <a href={this.props.info.github} target='blank_'>View Source Code</a>
             }
           </div>
         </div>

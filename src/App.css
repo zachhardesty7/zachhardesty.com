@@ -47,7 +47,7 @@ a:hover, .link {
   justify-content: center;
   flex-direction: column;
   height: 100vh;
-  background-color: #9ebc9e;
+  background-color: #0b3c5d;
   color: #FFF; }
   #title h2 {
     font-family: 'Roboto Condensed', sans-serif; }
@@ -75,7 +75,7 @@ nav {
   top: 0;
   align-items: center;
   z-index: 9;
-  background-color: #9ebc9e; }
+  background-color: #0b3c5d; }
   nav div:first-child {
     justify-self: end; }
   nav div:last-child {
@@ -89,27 +89,34 @@ nav {
     padding: 5px; }
 
 .icons {
-  padding: 10px 0; }
+  padding: 10px 0;
+  display: inline-flex;
+  align-self: center; }
   .icons a {
-    color: #FFF; }
+    color: #d9b310;
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+  .icons .icon {
+    padding: 0 5px; }
 
 .bullet::before {
   content: " - "; }
 
 #projects .tabs {
-  color: #4d7298;
+  color: #328cc1;
   padding: 1rem 0;
   align-content: center;
   align-items: center; }
   #projects .tabs .active {
-    border-bottom: 5px solid #e0479e; }
+    border-bottom: 5px solid #d9b310; }
   #projects .tabs a {
     transition: border .4s;
     font-size: 1.25rem;
     margin: 0 10px;
     padding: 10px 0; }
     #projects .tabs a:hover:not(.active) {
-      border-bottom: 2px solid #e0479e; }
+      border-bottom: 2px solid #d9b310; }
 
 .card {
   display: flex;
@@ -133,11 +140,13 @@ nav {
       border-radius: 0 0 2px 2px;
       flex-grow: 1;
       text-align: left; }
+      .card .card-stacked .content .title {
+        color: #328cc1; }
       .card .card-stacked .content .skills li {
         display: inline-block;
         padding: 5px 10px;
         margin: 5px 5px;
-        background-color: #e0479e;
+        background-color: #d9b310;
         color: #FFF;
         border-radius: 4px; }
     .card .card-stacked .actions {
@@ -146,12 +155,12 @@ nav {
       border-top: 1px solid rgba(160, 160, 160, 0.2);
       padding: 16px 24px; }
       .card .card-stacked .actions a {
-        color: #e0479e;
+        color: #328cc1;
         margin: 0 12px;
         transition: color .3s ease;
         text-transform: uppercase; }
         .card .card-stacked .actions a:hover {
-          color: #ef9ecc; }
+          color: #7cb9dd; }
 
 footer {
   grid-row: 3 / 3;
@@ -159,11 +168,13 @@ footer {
   font-size: .9rem;
   padding-top: 20px;
   color: #fff;
-  background-color: #9ebc9e; }
+  background-color: #0b3c5d; }
   footer #contact {
     margin-bottom: 20px;
     transition: transform 0.6s ease-in-out; }
     footer #contact a {
+      display: block; }
+    footer #contact > a {
       color: #FFF; }
   footer #bottom {
     overflow: hidden;
@@ -172,7 +183,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #649064; }
+    background-color: #000102; }
 
 li,
 ul {
@@ -200,7 +211,7 @@ h2 {
   margin: 1.78rem 0 1.424rem 0; }
 
 h3 {
-  color: #4d7298;
+  color: #328cc1;
   font-size: 2.92rem;
   line-height: 110%;
   margin: 1.46rem 0 1.168rem 0; }
@@ -230,7 +241,7 @@ h6 {
   z-index: 1;
   transition: .3s ease-out;
   color: #FFF;
-  background-color: #e0479e;
+  background-color: #d9b310;
   letter-spacing: .5px;
   font-size: 1rem;
   outline: 0;
@@ -242,10 +253,10 @@ h6 {
   text-transform: uppercase;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
   .button:hover {
-    background-color: #ef9ecc;
+    background-color: #f3d65c;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2); }
   .button:focus {
-    background-color: #a51c6a; }
+    background-color: #7a6509; }
 
 .line,
 .outline {
