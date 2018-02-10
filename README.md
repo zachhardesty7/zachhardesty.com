@@ -8,6 +8,10 @@ Here lies the source code for my web porfolio, currently built with [React](http
 
 ### Change Log
 
+- 2.3.2 update readme
+
+- 2.3.1 remove unnecessary build folder (can build yourself)
+
 - 2.3 new project, new color scheme, minor fixes and updates
 
 - 2.2.0 externalize to pull from JSON file and automatically update data, add image, add work experience
