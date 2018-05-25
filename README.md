@@ -3,10 +3,12 @@
 
 Here lies the source code for my web porfolio, currently built with [React](https://github.com/facebook/react) and [Create React App](https://github.com/facebookincubator/create-react-app) in order to easily edit or add more data by updating JSON.
 
-*Copyright (c) 2017 || Zach Hardesty || [zachhardesty.com](http://zachhardesty.com)*
+*Copyright (c) 2018 || Zach Hardesty || [zachhardesty.com](http://zachhardesty.com)*
 
 
 ### Change Log
+
+- 2.4 update projects, work exp, colors/styles, skills, resume, personal summary and code refactoring to component-based architecture. update react-scripts to 1.1.4. enforce JavaScript Standard Style
 
 - 2.3.2 update readme
 
