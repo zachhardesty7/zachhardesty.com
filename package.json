@@ -24,7 +24,8 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "gh-pages": "^1.0.0"
+    "gh-pages": "^1.0.0",
+    "standard": "^11.0.1"
   },
   "standard": {
     "parser": "babel-eslint"
