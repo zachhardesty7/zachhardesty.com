@@ -1,10 +1,30 @@
 [
   {
     "type": "app",
+    "title": "ConnectDoor Website",
+    "description": "Using Gatsby, Contentful, and Netlify, I created a server side rendered progressive web app to display variable information about a startup by the name of ConnectDoor. Contentful allows the client to edit almost every single piece of content. Additionally, this website uses Gatsby-Image to render images using the new <picture /> tags to display a dynamically sized and formatted image based on browser and browser size. Components are styled based on the SemanticUI framework and using Font Awesome icons. The website conforms to all standard A11y requirements.",
+    "image": "theconnectdoor.png",
+    "link": "https://theconnectdoor.com",
+    "github": "https://github.com/zachhardesty7/connect-door",
+    "skills": [
+      "Gatsby",
+      "Contentful",
+      "GraphQL",
+      "React",
+      "JavaScript",
+      "SCSS",
+      "CSS Grid",
+      "SemanticUI",
+      "HTML5",
+      "Webpack"
+    ]
+  },
+  {
+    "type": "app",
     "title": "My Personal Portfolio Website",
-    "description": "This is the website you're looking at right now! It's built with React.js to allow projects to be easily added, removed, and updated by just modifying a JSON file. This project builds off of create-react-app to take advantage of Webpack and implements SCSS styling inspired by material design standards and semi-dynamically sized images for quick loading. This website dramatically improves on my first website back when I thought Dreamweaver was a good idea.",
+    "description": "This is the website you're looking at right now! It's built with React.js to allow projects to be easily added, removed, and updated by just modifying a JSON file. This project builds off of create-react-app to take advantage of Webpack and implements SCSS styling inspired by material design standards and semi-dynamically sized images for quick loading. This website dramatically improves on my first website back when I thought DreamWeaver was a good idea.",
     "image": "website",
-    "link": "http://zachhardesty.com",
+    "link": "https://zachhardesty.com",
     "github": "https://github.com/zachhardesty7/zachhardesty.com",
     "skills": [
       "React",
@@ -19,7 +39,7 @@
   {
     "type": "app",
     "title": "coinaged.io",
-    "description": "A massive project to facilitate new user aquisition for investment in the cryptocurrency markets. Upon completion, this app serves as the back-end of an investment firm for cryptocurrencies. The philosophy of the company: crypto will eventually reach widespread adoption and the time is now to get in at the floor. Written in Python and using MongoDB, the backend stores user information, trades, and deposits and withdrawals. It serves this information to the front-end dashboard through a private API. More info coming soon.",
+    "description": "A massive project to facilitate new user acquisition for investment in the cryptocurrency markets. Upon completion, this app serves as the back-end of an investment firm for cryptocurrencies. The philosophy of the company: crypto will eventually reach widespread adoption and the time is now to get in at the floor. Written in Python and using MongoDB, the back-end stores user information, trades, and deposits and withdrawals. It serves this information to the front-end dashboard through a private API. More info coming soon.",
     "link": "http://coinaged.io/",
     "github": "https://github.com/zachhardesty7/coinaged.io-backend",
     "skills": [
@@ -31,7 +51,7 @@
   {
     "type": "app",
     "title": "Greasemonkey Scripts Collection",
-    "description": "The Github repo hosts a handful of different script files that Tampermonkey injects into the relevant websites. Certain websites just seem to be missing something or a simple change could really improve the functionality. I took it upon myself to add these features in the most seemless way possible. Check out the Github for a beautifully well-executed readme.md file that makes me proud.",
+    "description": "The Github repo hosts a handful of different script files that Tampermonkey injects into the relevant websites. Certain websites just seem to be missing something or a simple change could really improve the functionality. I took it upon myself to add these features in the most seamless way possible. Check out the Github for a beautifully well-executed readme.md file that makes me proud.",
     "link": "",
     "github": "https://github.com/zachhardesty7/tamper-monkey-scripts-collection",
     "skills": [
@@ -43,7 +63,7 @@
   {
     "type": "app",
     "title": "WooCommerce Widget",
-    "description": "After extensive research I concluded that allowing affiliates or vendors to embed products from a WooCommerce store is nigh impossible. This project solves that issue by creating a widget that enables a customizable and dynamic iFrame to be embedded in any website. It can track and report various metrics (including referers' URL or ID) back to the host's WooCommerce plugin and stores it in the order data upon completion of a sale. (Project is not currently publicly accessible but a demo can be viewed)",
+    "description": "After extensive research I concluded that allowing affiliates or vendors to embed products from a WooCommerce store is nigh impossible. This project solves that issue by creating a widget that enables a customizable and dynamic iFrame to be embedded in any website. It can track and report various metrics (including referrers' URL or ID) back to the host's WooCommerce plugin and stores it in the order data upon completion of a sale. (Project is not currently publicly accessible but a demo can be viewed)",
     "image": "mpl-widget_rwfnof",
     "link": "http://mpl.zachhardesty.com/",
     "github": "https://github.com/zachhardesty7/woocommerce-widget",
@@ -95,7 +115,7 @@
   {
     "type": "app",
     "title": "WooCommerce MPL Plugin",
-    "description": "A WordPress plugin designed to extend the functionality and practicallity of WooCommerce and address the lack of ability to apply modern trends to WooCommerce pages. It includes a collection of tweaks that modify various layouts and styles, CRON jobs for checking active users in Litmos LMS, and Constant Contact integration. Developed specifically for Mark Porter Live",
+    "description": "A WordPress plugin designed to extend the functionality and practicality of WooCommerce and address the lack of ability to apply modern trends to WooCommerce pages. It includes a collection of tweaks that modify various layouts and styles, CRON jobs for checking active users in Litmos LMS, and Constant Contact integration. Developed specifically for Mark Porter Live",
     "image": "mpl-plugin_tezxxo",
     "link": "https://markporterlive.com",
     "github": "https://github.com/zachhardesty7/woocommerce-mpl",
@@ -152,7 +172,7 @@
   {
     "type": "website",
     "title": "TSA Roadie",
-    "description": "Simple one page website to sell a single product. People often struggle with traveling and the TSA's arbitrary rules. A simple bottle and bag kit, this product facilitates the process of bringing alcohol on a airplane and saves you money in the process. If you travel often, why buy overpriced drinks when you can bring your own?",
+    "description": "Simple one page website to sell a single product. People often struggle with traveling and the arbitrary rules of TSA. A simple bottle and bag kit, this product facilitates the process of bringing alcohol on a airplane and saves you money in the process. If you travel often, why buy overpriced drinks when you can bring your own?",
     "image": "tsaroadie_ricopz",
     "link": "http://tsaroadie.com",
     "github": "",

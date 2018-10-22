@@ -30,7 +30,7 @@ body {
 	grid-template-rows: auto;
 }
 
-a:hover, .link {
+a:hover, .link, button:hover {
 	cursor: pointer;
 }
 
@@ -136,12 +136,14 @@ nav {
 	padding: 10px 0;
 	display: inline-flex;
 	align-self: center;
+
 	a {
 		color: $accent;
 		display: flex;
 		align-items: center;
 		flex-direction: column;
 	}
+
 	.icon {
 		padding: 0 5px;
 		opacity: 1;
@@ -162,22 +164,30 @@ nav {
 		padding: 1rem 0;
 		align-content: center;
 		align-items: center;
+
 		.active {
 			border-bottom: 5px solid $accent;
 		}
-		a {
+
+		button {
+			background-color: transparent;
+			border: none;
+			color: $primary;
 			transition: border .4s;
 			font-size: 1.25rem;
 			margin: 0 10px;
 			padding: 10px 0;
+
+			&:focus {
+				outline: none;
+			}
+
 			&:hover:not(.active) {
 				border-bottom: 2px solid $accent;
 				color: rgba($primary, 0.75);
 			}
 		}
-
 	}
-
 }
 
 .card {

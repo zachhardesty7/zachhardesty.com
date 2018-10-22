@@ -1,23 +1,29 @@
-import React, { Component } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import data from './data.json'
-import Card from './card.js'
+import Card from './card'
 
-export default class Portfolio extends Component {
-  render () {
-    let projects = data.map(project => {
-      if (project.type === this.props.disp) {
+const Portfolio = ({ display }) => (
+  <div>
+    {data.map((project) => {
+      if (project.type === display) {
         return (
           <Card
             key={project.title.replace(/\s+/g, '-').toLowerCase()}
             info={project}
           />
         )
-      } else { return false }
-    })
-    return (
-      <div>
-        {projects}
-      </div>
-    )
-  }
+      } return false
+    })}
+  </div>
+)
+
+Portfolio.propTypes = {
+  display: PropTypes.string
 }
+
+Portfolio.defaultProps = {
+  display: ''
+}
+
+export default Portfolio
