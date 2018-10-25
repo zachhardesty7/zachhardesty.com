@@ -1,13 +1,10 @@
 @import 'linear-gradient.scss';
 
-// old colors
-// $primary: #9ebc9e;
-// $secondary: #4d7298;
-// $accent: #e0479e;
 $primary: #0b3c5d;
 $accent: #d9b310;
 $dark: #2c2c34;
-$white: #FFF;
+$light: #fafafa;
+$white: #fff;
 
 html {
 	line-height: 1.5;
@@ -19,7 +16,65 @@ html {
 
 body {
 	font-family: "Roboto", sans-serif;
-	background-color: #fafafa;
+	background-color: $light;
+	margin: 0;
+  padding: 0;
+}
+
+li,
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	transition: color .3s ease;	
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+	line-height: 1.1;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 4.2rem;
+	line-height: 110%;
+	margin: 2.1rem 0 1.68rem 0
+}
+
+h2 {
+	font-size: 3.56rem;
+	line-height: 110%;
+	margin: 1.78rem 0 1.424rem 0
+}
+
+h3 {
+	color: $primary;
+	font-size: 2.92rem;
+	line-height: 110%;
+	margin: 1.46rem 0 1.168rem 0
+}
+
+h4 {
+	font-size: 2.28rem;
+	line-height: 110%;
+	margin: 1.14rem 0 .912rem 0
+}
+
+h5 {
+	font-size: 1.64rem;
+	line-height: 110%;
+	margin: .82rem 0 .656rem 0
+}
+
+h6 {
+	font-size: 1rem;
+	line-height: 110%;
+	margin: .5rem 0 .4rem 0
 }
 
 .App {
@@ -38,6 +93,7 @@ a:hover, .link, button:hover {
 	padding-top: 1rem;
 	margin-top: 2rem;
 }
+
 #skills {
 	padding-top: 1rem;
 	p {
@@ -69,9 +125,11 @@ a:hover, .link, button:hover {
 	height: 100vh;
 	background-color: $primary;
 	color: $white;
+
 	h2 {
 		font-family: 'Roboto Condensed', sans-serif;
 	}
+
 	.chevron {
 		position: absolute;
 		bottom: 5%;
@@ -128,7 +186,7 @@ nav {
 
 		&:hover {
 			color: rgba($white, 0.75);
-		};
+		}
 	}
 }
 
@@ -210,7 +268,8 @@ nav {
 		img {
 			width: 100%;
 			opacity: 1;
-			transition: opacity .3s ease;				
+			transition: opacity .3s ease;	
+			
 			&:hover {
 				opacity: 0.75;
 			}
@@ -219,6 +278,23 @@ nav {
 
 	.card-stacked {
 		position: relative;
+
+		.actions {
+			position: relative;
+			background-color: inherit;
+			border-top: 1px solid rgba(160,160,160,0.2);
+			padding: 16px 24px;
+
+			a {
+				color: $primary;
+				margin: 0 12px;
+				text-transform: uppercase;
+
+				&:hover {
+					color: rgba($primary, 0.75);
+				}
+			}
+		}
 
 		.content {
 			padding: 24px;
@@ -245,23 +321,6 @@ nav {
 			
 			.date {
 				color: rgba($dark, .8);
-			}
-		}
-
-		.actions {
-			position: relative;
-			background-color: inherit;
-			border-top: 1px solid rgba(160,160,160,0.2);
-			padding: 16px 24px;
-
-			a {
-				color: $primary;
-				margin: 0 12px;
-				text-transform: uppercase;
-
-				&:hover {
-					color: rgba($primary, 0.75);
-				}
 			}
 		}
 	}
@@ -292,62 +351,6 @@ footer {
 		align-items: center;
 		justify-content: center;
 	}
-}
-
-li,
-ul {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-}
-
-a {
-	text-decoration: none;
-	transition: color .3s ease;	
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 400;
-	line-height: 1.1;
-	margin: 0;
-	padding: 0;
-}
-
-h1 {
-	font-size: 4.2rem;
-	line-height: 110%;
-	margin: 2.1rem 0 1.68rem 0
-}
-
-h2 {
-	font-size: 3.56rem;
-	line-height: 110%;
-	margin: 1.78rem 0 1.424rem 0
-}
-
-h3 {
-	color: $primary;
-	font-size: 2.92rem;
-	line-height: 110%;
-	margin: 1.46rem 0 1.168rem 0
-}
-
-h4 {
-	font-size: 2.28rem;
-	line-height: 110%;
-	margin: 1.14rem 0 .912rem 0
-}
-
-h5 {
-	font-size: 1.64rem;
-	line-height: 110%;
-	margin: .82rem 0 .656rem 0
-}
-
-h6 {
-	font-size: 1rem;
-	line-height: 110%;
-	margin: .5rem 0 .4rem 0
 }
 
 .button {
@@ -396,7 +399,6 @@ h6 {
 .outline {
 	stroke-miterlimit: 10;
 }
-
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
