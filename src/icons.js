@@ -40,7 +40,7 @@ const Icons = ({ color, text }) => (
 
 Icons.propTypes = {
   color: PropTypes.string,
-  text: PropTypes.string
+  text: PropTypes.bool
 }
 
 Icons.defaultProps = {

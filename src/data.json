@@ -87,31 +87,18 @@
       "WooCommerce API"
     ]
   },
-    {
-      "type": "app",
-      "title": "WooCommerce Widget Interface",
-      "description": "An extension to the WooCommerce embed widget featuring a simple React app that allows a user to generate a snippet from their chosen settings. Express mode enables only affiliate tracking while locking the other values to their dynamic setting. Advanced enables customization of all attributes such as size and category of products to include. Custom serves as a middle ground between the two. (Project is not currently publicly accessible)",
-      "link": "",
-      "github": "https://github.com/zachhardesty7/woocommerce-widget-interface",
-      "skills": [
-        "React",
-        "JavaScript",
-        "SCSS",
-        "WooCommerce API"
-      ]
-    },
-    {
-      "type": "app",
-      "title": "GroupMe Notifier",
-      "description": "Uses a little python script hosted on Heroku to poll a given GroupMe group chat for keywords and emails a summary to you. Can be handy for giant groups that often have chatter interspersed between important notifications.",
-      "link": "",
-      "github": "https://github.com/zachhardesty7/group-me-notifier",
-      "skills": [
-        "Python",
-        "Heroku",
-        "GroupMe API"
-      ]
-    },
+  {
+    "type": "app",
+    "title": "GroupMe Notifier",
+    "description": "Uses a little python script hosted on Heroku to poll a given GroupMe group chat for keywords and emails a summary to you. Can be handy for giant groups that often have chatter interspersed between important notifications.",
+    "link": "",
+    "github": "https://github.com/zachhardesty7/group-me-notifier",
+    "skills": [
+      "Python",
+      "Heroku",
+      "GroupMe API"
+    ]
+  },
   {
     "type": "app",
     "title": "WooCommerce MPL Plugin",
