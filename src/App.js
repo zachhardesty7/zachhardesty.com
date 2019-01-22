@@ -66,12 +66,12 @@ const App = () => {
           <p>
             <b>Proficient with:</b>
             {' '}
-            React, JavaScript (incl. ES6+), WordPress, HTML, CSS
+            React, JavaScript (incl. ES6+), WordPress, HTML, CSS, SCSS, Git, REST, GraphQL
           </p>
           <p>
             <b>Familiar with:</b>
             {' '}
-            Python, Java, MongoDB, Bootstrap 4, CLI, REST, PHP, SCSS, Git, jQuery, Webpack
+            Python, Java, Webpack, Bootstrap, Semantic UI, CLI, C/C++, PHP, MongoDB
           </p>
         </div>
         <Experience data={data} />
