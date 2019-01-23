@@ -18,7 +18,12 @@ body {
 	font-family: "Roboto", sans-serif;
 	background-color: $light;
 	margin: 0;
-  padding: 0;
+	padding: 0;
+	
+	::selection {
+		background-color: $accent;
+		color: #ffffff;
+	}
 }
 
 li,
@@ -94,15 +99,18 @@ a:hover, .link, button:hover {
 	margin-top: 2rem;
 }
 
-#skills {
-	padding-top: 1rem;
-	p {
-		text-align: left;
-	}
-}
-
 #about > p {
 	text-align: left;
+}
+
+#skills {
+	padding-top: 2rem;
+	p {
+		text-align: left;
+		p {
+			margin-top: 0.3em;
+		}
+	}
 }
 
 .main {
@@ -127,7 +135,12 @@ a:hover, .link, button:hover {
 	color: $white;
 
 	h2 {
+		text-shadow: 0px 2px 3px black;
 		font-family: 'Roboto Condensed', sans-serif;
+	}
+
+	.icons a span {
+		text-shadow: 0px 1px 2px black;
 	}
 
 	.chevron {
@@ -182,6 +195,7 @@ nav {
 
 	.link {
 		color: $white;
+		text-shadow: 0px 2px 4px black;
 		padding: 5px;
 
 		&:hover {
@@ -200,6 +214,10 @@ nav {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
+
+		.icon-text {
+			color: $white;
+		}
 	}
 
 	.icon {
@@ -212,9 +230,19 @@ nav {
 	}
 }
 
-.bullet::before {
-	content: " - ";
+.bullets {
+	padding-left: 1em;
+	
+	.bullet {
+		list-style-type: disc;
+	
+		&::marker {
+			color: $primary;
+			background-color: $primary;
+		}
+	}
 }
+
 
 #projects {
 	.tabs {
@@ -302,12 +330,16 @@ nav {
 			flex-grow: 1;
 			text-align: left;
 
+			.position {
+				color: $primary;
+			}
+
 			.title a { 
-					color: $primary;
-					
-					&:hover {
-						color: rgba($primary, 0.75);
-					}
+				color: $primary;
+				
+				&:hover {
+					color: rgba($primary, 0.75);
+				}
 			}
 
 			.skills li {
@@ -327,7 +359,7 @@ nav {
 }
 
 footer {
-	@include linear-gradient(to bottom, $primary, darken($primary, 10));
+	@include linear-gradient(to bottom, $primary, darken($primary, 5));
 	grid-row: 3 / 3;
 	grid-column: 1 / 4;
 	font-size: .9rem;
@@ -337,6 +369,7 @@ footer {
 	#contact {
 		margin-bottom: 10px;
 		transition: transform 0.6s ease-in-out;
+		
 		> a {
 			display: block;
 			color: $white;

@@ -44,7 +44,7 @@ Icons.propTypes = {
 }
 
 Icons.defaultProps = {
-  color: '#d9b310',
+  color: '',
   text: ''
 }
 

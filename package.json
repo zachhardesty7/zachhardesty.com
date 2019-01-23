@@ -5,9 +5,7 @@
   "private": true,
   "dependencies": {
     "cloudinary-react": "^1.0.4",
-    "eslint-plugin-react-hooks": "0.0.0",
     "node-sass": "^4.9.4",
-    "npm-run-all": "^4.1.1",
     "prop-types": "^15.6.2",
     "react": "^16.7.0-alpha.0",
     "react-dom": "^16.7.0-alpha.0",
@@ -22,6 +20,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "npm-run-all": "^4.1.1",
     "stylelint": "^9.6.0",
     "stylelint-scss": "^3.3.2",
     "stylelint-config-recommended-scss": "^3.2.0",
@@ -35,6 +34,7 @@
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.11.0",
+    "eslint-plugin-react-hooks": "0.0.0",
     "eslint-plugin-standard": "^4.0.0"
   },
   "browserslist": [

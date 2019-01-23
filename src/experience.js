@@ -10,7 +10,8 @@ const Experience = ({ data }) => (
           <div key={job.position.toLowerCase().replace(/ /g, '-')} className='card'>
             <div className='card-stacked'>
               <div className='content'>
-                <h5 className='position'>{`${job.position} || ${job.employer} || ${job.location}`}</h5>
+                <h5 className='position'>{`${job.position}`}</h5>
+                <h5 className='position'>{`${job.employer} (${job.location})`}</h5>
                 <p className='date'>{job.date}</p>
                 <div className='bullets'>
                   <ul>{job.bullets.map(bullet => <li key={bullet} className='bullet'>{bullet}</li>)}</ul>
