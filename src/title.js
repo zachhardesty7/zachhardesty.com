@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-scroll'
 import Icons from './icons'
 
+import './title.scss'
+
 const Title = () => (
   <div id='title'>
     <h2>zach hardesty</h2>

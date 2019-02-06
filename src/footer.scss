@@ -1,0 +1,35 @@
+@import 'linear-gradient.scss';
+
+$primary: #0b3c5d;
+$accent: #d9b310;
+$dark: #2c2c34;
+$light: #fafafa;
+$white: #fff;
+
+footer {
+	@include linear-gradient(to bottom, $primary, darken($primary, 5));
+	grid-row: 3 / 3;
+	grid-column: 1 / 4;
+	font-size: .9rem;
+	padding-top: 20px;
+	color: $white;
+
+	#contact {
+		margin-bottom: 10px;
+		transition: transform 0.6s ease-in-out;
+		
+		> a {
+			display: block;
+			color: $white;
+		}
+	}
+
+	#bottom {
+		overflow: hidden;
+		font-weight: 300;
+		min-height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

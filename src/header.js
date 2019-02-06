@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-scroll'
 
+import './header.scss'
+
 const calcDistance = (scrollDistanceInPx) => {
   const min = 600
   const max = 2500

@@ -1,6 +1,8 @@
 import React from 'react'
 import Icons from './icons'
 
+import './footer.scss'
+
 const Footer = () => (
   <footer>
     <div id='contact'>

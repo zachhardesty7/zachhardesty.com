@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import './icons.scss'
+
 const Icons = ({ color, text }) => (
   <div className='icons'>
     <div className='icon'>

@@ -10,6 +10,7 @@ import Footer from './footer'
 import './App.scss'
 
 import data from './data.json'
+import './projects.scss'
 
 const App = () => {
   const [display, setDisplay] = useState('app')
@@ -44,14 +45,14 @@ const App = () => {
         <Icons color='black' text />
         <div id='skills'>
           <h5>Skills</h5>
-          <p>
+          <div>
             <b>Proficient with:</b>
             <p> React, JavaScript (incl. ES6+), WordPress, HTML, CSS, SCSS, Git, REST, GraphQL</p>
-          </p>
-          <p>
+          </div>
+          <div>
             <b>Familiar with:</b>
             <p> Python, Java, Webpack, Bootstrap, Semantic UI, CLI, C/C++, PHP, MongoDB</p>
-          </p>
+          </div>
         </div>
         <Experience data={data} />
         <div id='projects'>
