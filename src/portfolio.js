@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import data from './data.json'
+import data from './data/data.json'
 import Card from './card'
 
 const Portfolio = ({ display }) => (

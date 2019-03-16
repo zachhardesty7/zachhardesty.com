@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 import { Image, Transformation } from 'cloudinary-react'
 
-import Title from './title'
-import Header from './header'
-import Icons from './icons'
-import Portfolio from './portfolio'
-import Experience from './experience'
-import Footer from './footer'
+import { Icon, IconGroup } from 'semantic-styled-ui'
+import Title from '../title'
+import Header from '../header'
+import Portfolio from '../portfolio'
+import Experience from '../experience'
+import Footer from '../footer'
 import './App.scss'
 
-import data from './data.json'
-import './projects.scss'
+import data from '../data/data.json'
+import '../projects.scss'
 
 const App = () => {
   const [display, setDisplay] = useState('app')
@@ -20,7 +20,7 @@ const App = () => {
   }
 
   return (
-    <div className='App'>
+    <div className='App root'>
       <Title />
       <Header />
       <main className='main'>
@@ -28,7 +28,7 @@ const App = () => {
           <h3>About Me</h3>
           <div>
             {/* cSpell: disable-next-line */}
-            <Image id='portrait' cloudName='zachhardesty' publicId='portrait_llepmw' format='jpg'>
+            <Image id='portrait' cloudName='zachhardesty' publicId='portrait' format='jpg'>
               <Transformation crop='fill' gravity='faces' width='210' height='210' radius='max' />
             </Image>
           </div>
@@ -42,7 +42,12 @@ const App = () => {
           </p>
 
         </div>
-        <Icons color='black' text />
+        <IconGroup padded='bottom' colorHover='#000000' size='large' compact justify='center'>
+          <Icon name='mail' link='mailto:hello@zachhardesty.com' />
+          <Icon name='github' link='https://github.com/zachhardesty7' />
+          <Icon name='linkedin' link='https://www.linkedin.com/in/zachhardesty7' />
+          <Icon name='briefcase' link='https://docs.google.com/document/d/1JluScSVuuTK9wMS2gK6ygd-4tRxCO73tvwR3lvDe1hI/edit?usp=sharing' />
+        </IconGroup>
         <div id='skills'>
           <h5>Skills</h5>
           <div>
