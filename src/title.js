@@ -7,13 +7,13 @@ import './title.scss'
 const Title = () => (
   <div id='title'>
     <h2>zach hardesty</h2>
-    <IconGroup size='large' light compact justify='center'>
-      <Icon name='mail' link='mailto:hello@zachhardesty.com' />
-      <Icon name='github' link='https://github.com/zachhardesty7' />
-      <Icon name='linkedin' link='https://www.linkedin.com/in/zachhardesty7' />
-      <Icon name='briefcase' link='https://docs.google.com/document/d/1JluScSVuuTK9wMS2gK6ygd-4tRxCO73tvwR3lvDe1hI/edit?usp=sharing' />
+    <IconGroup label size='large' light justify='center'>
+      <Icon name='Mail' link='mailto:hello@zachhardesty.com' />
+      <Icon name='Github' link='https://github.com/zachhardesty7' />
+      <Icon name='LinkedIn' link='https://www.linkedin.com/in/zachhardesty7' />
+      <Icon name='briefcase' label='Resume' link='https://docs.google.com/document/d/1JluScSVuuTK9wMS2gK6ygd-4tRxCO73tvwR3lvDe1hI/edit?usp=sharing' />
     </IconGroup>
-    <Icon tag={Link} to='about' size='bigger' name='chevron down' className='chevron' offset={-60} />
+    <Icon tag={Link} light link='#about' offset={-60} size='bigger' name='chevron down' className='chevron' />
   </div>
 )
 

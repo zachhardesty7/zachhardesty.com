@@ -1,12 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Image, Transformation } from 'cloudinary-react'
+import { Image as CloudImage, Transformation } from 'cloudinary-react'
 
 import {
-  Grid, Modal, Image as SUIImage
+  Grid, Image, Modal
 } from 'semantic-ui-react'
 
-import './modal.scss'
 import './card.scss'
 
 const Card = ({ info }) => (
@@ -19,9 +18,9 @@ const Card = ({ info }) => (
         trigger={(
           <div className='thumbnail link'>
             <div className='overlay' />
-            <Image alt='thumbnail' cloudName='zachhardesty' publicId={info.image} format='jpg'>
+            <CloudImage alt='thumbnail' cloudName='zachhardesty' publicId={info.image} format='jpg'>
               <Transformation crop='fill' gravity='north' width='750' height='750' />
-            </Image>
+            </CloudImage>
           </div>
         )}
       >
@@ -31,7 +30,7 @@ const Card = ({ info }) => (
         <Modal.Content scrolling>
           <Grid columns={2} stackable>
             <Grid.Column computer={7} textAlign='left'>
-              <SUIImage as={Image} className='profile-image' cloudName='zachhardesty' centered size='large' publicId={info.image} format='jpg' />
+              <CloudImage as={Image} className='profile-image' cloudName='zachhardesty' centered size='large' publicId={info.image} format='jpg' />
             </Grid.Column>
             <Grid.Column computer={9} textAlign='justified'>
               <Modal.Description>

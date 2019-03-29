@@ -1,7 +1,26 @@
 import React, { useState } from 'react'
 import { Image, Transformation } from 'cloudinary-react'
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
+import { graphql } from 'gatsby'
 
-import { Icon, IconGroup } from 'semantic-styled-ui'
+import { Link } from 'react-scroll'
+// import Helmet from 'react-helmet'
+// import GImage from 'gatsby-image'
+
+import 'semantic-ui-css/semantic.min.css'
+
+// user-defined
+import {
+  // Footer,
+  Hero,
+  Icon,
+  IconGroup,
+  Navigation,
+  asTag,
+  getBackgroundColor,
+  getColor
+} from 'semantic-styled-ui'
+
 import Title from '../title'
 import Header from '../header'
 import Portfolio from '../portfolio'
@@ -9,8 +28,22 @@ import Experience from '../experience'
 import Footer from '../footer'
 import './App.scss'
 
-import data from '../data/data.json'
+import experiences from '../data/experiences.json'
 import '../projects.scss'
+
+const brandColors = {
+  blue: '#3b5998',
+  orange: '#ca6914',
+  teal: '#749ad3',
+  white: '#ffffff'
+}
+
+const defaultColors = {
+  ...brandColors,
+  primary: brandColors.blue,
+  secondary: brandColors.teal,
+  accent: brandColors.orange
+}
 
 const App = () => {
   const [display, setDisplay] = useState('app')
@@ -27,7 +60,6 @@ const App = () => {
         <div id='about'>
           <h3>About Me</h3>
           <div>
-            {/* cSpell: disable-next-line */}
             <Image id='portrait' cloudName='zachhardesty' publicId='portrait' format='jpg'>
               <Transformation crop='fill' gravity='faces' width='210' height='210' radius='max' />
             </Image>
@@ -42,11 +74,11 @@ const App = () => {
           </p>
 
         </div>
-        <IconGroup padded='bottom' colorHover='#000000' size='large' compact justify='center'>
-          <Icon name='mail' link='mailto:hello@zachhardesty.com' />
-          <Icon name='github' link='https://github.com/zachhardesty7' />
-          <Icon name='linkedin' link='https://www.linkedin.com/in/zachhardesty7' />
-          <Icon name='briefcase' link='https://docs.google.com/document/d/1JluScSVuuTK9wMS2gK6ygd-4tRxCO73tvwR3lvDe1hI/edit?usp=sharing' />
+        <IconGroup label padded='top' color='rgba(0,0,0,.7)' colorHover='rgba(0,0,0,1)' size='big' justify='center'>
+          <Icon name='Mail' link='mailto:hello@zachhardesty.com' />
+          <Icon name='Github' link='https://github.com/zachhardesty7' />
+          <Icon name='LinkedIn' link='https://www.linkedin.com/in/zachhardesty7' />
+          <Icon name='briefcase' label='Resume' link='https://docs.google.com/document/d/1JluScSVuuTK9wMS2gK6ygd-4tRxCO73tvwR3lvDe1hI/edit?usp=sharing' />
         </IconGroup>
         <div id='skills'>
           <h5>Skills</h5>
@@ -59,7 +91,7 @@ const App = () => {
             <p> Python, Java, Webpack, Bootstrap, Semantic UI, CLI, C/C++, PHP, MongoDB</p>
           </div>
         </div>
-        <Experience data={data} />
+        <Experience data={experiences} />
         <div id='projects'>
           <h3>Projects</h3>
           <div className='tabs'>

@@ -27,14 +27,11 @@ $white: #fff;
 		position: absolute;
 		bottom: 5%;
     left: 50%;
-		color: $white;
 		animation: bounce 4s ease-in-out infinite;
-		opacity: 1;
 		transition: opacity .3s ease;	
 		
 		&:hover {
 			cursor: pointer;
-			opacity: 0.75;
 		}
 	}
 }
