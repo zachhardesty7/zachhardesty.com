@@ -23,7 +23,7 @@ module.exports = {
       }
     },
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`
+    `gatsby-transformer-sharp`,
     // {
     //   resolve: 'gatsby-plugin-google-analytics',
     //   options: {
@@ -80,6 +80,6 @@ module.exports = {
     //     displayName: process.env.NODE_ENV !== 'production'
     //   }
     // },
-    // 'gatsby-plugin-netlify'
+    'gatsby-plugin-netlify'
   ]
 }

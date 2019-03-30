@@ -27,8 +27,6 @@ import Experience from '../experience'
 import Footer from '../footer'
 import './App.scss'
 
-import '../projects.scss'
-
 // const brandColors = {
 //   blue: '#3b5998',
 //   orange: '#ca6914',

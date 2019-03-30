@@ -6,6 +6,8 @@ Here lies the source code for my web portfolio, currently built with [React](htt
 
 ## Change Log
 
+- 3.2.1 quick bug fix
+
 - 3.2.0 fully remove cloudinary, particularly for portrait
 
 - 3.1.0 convert from cloudinary to gatsby-image
