@@ -4,15 +4,26 @@ module.exports = {
     siteUrl: 'https://zachhardesty.com'
   },
   plugins: [
-    `gatsby-plugin-sass`,
+    'gatsby-plugin-sass',
+    `gatsby-transformer-json`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `data`,
+        name: 'data',
         path: `${__dirname}/src/data/`,
-        ignore: [`**/\.*`], // ignore files starting with a dot
-      },
-    }
+        ignore: ['**/.*'] // ignore files starting with a dot
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'assets',
+        path: `${__dirname}/src/assets/`,
+        ignore: ['**/.*'] // ignore files starting with a dot
+      }
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`
     // {
     //   resolve: 'gatsby-plugin-google-analytics',
     //   options: {

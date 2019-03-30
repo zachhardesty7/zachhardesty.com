@@ -8,10 +8,12 @@ import './header.scss'
 // import GImage from 'gatsby-image'
 
 const Logo = styled('svg')`
-  vertical-align: middle;
-  padding: 10px;
-  width: 50px;
-  height: 50px;
+  &&& {
+    vertical-align: middle;
+    padding: 10px;
+    width: 50px !important;
+    height: 50px !important;
+  }
 `
 
 const pages = ['about', 'projects', 'experience', 'contact']

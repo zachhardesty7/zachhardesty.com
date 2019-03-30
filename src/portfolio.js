@@ -1,29 +1,31 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import data from './data/data.json'
 import Card from './card'
 
-const Portfolio = ({ display }) => (
+const Portfolio = ({ items, images }) => (
   <div>
-    {data.map((project) => {
-      if (project.type === display) {
-        return (
-          <Card
-            key={project.title.replace(/\s+/g, '-').toLowerCase()}
-            info={project}
-          />
-        )
-      } return false
-    })}
+    {items.map(item => (
+      <Card
+        key={item.title.replace(/\s+/g, '-').toLowerCase()}
+        title={item.title}
+        description={item.description}
+        link={item.link}
+        github={item.github}
+        skills={item.skills}
+        image={images[item.image]}
+      />
+    ))}
   </div>
 )
 
 Portfolio.propTypes = {
-  display: PropTypes.string
+  items: PropTypes.node,
+  images: PropTypes.node
 }
 
 Portfolio.defaultProps = {
-  display: ''
+  items: PropTypes.node,
+  images: PropTypes.node
 }
 
-export default Portfolio
+export default React.memo(Portfolio)

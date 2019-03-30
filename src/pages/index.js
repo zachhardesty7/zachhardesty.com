@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Image, Transformation } from 'cloudinary-react'
-import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
+// import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
 import { graphql } from 'gatsby'
 
-import { Link } from 'react-scroll'
+// import { Link } from 'react-scroll'
 // import Helmet from 'react-helmet'
 // import GImage from 'gatsby-image'
 
@@ -12,13 +12,13 @@ import 'semantic-ui-css/semantic.min.css'
 // user-defined
 import {
   // Footer,
-  Hero,
+  // Hero,
   Icon,
-  IconGroup,
-  Navigation,
-  asTag,
-  getBackgroundColor,
-  getColor
+  IconGroup
+  // Navigation,
+  // asTag,
+  // getBackgroundColor,
+  // getColor
 } from 'semantic-styled-ui'
 
 import Title from '../title'
@@ -28,25 +28,32 @@ import Experience from '../experience'
 import Footer from '../footer'
 import './App.scss'
 
-import experiences from '../data/experiences.json'
 import '../projects.scss'
 
-const brandColors = {
-  blue: '#3b5998',
-  orange: '#ca6914',
-  teal: '#749ad3',
-  white: '#ffffff'
-}
+// const brandColors = {
+//   blue: '#3b5998',
+//   orange: '#ca6914',
+//   teal: '#749ad3',
+//   white: '#ffffff'
+// }
 
-const defaultColors = {
-  ...brandColors,
-  primary: brandColors.blue,
-  secondary: brandColors.teal,
-  accent: brandColors.orange
-}
+// const defaultColors = {
+//   ...brandColors,
+//   primary: brandColors.blue,
+//   secondary: brandColors.teal,
+//   accent: brandColors.orange
+// }
 
-const App = () => {
+const App = ({ data }) => {
   const [display, setDisplay] = useState('app')
+
+  const apps = data.allAppsJson.edges.map(entry => entry.node)
+  const experiences = data.allExperiencesJson.edges.map(entry => entry.node)
+  const websites = data.allWebsitesJson.edges.map(entry => entry.node)
+  const images = {}
+  data.allFile.edges.map(entry => entry.node).forEach((image) => {
+    images[image.childImageSharp.fixed.originalName] = image.childImageSharp.fixed
+  })
 
   const handleClick = (e) => {
     setDisplay(e.target.dataset.display)
@@ -98,12 +105,68 @@ const App = () => {
             <button type='button' data-display='app' className={display === 'app' ? 'active' : undefined} onClick={handleClick}>Apps</button>
             <button type='button' data-display='website' className={display === 'website' ? 'active' : undefined} onClick={handleClick}>Websites</button>
           </div>
-          <Portfolio display={display} />
+          <Portfolio items={display === 'website' ? websites : apps} images={images} />
         </div>
       </main>
       <Footer />
     </div>
   )
 }
+
+export const q = graphql`
+  {
+    allFile(filter: {extension: {eq: "png"}}) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            fixed(width: 700, height: 700, cropFocus: NORTH) {
+              ...GatsbyImageSharpFixed_withWebp
+              originalName
+            }
+          }
+        }
+      }
+    }
+    allAppsJson {
+      edges {
+        node {
+          id
+          title
+          description
+          image
+          link
+          github
+          skills
+        }
+      }
+    }
+    allWebsitesJson {
+      edges {
+        node {
+          id
+          title
+          description
+          image
+          link
+          github
+          skills
+        }
+      }
+    }
+    allExperiencesJson {
+      edges {
+        node {
+          id
+          employer
+          position
+          location
+          date
+          bullets
+        }
+      }
+    }
+  }
+`
 
 export default App

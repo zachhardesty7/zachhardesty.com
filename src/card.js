@@ -1,40 +1,43 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Image as CloudImage, Transformation } from 'cloudinary-react'
+import GImage from 'gatsby-image'
 
-import {
-  Grid, Image, Modal
-} from 'semantic-ui-react'
+import { Grid, Modal } from 'semantic-ui-react'
 
 import './card.scss'
 
-const Card = ({ info }) => (
+const Card = ({
+  description,
+  link,
+  github,
+  skills,
+  image,
+  title
+}) => (
   <div className='card'>
-    {info.image && (
+    {image && (
       <Modal
         size='large'
-        key={info.name}
+        key={title}
         closeIcon
         trigger={(
           <div className='thumbnail link'>
             <div className='overlay' />
-            <CloudImage alt='thumbnail' cloudName='zachhardesty' publicId={info.image} format='jpg'>
-              <Transformation crop='fill' gravity='north' width='750' height='750' />
-            </CloudImage>
+            <GImage fixed={image} />
           </div>
         )}
       >
         <Modal.Header>
-          {info.title}
+          {title}
         </Modal.Header>
         <Modal.Content scrolling>
           <Grid columns={2} stackable>
             <Grid.Column computer={7} textAlign='left'>
-              <CloudImage as={Image} className='profile-image' cloudName='zachhardesty' centered size='large' publicId={info.image} format='jpg' />
+              <GImage fixed={image} />
             </Grid.Column>
             <Grid.Column computer={9} textAlign='justified'>
               <Modal.Description>
-                {/* {info.bio.content.map(paragraph => (
+                {/* {bio.content.map(paragraph => (
                     <p key={paragraph.content[0].value.slice(0, 8)}>
                       {paragraph.content[0].value}
                     </p>
@@ -48,19 +51,19 @@ const Card = ({ info }) => (
     <div className='card-stacked'>
       <div className='content'>
         <h5 className='title'>
-          <a href={info.link} target='blank_'>{info.title}</a>
+          <a href={link} target='blank_'>{title}</a>
         </h5>
-        <p>{info.description}</p>
+        <p>{description}</p>
         <div className='skills'>
-          <ul>{info.skills.map(skill => <li key={skill} className='skill'>{skill}</li>)}</ul>
+          <ul>{skills.map(skill => <li key={skill} className='skill'>{skill}</li>)}</ul>
         </div>
       </div>
       <div className='actions'>
-        {info.link &&
-        <a href={info.link} target='blank_'>View Project</a>
+        {link &&
+          <a href={link} target='blank_'>View Project</a>
         }
-        {info.github &&
-        <a href={info.github} target='blank_'>View Source Code</a>
+        {github &&
+          <a href={github} target='blank_'>View Source Code</a>
         }
       </div>
     </div>
@@ -68,23 +71,21 @@ const Card = ({ info }) => (
 )
 
 Card.propTypes = {
-  info: PropTypes.shape({
-    link: PropTypes.string,
-    github: PropTypes.string,
-    skills: PropTypes.array,
-    image: PropTypes.string,
-    title: PropTypes.string
-  })
+  link: PropTypes.string,
+  github: PropTypes.string,
+  description: PropTypes.string,
+  skills: PropTypes.node,
+  image: PropTypes.string,
+  title: PropTypes.string
 }
 
 Card.defaultProps = {
-  info: {
-    link: '',
-    github: '',
-    skills: [],
-    image: '',
-    title: ''
-  }
+  link: '',
+  github: '',
+  description: '',
+  skills: [],
+  image: '',
+  title: ''
 }
 
-export default Card
+export default React.memo(Card)
