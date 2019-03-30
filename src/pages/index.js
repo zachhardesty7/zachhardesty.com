@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import { Image, Transformation } from 'cloudinary-react'
 // import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
 import { graphql } from 'gatsby'
 
 // import { Link } from 'react-scroll'
 // import Helmet from 'react-helmet'
-// import GImage from 'gatsby-image'
+import GImage from 'gatsby-image'
 
 import 'semantic-ui-css/semantic.min.css'
 
@@ -54,6 +53,7 @@ const App = ({ data }) => {
   data.allFile.edges.map(entry => entry.node).forEach((image) => {
     images[image.childImageSharp.fixed.originalName] = image.childImageSharp.fixed
   })
+  const portrait = data.portrait.childImageSharp.fixed
 
   const handleClick = (e) => {
     setDisplay(e.target.dataset.display)
@@ -67,9 +67,7 @@ const App = ({ data }) => {
         <div id='about'>
           <h3>About Me</h3>
           <div>
-            <Image id='portrait' cloudName='zachhardesty' publicId='portrait' format='jpg'>
-              <Transformation crop='fill' gravity='faces' width='210' height='210' radius='max' />
-            </Image>
+            <GImage className='portrait' fixed={portrait} />
           </div>
 
           <h4>Welcome to my web portfolio!</h4>
@@ -125,6 +123,15 @@ export const q = graphql`
               originalName
             }
           }
+        }
+      }
+    }
+    portrait: file(name: {eq: "portrait"}) {
+      id
+      childImageSharp {
+        fixed(width: 250, height: 250, cropFocus: NORTH) {
+          ...GatsbyImageSharpFixed_withWebp
+          originalName
         }
       }
     }

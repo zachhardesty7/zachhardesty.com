@@ -26,8 +26,8 @@ const Header = () => (
           tag={Link}
           key={page}
           link={`#${page}`}
-          anchor
           offset={-60}
+          tabIndex='0'
           className='link'
         >
           {page}
@@ -50,9 +50,8 @@ const Header = () => (
           tag={Link}
           key={page}
           link={`#${page}`}
-          anchor
           offset={-60}
-          tabIndex={i + 1 + 1}
+          tabIndex='0'
           className='link'
         >
           {page}

@@ -51,7 +51,11 @@ const Card = ({
     <div className='card-stacked'>
       <div className='content'>
         <h5 className='title'>
-          <a href={link} target='blank_'>{title}</a>
+          {
+            link
+              ? <a href={link} target='blank_'>{title}</a>
+              : title
+          }
         </h5>
         <p>{description}</p>
         <div className='skills'>
