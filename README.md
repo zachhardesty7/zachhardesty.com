@@ -6,6 +6,10 @@ Here lies the source code for my web portfolio, currently built with [React](htt
 
 ## Change Log
 
+- 3.1.0 convert from cloudinary to gatsby-image
+
+- 3.0.0 overhaul: eject CRA, add Gatsby & SSUI
+
 - 2.4 update projects, work exp, colors/styles, skills, resume, personal summary and code refactoring to component-based architecture. update react-scripts to 1.1.4. enforce JavaScript Standard Style
 
 - 2.3.2 update readme

@@ -1,6 +1,6 @@
 {
   "name": "zachhardesty-web-portfolio",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "homepage": "https://zachhardesty.com",
   "private": true,
   "sideEffects": false,
@@ -28,6 +28,7 @@
     "dev:https": "gatsby develop --https",
     "test": "yarn run build && yarn run serve",
     "serve": "gatsby serve",
+    "deploy": "npm run build && node deploy",
     "build": "gatsby build"
   },
   "devDependencies": {
