@@ -1,5 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import { getBackgroundColor, getColor } from 'semantic-styled-ui'
+
+const S = {}
+
+S.Bullets = styled.ul`
+  width: fit-content;
+  margin: auto;
+
+  li::marker {
+    ${getColor('primary')};
+    ${getBackgroundColor('primary')};
+  }
+`
 
 const Experience = ({ data }) => (
   <div id='experience'>
@@ -11,9 +25,9 @@ const Experience = ({ data }) => (
             <h5 className='position'>{`${job.position}`}</h5>
             <h5 className='position'>{`${job.employer} (${job.location})`}</h5>
             <p className='date'>{job.date}</p>
-            <div className='bullets'>
-              <ul>{job.bullets.map(bullet => <li key={bullet} className='bullet'>{bullet}</li>)}</ul>
-            </div>
+            <S.Bullets>
+              {job.bullets.map(bullet => <li key={bullet}>{bullet}</li>)}
+            </S.Bullets>
           </div>
         </div>
       </div>

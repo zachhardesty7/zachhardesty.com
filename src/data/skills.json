@@ -1,0 +1,30 @@
+[
+  {
+    "type": "proficient",
+    "values": [
+      "React",
+      "JavaScript (incl. ES6+)",
+      "WordPress",
+      "HTML",
+      "CSS",
+      "SCSS",
+      "Git",
+      "REST",
+      "GraphQL"
+    ]
+  },
+  {
+    "type": "familiar",
+    "values": [
+      "Python",
+      "Java",
+      "Webpack",
+      "Bootstrap",
+      "Semantic UI",
+      "CLI",
+      "C/C++",
+      "PHP",
+      "MongoDB"
+    ]
+  }
+]

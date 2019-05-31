@@ -2,10 +2,40 @@ import React from 'react'
 import { Link } from 'react-scroll'
 import styled from 'styled-components'
 
-import { Navigation } from 'semantic-styled-ui'
+import { Navigation, getBackgroundColor } from 'semantic-styled-ui'
 
-import './header.scss'
 // import GImage from 'gatsby-image'
+
+const S = {}
+
+S.Nav = styled.nav`
+  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  width: 100%;
+  top: 0;
+  align-items: center;
+  z-index: 9;
+  ${getBackgroundColor('primary')};
+
+  div:first-child {
+    justify-self: end;
+  }
+
+  div:last-child {
+    justify-self: start;
+  }
+`
+
+S.NavItem = styled(Navigation.Item)`
+  color: #fff;
+  text-shadow: 0px 2px 4px black;
+  padding: 5px;
+
+  &:hover {
+    color: rgba(#fff, 0.75);
+  }
+`
 
 const Logo = styled('svg')`
   &&& {
@@ -19,19 +49,18 @@ const Logo = styled('svg')`
 const pages = ['about', 'projects', 'experience', 'contact']
 
 const Header = () => (
-  <nav>
+  <S.Nav>
     <div>
       {pages.slice(0, pages.length / 2).map((page, i) => (
-        <Navigation.Item
+        <S.NavItem
           tag={Link}
           key={page}
           link={`#${page}`}
           offset={-60}
           tabIndex='0'
-          className='link'
         >
           {page}
-        </Navigation.Item>
+        </S.NavItem>
       ))}
     </div>
     <Navigation.Logo link='#title'>
@@ -46,19 +75,18 @@ const Header = () => (
     </Navigation.Logo>
     <div>
       {pages.slice(pages.length / 2).map((page, i) => (
-        <Navigation.Item
+        <S.NavItem
           tag={Link}
           key={page}
           link={`#${page}`}
           offset={-60}
           tabIndex='0'
-          className='link'
         >
           {page}
-        </Navigation.Item>
+        </S.NavItem>
       ))}
     </div>
-  </nav>
+  </S.Nav>
 )
 
 export default Header
