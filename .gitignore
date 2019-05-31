@@ -22,7 +22,7 @@ jspm_packages/
 # dotenv environment variables file
 .env
 
-# build folder
+# build folders
 public/
 build/
 dist/

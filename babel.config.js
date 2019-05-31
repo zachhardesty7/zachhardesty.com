@@ -1,27 +1,6 @@
 module.exports = {
   presets: [
-    [
-      '@babel/preset-env',
-      {
-        loose: true,
-        modules: false,
-        useBuiltIns: 'usage',
-        shippedProposals: true,
-        targets: {
-          browsers: [
-            '>0.25%',
-            'not dead'
-          ]
-        }
-      }
-    ],
-    [
-      '@babel/preset-react',
-      {
-        useBuiltIns: true,
-        pragma: 'React.createElement'
-      }
-    ]
+    'babel-preset-gatsby'
   ],
   plugins: [
     'babel-plugin-transform-semantic-ui-react-style-imports',
@@ -38,17 +17,8 @@ module.exports = {
       }
     ],
     [
-      '@babel/plugin-proposal-class-properties',
-      {
+      '@babel/plugin-transform-template-literals', {
         loose: true
-      }
-    ],
-    '@babel/plugin-syntax-dynamic-import',
-    [
-      '@babel/plugin-transform-runtime',
-      {
-        helpers: true,
-        regenerator: true
       }
     ]
   ]
