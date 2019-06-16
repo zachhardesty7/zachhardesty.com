@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
 import {
-  Icon, IconGroup, getBackgroundColor, getColor
+  Icon, IconGroup, getBackgroundColor, getColor,
 } from 'semantic-styled-ui'
 
 const S = {}

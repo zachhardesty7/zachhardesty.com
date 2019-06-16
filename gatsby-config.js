@@ -1,26 +1,26 @@
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
-    siteUrl: 'https://zachhardesty.com'
+    siteUrl: 'https://zachhardesty.com',
   },
   plugins: [
     'gatsby-plugin-sass',
-    `gatsby-transformer-json`,
+    'gatsby-transformer-json',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'data',
         path: `${__dirname}/src/data/`,
-        ignore: ['**/.*'] // ignore files starting with a dot
-      }
+        ignore: ['**/.*'], // ignore files starting with a dot
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'assets',
         path: `${__dirname}/src/assets/`,
-        ignore: ['**/.*'] // ignore files starting with a dot
-      }
+        ignore: ['**/.*'], // ignore files starting with a dot
+      },
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -30,14 +30,14 @@ module.exports = {
     //     pathToConfigModule: `src/utils/typography`
     //   }
     // },
-    // {
-    //   resolve: 'gatsby-plugin-google-analytics',
-    //   options: {
-    //     trackingId: 'UA-133288229-1',
-    //     respectDNT: true
-    //   }
-    // },
-    // 'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-81609810-1',
+        respectDNT: true,
+      },
+    },
+    'gatsby-plugin-sitemap',
     // {
     //   resolve: 'gatsby-plugin-webpack-bundle-analyzer',
     //   options: {
@@ -78,14 +78,14 @@ module.exports = {
     //   }
     // },
     // 'gatsby-plugin-offline',
-    // {
-    //   resolve: 'gatsby-plugin-styled-components',
-    //   options: {
-    //     pure: process.env.NODE_ENV === 'production',
-    //     fileName: process.env.NODE_ENV !== 'production',
-    //     displayName: process.env.NODE_ENV !== 'production'
-    //   }
-    // },
-    'gatsby-plugin-netlify'
-  ]
+    {
+      resolve: 'gatsby-plugin-styled-components',
+      options: {
+        pure: process.env.NODE_ENV === 'production',
+        fileName: process.env.NODE_ENV !== 'production',
+        displayName: process.env.NODE_ENV !== 'production',
+      },
+    },
+    'gatsby-plugin-netlify',
+  ],
 }

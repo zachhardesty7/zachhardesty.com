@@ -99,7 +99,7 @@ const Card = ({
   github,
   skills,
   image,
-  title
+  title,
 }) => (
   <S.Card>
     {image && (
@@ -167,7 +167,7 @@ Card.propTypes = {
   description: PropTypes.string,
   skills: PropTypes.node,
   image: PropTypes.string,
-  title: PropTypes.string
+  title: PropTypes.string,
 }
 
 Card.defaultProps = {
@@ -176,7 +176,7 @@ Card.defaultProps = {
   description: '',
   skills: [],
   image: '',
-  title: ''
+  title: '',
 }
 
 export default React.memo(Card)

@@ -42,12 +42,12 @@ Experience.propTypes = {
     location: PropTypes.string,
     employer: PropTypes.string,
     bullets: PropTypes.array,
-    date: PropTypes.string
-  }))
+    date: PropTypes.string,
+  })),
 }
 
 Experience.defaultProps = {
-  data: []
+  data: [],
 }
 
 export default Experience

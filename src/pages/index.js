@@ -8,14 +8,10 @@ import GImage from 'gatsby-image'
 
 import 'semantic-ui-css/semantic.min.css'
 
-// user-defined
 import {
-  // Footer,
-  // Hero,
   Icon,
   IconGroup,
-  // Navigation,
-  getColor
+  getColor,
 } from 'semantic-styled-ui'
 
 import Title from '../title'
@@ -29,7 +25,7 @@ const defaultColors = {
   secondary: '#fafafa',
   accent: '#d9b310',
   dark: '#2c2c34',
-  light: '#cccccc'
+  light: '#cccccc',
 }
 
 const GlobalStyle = createGlobalStyle`

@@ -20,12 +20,12 @@ const Portfolio = ({ items, images }) => (
 
 Portfolio.propTypes = {
   items: PropTypes.node,
-  images: PropTypes.node
+  images: PropTypes.node,
 }
 
 Portfolio.defaultProps = {
   items: PropTypes.node,
-  images: PropTypes.node
+  images: PropTypes.node,
 }
 
 export default React.memo(Portfolio)
