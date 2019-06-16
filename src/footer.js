@@ -36,8 +36,7 @@ S.Bottom = styled.div`
 const Footer = () => (
   <S.Footer>
     <S.Contact id='contact'>
-      <h4>Contact</h4>
-      <IconGroup light label size='large' padded='bottom' justify='center'>
+      <IconGroup light label size='large' padded justify='center'>
         <Icon name='Mail' link='mailto:hello@zachhardesty.com' />
         <Icon name='Github' link='https://github.com/zachhardesty7' />
         <Icon name='LinkedIn' link='https://www.linkedin.com/in/zachhardesty7' />
@@ -46,7 +45,7 @@ const Footer = () => (
       <a href='mailto:hello@zachhardesty.com'>hello@zachhardesty.com</a>
     </S.Contact>
     <S.Bottom id='bottom'>
-      <p>website designed and developed by zach hardesty || copyright 2018</p>
+      <p>website designed and developed by zach hardesty || copyright 2018 - 2019</p>
     </S.Bottom>
   </S.Footer>
 )

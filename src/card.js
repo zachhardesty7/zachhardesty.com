@@ -5,7 +5,7 @@ import GImage from 'gatsby-image'
 import { Grid, Modal } from 'semantic-ui-react'
 import { getBackgroundColor, getColor } from 'semantic-styled-ui'
 
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const S = {}
 
@@ -16,9 +16,7 @@ S.Card = styled.div`
   margin: .5rem 0 1rem 0;
   border-radius: 2px;
   transition: box-shadow .25s;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),
-  0 1px 5px 0 rgba(0,0,0,0.12),
-  0 3px 1px -2px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
   background-color: #fff;
 `
 
@@ -53,9 +51,11 @@ S.Actions = styled.div`
     margin: 0 12px;
     text-transform: uppercase;
 
-    &:hover {
-      color: rgba(${getColor('primary')}, 0.75);
-    }
+    ${({ theme }) => theme && css`
+      &:hover {
+        color: ${theme.primary}75;
+      }
+    `};
   }
 `
 
@@ -73,9 +73,11 @@ S.Position = styled.div`
 S.TitleLink = styled.a`
   ${getColor('primary')};
   
-  &:hover {
-    color: rgba(${getColor('primary')}, 0.75);
-  }
+  ${({ theme }) => theme && css`
+    &:hover {
+      color: ${theme.primary}75;
+    }
+  `};
 `
 
 S.Skill = styled.li`

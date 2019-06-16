@@ -15,8 +15,6 @@ import {
   Icon,
   IconGroup,
   // Navigation,
-  // asTag,
-  getBackgroundColor,
   getColor
 } from 'semantic-styled-ui'
 
@@ -31,7 +29,7 @@ const defaultColors = {
   secondary: '#fafafa',
   accent: '#d9b310',
   dark: '#2c2c34',
-  light: '#fafafa'
+  light: '#cccccc'
 }
 
 const GlobalStyle = createGlobalStyle`

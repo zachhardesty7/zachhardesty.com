@@ -18,7 +18,7 @@ S.Title = styled.div`
   ${getColor('white')};
 `
 
-S.Header = styled.h2`
+S.Header = styled.h1`
   text-shadow: 0px 2px 3px darkgrey;
   font-family: 'Roboto Condensed', sans-serif;
 `
