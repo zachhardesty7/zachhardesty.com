@@ -1,12 +1,12 @@
 import React from 'react'
-import { Icon, IconGroup, getBackgroundColor } from 'semantic-styled-ui'
-import styled from 'styled-components'
+import { Icon, IconGroup } from 'semantic-styled-ui'
+import styled, { css } from 'styled-components'
 
 const S = {}
 
 S.Footer = styled.footer`
-  ${getBackgroundColor('primary')};
-  /* background-color: linear-gradient(180deg, navy, navy); */
+  background-color: rgb(0,0,0);
+  ${({ theme }) => css`background: linear-gradient(180deg, ${theme.primary}, #000)`};
   grid-row: 3 / 3;
   grid-column: 1 / 4;
   font-size: .9rem;
@@ -21,6 +21,8 @@ S.Contact = styled.div`
   > a {
     display: block;
     color: #fff;
+    margin: auto;
+    width: fit-content;
   }
 `
 

@@ -11,6 +11,7 @@ import 'semantic-ui-css/semantic.min.css'
 import {
   Icon,
   IconGroup,
+  ObjectFromEntries,
   getColor,
 } from 'semantic-styled-ui'
 
@@ -282,10 +283,10 @@ const App = ({ data }) => {
   const apps = data.allAppsJson.edges.map(entry => entry.node)
   const experiences = data.allExperiencesJson.edges.map(entry => entry.node)
   const websites = data.allWebsitesJson.edges.map(entry => entry.node)
-  const skills = Object.fromEntries(
+  const skills = ObjectFromEntries(
     data.allSkillsJson.edges.map(skillset => [skillset.node.type, skillset.node.values])
   )
-  const images = Object.fromEntries(
+  const images = ObjectFromEntries(
     data.allFile.edges.map(image => (
       [image.node.childImageSharp.fixed.originalName, image.node.childImageSharp.fixed]
     ))

@@ -53,7 +53,7 @@ const Header = () => (
     <div>
       {pages.slice(0, pages.length / 2).map((page, i) => (
         <S.NavItem
-          tag={Link}
+          forwardedAs={Link}
           key={page}
           link={`#${page}`}
           offset={-60}
@@ -76,7 +76,7 @@ const Header = () => (
     <div>
       {pages.slice(pages.length / 2).map((page, i) => (
         <S.NavItem
-          tag={Link}
+          forwardedAs={Link}
           key={page}
           link={`#${page}`}
           offset={-60}
