@@ -94,89 +94,89 @@ S.Date = styled.div`
 `
 
 const Card = ({
-  description,
-  link,
-  github,
-  skills,
-  image,
-  title,
+	description,
+	link,
+	github,
+	skills,
+	image,
+	title,
 }) => (
-  <S.Card>
-    {image && (
-      <Modal
-        size='large'
-        key={title}
-        closeIcon
-        trigger={(
-          <div className='thumbnail link'>
-            <div className='overlay' />
-            <GImage fixed={image} />
-          </div>
-        )}
-      >
-        <Modal.Header>
-          {title}
-        </Modal.Header>
-        <Modal.Content scrolling>
-          <Grid columns={2} stackable>
-            <Grid.Column computer={7} textAlign='left'>
-              <GImage fixed={image} />
-            </Grid.Column>
-            <Grid.Column computer={9} textAlign='justified'>
-              <Modal.Description>
-                {/* {bio.content.map(paragraph => (
+	<S.Card>
+		{image && (
+			<Modal
+				size='large'
+				key={title}
+				closeIcon
+				trigger={(
+					<div className='thumbnail link'>
+						<div className='overlay' />
+						<GImage fixed={image} />
+					</div>
+				)}
+			>
+				<Modal.Header>
+					{title}
+				</Modal.Header>
+				<Modal.Content scrolling>
+					<Grid columns={2} stackable>
+						<Grid.Column computer={7} textAlign='left'>
+							<GImage fixed={image} />
+						</Grid.Column>
+						<Grid.Column computer={9} textAlign='justified'>
+							<Modal.Description>
+								{/* {bio.content.map(paragraph => (
                     <p key={paragraph.content[0].value.slice(0, 8)}>
                       {paragraph.content[0].value}
                     </p>
                   ))} */}
-              </Modal.Description>
-            </Grid.Column>
-          </Grid>
-        </Modal.Content>
-      </Modal>
-    )}
-    <S.CardStacked>
-      <S.Content>
-        <h5 className='title'>
-          {
-            link
-              ? <S.TitleLink href={link} target='blank_'>{title}</S.TitleLink>
-              : title
-          }
-        </h5>
-        <p>{description}</p>
-        <div className='skills'>
-          <ul>{skills.map(skill => <S.Skill key={skill}>{skill}</S.Skill>)}</ul>
-        </div>
-      </S.Content>
-      <S.Actions>
-        {link &&
-          <a href={link} target='blank_'>View Project</a>
-        }
-        {github &&
-          <a href={github} target='blank_'>View Source Code</a>
-        }
-      </S.Actions>
-    </S.CardStacked>
-  </S.Card>
+							</Modal.Description>
+						</Grid.Column>
+					</Grid>
+				</Modal.Content>
+			</Modal>
+		)}
+		<S.CardStacked>
+			<S.Content>
+				<h5 className='title'>
+					{
+						link
+							? <S.TitleLink href={link} target='blank_'>{title}</S.TitleLink>
+							: title
+					}
+				</h5>
+				<p>{description}</p>
+				<div className='skills'>
+					<ul>{skills.map(skill => <S.Skill key={skill}>{skill}</S.Skill>)}</ul>
+				</div>
+			</S.Content>
+			<S.Actions>
+				{link &&
+				<a href={link} target='blank_'>View Project</a>
+				}
+				{github &&
+				<a href={github} target='blank_'>View Source Code</a>
+				}
+			</S.Actions>
+		</S.CardStacked>
+	</S.Card>
 )
 
 Card.propTypes = {
-  link: PropTypes.string,
-  github: PropTypes.string,
-  description: PropTypes.string,
-  skills: PropTypes.node,
-  image: PropTypes.string,
-  title: PropTypes.string,
+	link: PropTypes.string,
+	github: PropTypes.string,
+	description: PropTypes.string,
+	skills: PropTypes.node,
+	image: PropTypes.string,
+	title: PropTypes.string,
 }
 
 Card.defaultProps = {
-  link: '',
-  github: '',
-  description: '',
-  skills: [],
-  image: '',
-  title: '',
+	link: '',
+	github: '',
+	description: '',
+	skills: [],
+	image: '',
+	title: '',
 }
 
 export default React.memo(Card)

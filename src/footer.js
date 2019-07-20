@@ -36,20 +36,20 @@ S.Bottom = styled.div`
 `
 
 const Footer = () => (
-  <S.Footer>
-    <S.Contact id='contact'>
-      <IconGroup light label size='large' padded justify='center'>
-        <Icon name='Mail' link='mailto:hello@zachhardesty.com' />
-        <Icon name='Github' link='https://github.com/zachhardesty7' />
-        <Icon name='LinkedIn' link='https://www.linkedin.com/in/zachhardesty7' />
-        <Icon name='briefcase' label='Resume' link='https://docs.google.com/document/d/1JluScSVuuTK9wMS2gK6ygd-4tRxCO73tvwR3lvDe1hI/edit?usp=sharing' />
-      </IconGroup>
-      <a href='mailto:hello@zachhardesty.com'>hello@zachhardesty.com</a>
-    </S.Contact>
-    <S.Bottom id='bottom'>
-      <p>website designed and developed by zach hardesty || copyright 2018 - 2019</p>
-    </S.Bottom>
-  </S.Footer>
+	<S.Footer>
+		<S.Contact id='contact'>
+			<IconGroup light label size='large' padded justify='center'>
+				<Icon name='Mail' link='mailto:hello@zachhardesty.com' />
+				<Icon name='Github' link='https://github.com/zachhardesty7' />
+				<Icon name='LinkedIn' link='https://www.linkedin.com/in/zachhardesty7' />
+				<Icon name='briefcase' label='Resume' link='https://docs.google.com/document/d/1JluScSVuuTK9wMS2gK6ygd-4tRxCO73tvwR3lvDe1hI/edit?usp=sharing' />
+			</IconGroup>
+			<a href='mailto:hello@zachhardesty.com'>hello@zachhardesty.com</a>
+		</S.Contact>
+		<S.Bottom id='bottom'>
+			<p>website designed and developed by zach hardesty || copyright 2018 - 2019</p>
+		</S.Bottom>
+	</S.Footer>
 )
 
 export default Footer
