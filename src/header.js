@@ -37,7 +37,12 @@ S.NavItem = styled(Navigation.Item)`
   }
 `
 
-const Logo = styled('svg')`
+S.LogoCon = styled.div`
+	padding: 0 0.3em;
+	margin: 0 !important;
+`
+
+S.Logo = styled.svg`
   &&& {
     vertical-align: middle;
     padding: 10px;
@@ -64,14 +69,12 @@ const Header = () => (
 			))}
 		</div>
 		<Navigation.Logo link='#title'>
-			<Logo
-				xmlns='http://www.w3.org/2000/svg'
-				viewBox='0 0 934 934'
-			>
-				<title>ZH Logo V4</title>
-				<path className='line' d='M189.51 244.81l299.37-.75-299.46 299.46L745 544M487.53 371.47v343.59M694.34 371.34v343.85' />
-				<circle className='outline' cx='467' cy='467' r='437' />
-			</Logo>
+			<S.LogoCon>
+				<S.Logo xmlns='http://www.w3.org/2000/svg' viewBox='0 0 934 934'>
+					<path strokeLinejoin='round' d='M189.5 244.8l299.4-.7-299.5 299.4 555.6.5M487.5 371.5v343.6m206.8-343.8v343.9' fill='none' stroke='#fff' strokeLinecap='round' strokeWidth='60' />
+					<circle cx='467' cy='467' r='437' fill='none' stroke='#fff' strokeLinecap='round' strokeLinejoin='round' strokeMiterlimit='10' strokeWidth='60' />
+				</S.Logo>
+			</S.LogoCon>
 		</Navigation.Logo>
 		<div>
 			{pages.slice(pages.length / 2).map((page, i) => (
