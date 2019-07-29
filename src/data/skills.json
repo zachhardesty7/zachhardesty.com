@@ -1,7 +1,6 @@
 [
   {
-    "type": "proficient",
-    "values": [
+    "proficient": [
       "React",
       "JavaScript (incl. ES6+)",
       "WordPress",
@@ -11,11 +10,8 @@
       "Git",
       "REST",
       "GraphQL"
-    ]
-  },
-  {
-    "type": "familiar",
-    "values": [
+    ],
+    "familiar": [
       "Python",
       "Java",
       "Webpack",

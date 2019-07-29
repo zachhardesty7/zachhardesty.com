@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
+import styled, { ThemeProvider, createGlobalStyle, css } from 'styled-components'
 import { graphql } from 'gatsby'
 
 // import { Link } from 'react-scroll'
@@ -7,7 +7,6 @@ import { graphql } from 'gatsby'
 import GImage from 'gatsby-image'
 
 import 'semantic-ui-css/semantic.min.css'
-
 import {
 	Icon,
 	IconGroup,
@@ -214,50 +213,48 @@ S.Tabs = styled.div`
   padding: 1rem 0;
   align-content: center;
   align-items: center;
+`
 
-  .active {
-    border-bottom: 5px solid gold;
-  }
+S.Button = styled.button`
+	background-color: transparent;
+	border: none;
+	${getColor('primary')};
+	transition: border .4s;
+	font-size: 1.25rem;
+	margin: 0 10px;
+	padding: 10px 0;
 
-  button {
-    background-color: transparent;
-    border: none;
-    ${getColor('primary')};
-    transition: border .4s;
-    font-size: 1.25rem;
-    margin: 0 10px;
-    padding: 10px 0;
+	&:focus {
+		outline: none;
+	}
 
-    &:focus {
-      outline: none;
-    }
+	${({ active }) => active && css`
+		&:hover {
+    	border-bottom: 5px solid gold;
+		}
+	`}
 
-    &:hover:not(.active) {
-      border-bottom: 2px solid gold;
-      color: rgba(gold, 0.75);
-    }
-  }
+	${({ active }) => !active && css`
+		&:hover {
+			border-bottom: 2px solid gold;
+			color: rgba(gold, 0.75);
+		}
+	`}
 `
 
 const App = ({ data }) => {
 	const [display, setDisplay] = useState('app')
 
-	const apps = data.allAppsJson.edges.map(entry => entry.node)
-	const experiences = data.allExperiencesJson.edges.map(entry => entry.node)
-	const websites = data.allWebsitesJson.edges.map(entry => entry.node)
-	const skills = ObjectFromEntries(
-		data.allSkillsJson.edges.map(skillset => [skillset.node.type, skillset.node.values])
-	)
+	const { apps } = data.allAppsJson
+	const { experiences } = data.allExperiencesJson
+	const { websites } = data.allWebsitesJson
+	const { skills } = data
+	const { portrait } = data.file.childImageSharp
 	const images = ObjectFromEntries(
-		data.allFile.edges.map(image => (
-			[image.node.childImageSharp.fixed.originalName, image.node.childImageSharp.fixed]
+		data.allFile.images.map(image => (
+			[image.childImageSharp.image.originalName, image.childImageSharp.image]
 		))
 	)
-	const portrait = data.portrait.childImageSharp.fixed
-
-	const handleClick = (e) => {
-		setDisplay(e.target.dataset.display)
-	}
 
 	return (
 		<ThemeProvider theme={defaultColors}>
@@ -302,8 +299,20 @@ const App = ({ data }) => {
 					<div id='projects'>
 						<h3>Projects</h3>
 						<S.Tabs>
-							<button type='button' data-display='app' className={display === 'app' ? 'active' : undefined} onClick={handleClick}>Apps</button>
-							<button type='button' data-display='website' className={display === 'website' ? 'active' : undefined} onClick={handleClick}>Websites</button>
+							<S.Button
+								type='button'
+								active={display === 'app'}
+								onClick={() => setDisplay('app')}
+							>
+								Apps
+							</S.Button>
+							<S.Button
+								type='button'
+								active={display === 'website'}
+								onClick={() => setDisplay('website')}
+							>
+								Websites
+							</S.Button>
 						</S.Tabs>
 						<Portfolio items={display === 'website' ? websites : apps} images={images} />
 					</div>
@@ -317,72 +326,58 @@ const App = ({ data }) => {
 export const q = graphql`
   {
     allFile(filter: {extension: {eq: "png"}}) {
-      edges {
-        node {
-          id
-          childImageSharp {
-            fixed(width: 700, height: 700, cropFocus: NORTH) {
-              ...GatsbyImageSharpFixed_withWebp
-              originalName
-            }
+      images: nodes {
+        childImageSharp {
+          image: fixed(width: 700, height: 700, cropFocus: NORTH) {
+            ...GatsbyImageSharpFixed_withWebp
+            originalName
           }
         }
       }
     }
-    portrait: file(name: {eq: "portrait"}) {
-      id
+    file(name: {eq: "portrait"}) {
       childImageSharp {
-        fixed(width: 250, height: 250, cropFocus: NORTH) {
+        portrait: fixed(width: 250, height: 250, cropFocus: NORTH) {
           ...GatsbyImageSharpFixed_withWebp
           originalName
         }
       }
     }
     allAppsJson {
-      edges {
-        node {
-          id
-          title
-          description
-          image
-          link
-          github
-          skills
-        }
+      apps: nodes {
+        id
+        title
+        description
+        image
+        link
+        github
+        skills
       }
     }
     allWebsitesJson {
-      edges {
-        node {
-          id
-          title
-          description
-          image
-          link
-          github
-          skills
-        }
+      websites: nodes {
+        id
+        title
+        description
+        image
+        link
+        github
+        skills
       }
     }
     allExperiencesJson {
-      edges {
-        node {
-          id
-          employer
-          position
-          location
-          date
-          bullets
-        }
+      experiences: nodes {
+        id
+        employer
+        position
+        location
+        date
+        bullets
       }
     }
-    allSkillsJson {
-      edges {
-        node {
-          type
-          values
-        }
-      }
+    skills: skillsJson {
+      proficient
+      familiar
     }
   }
 `
