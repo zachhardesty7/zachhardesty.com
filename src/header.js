@@ -33,7 +33,7 @@ S.NavItem = styled(Navigation.Item)`
   padding: 5px;
 
   &:hover {
-    color: rgba(#fff, 0.75);
+    color: rgba(255, 255, 255, 0.75);
   }
 `
 
@@ -48,6 +48,16 @@ S.Logo = styled.svg`
     padding: 10px;
     width: 50px !important;
     height: 50px !important;
+
+		&:hover {
+			path, circle {
+    		stroke: rgba(255, 255, 255, 0.75);
+			}
+  	}
+
+		path, circle {
+			transition: stroke .3s ease;
+		}
   }
 `
 
@@ -60,15 +70,16 @@ const Header = () => (
 				<S.NavItem
 					forwardedAs={Link}
 					key={page}
-					link={`#${page}`}
+					to={page}
 					offset={-60}
 					tabIndex='0'
+					link='#'
 				>
 					{page}
 				</S.NavItem>
 			))}
 		</div>
-		<Navigation.Logo link='#title'>
+		<Navigation.Logo as={Link} to='title' link='#'>
 			<S.LogoCon>
 				<S.Logo xmlns='http://www.w3.org/2000/svg' viewBox='0 0 934 934'>
 					<path strokeLinejoin='round' d='M189.5 244.8l299.4-.7-299.5 299.4 555.6.5M487.5 371.5v343.6m206.8-343.8v343.9' fill='none' stroke='#fff' strokeLinecap='round' strokeWidth='60' />
@@ -81,9 +92,10 @@ const Header = () => (
 				<S.NavItem
 					forwardedAs={Link}
 					key={page}
-					link={`#${page}`}
+					to={page}
 					offset={-60}
 					tabIndex='0'
+					link='#'
 				>
 					{page}
 				</S.NavItem>

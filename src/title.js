@@ -44,7 +44,7 @@ const Title = () => (
 			<Icon name='LinkedIn' link='https://www.linkedin.com/in/zachhardesty7' />
 			<Icon name='briefcase' label='Resume' link='https://docs.google.com/document/d/1JluScSVuuTK9wMS2gK6ygd-4tRxCO73tvwR3lvDe1hI/edit?usp=sharing' />
 		</IconGroup>
-		<S.Chevron forwardedAs={Link} light link='#about' offset={-60} size='bigger' name='chevron down' />
+		<S.Chevron forwardedAs={Link} light link='#' offset={-60} size='bigger' name='chevron down' to='about' />
 	</S.Title>
 )
 
