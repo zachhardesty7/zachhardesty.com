@@ -94,12 +94,12 @@ S.Date = styled.div`
 `
 
 const Card = ({
-	description,
-	link,
-	github,
-	skills,
+	description = '',
+	link = '',
+	github = '',
+	skills = [],
 	image,
-	title,
+	title = '',
 }) => (
 	<S.Card>
 		{image && (
@@ -151,10 +151,10 @@ const Card = ({
 			</S.Content>
 			<S.Actions>
 				{link &&
-				<a href={link} target='blank_'>View Project</a>
+					<a href={link} target='blank_'>View Project</a>
 				}
 				{github &&
-				<a href={github} target='blank_'>View Source Code</a>
+					<a href={github} target='blank_'>View Source Code</a>
 				}
 			</S.Actions>
 		</S.CardStacked>
@@ -166,17 +166,18 @@ Card.propTypes = {
 	github: PropTypes.string,
 	description: PropTypes.string,
 	skills: PropTypes.node,
-	image: PropTypes.string,
+	image: PropTypes.shape({
+		width: PropTypes.number.isRequired,
+		height: PropTypes.number.isRequired,
+		src: PropTypes.string.isRequired,
+		srcSet: PropTypes.string.isRequired,
+		base64: PropTypes.string,
+		tracedSVG: PropTypes.string,
+		srcWebp: PropTypes.string,
+		srcSetWebp: PropTypes.string,
+		media: PropTypes.string,
+	}),
 	title: PropTypes.string,
-}
-
-Card.defaultProps = {
-	link: '',
-	github: '',
-	description: '',
-	skills: [],
-	image: '',
-	title: '',
 }
 
 export default React.memo(Card)

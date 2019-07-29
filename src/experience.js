@@ -15,7 +15,7 @@ S.Bullets = styled.ul`
   }
 `
 
-const Experience = ({ data }) => (
+const Experience = ({ data = [] }) => (
 	<div id='experience'>
 		<h3>Experience</h3>
 		{data.map(job => (
@@ -44,10 +44,6 @@ Experience.propTypes = {
 		bullets: PropTypes.array,
 		date: PropTypes.string,
 	})),
-}
-
-Experience.defaultProps = {
-	data: [],
 }
 
 export default Experience

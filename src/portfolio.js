@@ -17,8 +17,26 @@ const Portfolio = ({ items = [], images }) => (
 )
 
 Portfolio.propTypes = {
-	items: PropTypes.node,
-	images: PropTypes.node,
+	images: PropTypes.objectOf(PropTypes.shape({
+		width: PropTypes.number.isRequired,
+		height: PropTypes.number.isRequired,
+		src: PropTypes.string.isRequired,
+		srcSet: PropTypes.string.isRequired,
+		base64: PropTypes.string,
+		tracedSVG: PropTypes.string,
+		srcWebp: PropTypes.string,
+		srcSetWebp: PropTypes.string,
+		media: PropTypes.string,
+	})),
+	items: PropTypes.arrayOf(PropTypes.shape({
+		id: PropTypes.string,
+		title: PropTypes.string,
+		description: PropTypes.string,
+		image: PropTypes.string,
+		link: PropTypes.string,
+		github: PropTypes.string,
+		skills: PropTypes.arrayOf(PropTypes.string),
+	})),
 }
 
 export default React.memo(Portfolio)
