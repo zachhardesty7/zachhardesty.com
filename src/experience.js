@@ -16,7 +16,7 @@ S.Bullets = styled.ul`
 `
 
 const Experience = ({ data = [] }) => (
-	<div id='experience'>
+	<>
 		<h3>Experience</h3>
 		{data.map(job => (
 			<div key={job.position.toLowerCase().replace(/ /g, '-')} className='card'>
@@ -32,7 +32,7 @@ const Experience = ({ data = [] }) => (
 				</div>
 			</div>
 		))}
-	</div>
+	</>
 )
 
 Experience.propTypes = {

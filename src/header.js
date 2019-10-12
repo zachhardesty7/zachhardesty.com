@@ -1,29 +1,28 @@
 import React from 'react'
 import { Link } from 'react-scroll'
 import styled from 'styled-components'
-
 import { Navigation, getBackgroundColor } from 'semantic-styled-ui'
-
-// import GImage from 'gatsby-image'
 
 const S = {}
 
 S.Nav = styled.nav`
   position: fixed;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
   width: 100%;
-  top: 0;
   align-items: center;
   z-index: 9;
   ${getBackgroundColor('primary')};
 
-  div:first-child {
-    justify-self: end;
+  & > div:first-child {
+    display: flex;
+		flex: 1 1 auto;
+    justify-content: flex-end;
   }
 
-  div:last-child {
-    justify-self: start;
+  & > div:last-child {
+    display: flex;
+		flex: 1 1 auto;
+    justify-content: flex-start;
   }
 `
 
@@ -39,16 +38,10 @@ S.NavItem = styled(Navigation.Item)`
 
 S.LogoCon = styled.div`
 	padding: 0 0.3em;
-	margin: 0 !important;
 `
 
 S.Logo = styled.svg`
   &&& {
-    vertical-align: middle;
-    padding: 10px;
-    width: 50px !important;
-    height: 50px !important;
-
 		&:hover {
 			path, circle {
     		stroke: rgba(255, 255, 255, 0.75);
@@ -79,7 +72,7 @@ const Header = () => (
 				</S.NavItem>
 			))}
 		</div>
-		<Navigation.Logo as={Link} to='title' link='#'>
+		<Navigation.Logo logoSize='small' as={Link} to='title' link='#'>
 			<S.LogoCon>
 				<S.Logo xmlns='http://www.w3.org/2000/svg' viewBox='0 0 934 934'>
 					<path strokeLinejoin='round' d='M189.5 244.8l299.4-.7-299.5 299.4 555.6.5M487.5 371.5v343.6m206.8-343.8v343.9' fill='none' stroke='#fff' strokeLinecap='round' strokeWidth='60' />

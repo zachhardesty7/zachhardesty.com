@@ -2,17 +2,19 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
 import {
-	Icon, IconGroup, getBackgroundColor, getColor,
+	Icon,
+	IconGroup,
+	getBackgroundColor,
+	getColor,
 } from 'semantic-styled-ui'
 
 const S = {}
 
 S.Title = styled.div`
-  grid-row: 1 / 2;
-  grid-column: 1 / 4;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   ${getBackgroundColor('primary')};
   ${getColor('white')};
@@ -26,17 +28,18 @@ S.Header = styled.h1`
 S.Chevron = styled(Icon)`
   position: absolute;
   bottom: 5%;
-  left: 50%;
+	left: 50%;
+	right: 50%;
   animation: bounce 4s ease-in-out infinite;
   transition: opacity .3s ease;
-  
-  &:hover {
-    cursor: pointer;
-  }
+
+	i {
+		transform: translateX(-50%);
+	}
 `
 
 const Title = () => (
-	<S.Title id='title'>
+	<S.Title>
 		<S.Header>zach hardesty</S.Header>
 		<IconGroup label size='large' light justify='center'>
 			<Icon name='Mail' link='mailto:hello@zachhardesty.com' />

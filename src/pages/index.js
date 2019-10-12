@@ -125,14 +125,6 @@ const GlobalStyle = createGlobalStyle`
     margin: .5rem 0 .4rem 0
   }
 
-  .App {
-    display: grid;
-    text-align: center;
-    grid-column-gap: 5%;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto;
-  }
-
   #about, #projects, #experience {
     padding-top: 1rem;
     margin-top: 2rem;
@@ -152,11 +144,6 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  .main {
-    grid-row: 2 / 3;
-    grid-column: 2 / 3;
-  }
-
   .portrait {
     width: 15rem;
     border-radius: 100%;
@@ -172,46 +159,62 @@ const GlobalStyle = createGlobalStyle`
       transform: translate(-50%, 40%);
     }
   }
-
-  .button {
-    position: relative;
-    cursor: pointer;
-    display: inline-block;
-    overflow: hidden;
-    user-select: none;
-    margin: 0 .25rem;
-    z-index: 1;
-    transition: .3s ease-out;
-    color: #fff;
-    background-color: $accent;
-    letter-spacing: .5px;
-    font-size: 1rem;
-    outline: 0;
-    border: none;
-    border-radius: 2px;
-    height: 36px;
-    line-height: 36px;
-    padding: 0 2rem;
-    text-transform: uppercase;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-
-    &:hover {
-      background-color: lighten($accent, 20);
-      box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
-    }
-
-    &:focus {
-      background-color: darken($accent, 20);
-    }
-  }
 `
 
 const S = {}
 
+S.App = styled.div`
+      /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+`
+
+S.Main = styled.main`
+  width: 70%;
+  margin: auto;
+`
+
+S.Section = styled.div`
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  padding-top: 1rem;
+  margin-top: 2rem;
+`
+
+S.Skills = styled.div`
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+`
+
+S.Experience = styled.div`
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+`
+
+S.Projects = styled.div`
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+`
+
 S.Tabs = styled.div`
   ${getColor('primary')};
   padding: 1rem 0;
-  align-content: center;
   align-items: center;
 `
 
@@ -258,12 +261,12 @@ const App = ({ data }) => {
 
 	return (
 		<ThemeProvider theme={defaultColors}>
-			<div className='App root'>
+			<S.App>
 				<GlobalStyle />
-				<Title />
 				<Header />
-				<main className='main'>
-					<div id='about'>
+				<Title />
+				<S.Main>
+					<S.Section>
 						<h3>About Me</h3>
 						<div>
 							<GImage className='portrait' fixed={portrait} />
@@ -277,14 +280,14 @@ const App = ({ data }) => {
 							{`What does the future entail for me? Cryptocurrency, machine learning, and web and mobile app development all pique my interests. That being said, I find it difficult to commit to a particular path this early and stay open to all possibilities. Please do not to hesitate to contact me with opportunities or inquiries and connect with me on LinkedIn!`}
 						</p>
 
-					</div>
+					</S.Section>
 					<IconGroup label padded='top' color='rgba(0,0,0,.7)' colorHover='rgba(0,0,0,1)' size='big' justify='center'>
 						<Icon name='Mail' link='mailto:hello@zachhardesty.com' />
 						<Icon name='Github' link='https://github.com/zachhardesty7' />
 						<Icon name='LinkedIn' link='https://www.linkedin.com/in/zachhardesty7' />
 						<Icon name='briefcase' label='Resume' link='https://docs.google.com/document/d/1JluScSVuuTK9wMS2gK6ygd-4tRxCO73tvwR3lvDe1hI/edit?usp=sharing' />
 					</IconGroup>
-					<div id='skills'>
+					<S.Section>
 						<h5>Skills</h5>
 						<div>
 							<b>Proficient with:</b>
@@ -294,9 +297,12 @@ const App = ({ data }) => {
 							<b>Familiar with:</b>
 							<p>{skills.familiar.join(', ')}</p>
 						</div>
-					</div>
-					<Experience data={experiences} />
-					<div id='projects'>
+					</S.Section>
+					<S.Section>
+						<Experience data={experiences} />
+
+					</S.Section>
+					<S.Section>
 						<h3>Projects</h3>
 						<S.Tabs>
 							<S.Button
@@ -315,10 +321,10 @@ const App = ({ data }) => {
 							</S.Button>
 						</S.Tabs>
 						<Portfolio items={display === 'website' ? websites : apps} images={images} />
-					</div>
-				</main>
+					</S.Section>
+				</S.Main>
 				<Footer />
-			</div>
+			</S.App>
 		</ThemeProvider>
 	)
 }

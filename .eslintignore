@@ -26,7 +26,8 @@ yarn.lock
 # build folder
 public
 build
-dist
+**/dist/**
+dist/
 
 # gatsby cache folder
 .cache
