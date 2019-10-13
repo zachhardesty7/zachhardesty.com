@@ -72,3 +72,9 @@ typings/
 
 # Optional REPL history
 .node_repl_history
+
+# svelte added
+.DS_Store
+/src/node_modules/@sapper/
+/cypress/screenshots/
+/__sapper__/
