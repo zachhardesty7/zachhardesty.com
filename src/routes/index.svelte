@@ -7,49 +7,65 @@
     light: "#cccccc"
   };
 
-  import apps from "../data/apps.json";
-  import data from "../data/data.json";
-  import experiences from "../data/experiences.json";
-  import skills from "../data/skills.json";
-  import websites from "../data/websites.json";
+  import { apps, data, experiences, skills, websites } from "../data";
 
-  $: display = "apps";
+  let display = "apps";
 </script>
 
 <style>
-  /* h1, */
-  /* figure, */
-  p {
+  main {
+    width: 70%;
+    margin: auto;
+  }
+
+  section {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding-top: 1rem;
+    margin-top: 2rem;
+  }
+
+  .portrait {
+    width: 15rem;
+    border-radius: 100%;
     text-align: center;
-    margin: 0 auto;
   }
 
-  /* h1 {
-    font-size: 2.8em;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin: 0 0 0.5em 0;
-  } */
-
-  /* figure {
-    margin: 0 0 1em 0;
-  } */
-
-  img {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 0 1em 0;
+  button {
+    background-color: transparent;
+    border: none;
+    color: var(--primary);
+    transition: border 0.4s;
+    font-size: 1.25rem;
+    margin: 0 10px;
+    padding: 10px 0;
+    border-bottom: 0px solid gold;
+  }
+  button.active {
+    border-bottom-width: 2px;
+  }
+  button:hover {
+    border-bottom-width: 5px;
+  }
+  button:focus {
+    outline: none;
   }
 
-  p {
-    margin: 1em auto;
+  #skills {
+    align-items: flex-start;
+    padding-top: 2rem;
   }
-
-  /* @media (min-width: 480px) {
-    h1 {
-      font-size: 4em;
-    }
-  } */
+  #skills div {
+    display: block;
+    text-align: left;
+  }
+  #skills div p {
+    margin-top: 0.3em;
+  }
 </style>
 
 <svelte:head>
@@ -63,10 +79,10 @@
     <section>
       <h3>About Me</h3>
       <div>
-        <img className="portrait" alt="portrait" src="/portrait.jpg" />
+        <img class="portrait" alt="portrait" src="/portrait.jpg" />
       </div>
 
-      <h4>Welcome to my web portfolio!</h4>
+      <h4>Welcome to my web portfolio!!</h4>
       <p>
         {`First, allow me to tell you my story. I am now enrolled in the University of Texas at Austin's computer science degree plan but my journey began much earlier. From a young age, understanding the “why” and the “how” of everything from common items to modern marvels fascinated me. Naturally, once I received my parents' old computer I began tinkering and familiarizing myself. Learning to program daunted me but I hesitantly began exploring the basics of HTML, CSS, and JavaScript in my spare time. After getting a job with my neighbor, I started tinkering around in WordPress. There, I uncovered my fascination with web development and the rest is history.`}
       </p>
@@ -90,7 +106,7 @@
         label="Resume"
         link="https://docs.google.com/document/d/1JluScSVuuTK9wMS2gK6ygd-4tRxCO73tvwR3lvDe1hI/edit?usp=sharing" />
     </section> -->
-    <section>
+    <section id="skills">
       <h5>Skills</h5>
       <div>
         <b>Proficient with:</b>
@@ -110,13 +126,13 @@
       <div>
         <button
           type="button"
-          active={display === 'app'}
-          on:click={() => (display = 'app')}>
+          class:active={display === 'apps'}
+          on:click={() => (display = 'apps')}>
           Apps
         </button>
         <button
           type="button"
-          active={display === 'website'}
+          class:active={display === 'website'}
           on:click={() => (display = 'website')}>
           Websites
         </button>
