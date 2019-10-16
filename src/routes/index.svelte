@@ -1,12 +1,4 @@
 <script>
-  const defaultColors = {
-    primary: "#0b3c5d",
-    secondary: "#fafafa",
-    accent: "#d9b310",
-    dark: "#2c2c34",
-    light: "#cccccc"
-  };
-
   import { apps, data, experiences, skills, websites } from "../data";
 
   let display = "apps";
@@ -43,7 +35,7 @@
     font-size: 1.25rem;
     margin: 0 10px;
     padding: 10px 0;
-    border-bottom: 0px solid gold;
+    border-bottom: 0px solid var(--accent);
   }
   button.active {
     border-bottom-width: 2px;
