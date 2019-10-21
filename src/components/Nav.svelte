@@ -10,30 +10,29 @@
     position: fixed;
     display: flex;
     width: 100%;
-    align-items: center;
     z-index: 9;
     background-color: var(--primary);
   }
 
-  ul > li:first-child {
-    display: flex;
-    flex: 1 1 auto;
-    justify-content: flex-end;
-  }
-  ul > li:last-child {
-    display: flex;
-    flex: 1 1 auto;
-    justify-content: flex-start;
-  }
-
   ul {
     display: flex;
-    width: 100%;
+    align-items: center;
+    flex: 1;
   }
 
   li {
     display: flex;
+    flex: 0;
     align-items: center;
+  }
+
+  li:first-child {
+    flex: 1;
+    justify-content: flex-end;
+  }
+  li:last-child {
+    flex: 1;
+    justify-content: flex-start;
   }
 
   a {
@@ -48,19 +47,17 @@
 
   svg {
     vertical-align: middle;
-    width: 50px !important;
-    height: 50px !important;
+    width: 50px;
+    height: 50px;
     padding: 10px;
   }
   svg:not(:root) {
     overflow: hidden;
   }
-
   svg:hover path,
   svg:hover circle {
     stroke: rgba(255, 255, 255, 0.75);
   }
-
   svg path,
   svg circle {
     transition: stroke 0.3s ease;
