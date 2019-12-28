@@ -34,14 +34,26 @@
     transition: opacity 0.3s ease;
   }
 
+  .icons {
+    display: flex;
+  }
+
   .icons a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0 0.5em;
+    color: white;
   }
   .icons a:first-child {
     padding-left: 0;
   }
   .icons a:last-child {
     padding-right: 0;
+  }
+
+  .icons a div {
+    margin-top: 0.5em;
   }
 
   .down {
@@ -62,18 +74,21 @@
   <div class="icons">
     <a title="email" href="mailto:hello@zachhardesty.com">
       <Icon data={faEnvelope} scale="1.5" inverse label="email" />
-      <!-- TODO: add visible icon label -->
+      <div>Email</div>
     </a>
     <a title="github" href="https://github.com/zachhardesty7">
       <Icon data={faGithub} scale="1.5" inverse label="github" />
+      <div>Github</div>
     </a>
     <a title="linkedIn" href="https://www.linkedin.com/in/zachhardesty7">
       <Icon data={faLinkedin} scale="1.5" inverse label="linkedIn" />
+      <div>LinkedIn</div>
     </a>
     <a
       title="resume"
       href="https://docs.google.com/document/d/1JluScSVuuTK9wMS2gK6ygd-4tRxCO73tvwR3lvDe1hI/edit?usp=sharing">
       <Icon data={faBriefcase} scale="1.5" inverse label="resume" />
+      <div>Resume</div>
     </a>
   </div>
   <a class="down" href="#about" title="next page">
