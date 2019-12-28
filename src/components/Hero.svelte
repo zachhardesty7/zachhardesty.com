@@ -26,7 +26,8 @@
   }
 
   .icons {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   :global(.down) {
@@ -47,24 +48,33 @@
   <div class="icons">
     <Icon
       data={faEnvelope}
+      inverse
       title="email"
       label="Email"
       link="mailto:hello@zachhardesty.com" />
     <Icon
       data={faGithub}
+      inverse
       title="github"
       label="Github"
       link="https://github.com/zachhardesty7" />
     <Icon
       data={faLinkedin}
+      inverse
       title="linkedIn"
       label="LinkedIn"
       link="https://www.linkedin.com/in/zachhardesty7" />
     <Icon
       data={faBriefcase}
+      inverse
       title="resume"
       label="Resume"
       link="https://docs.google.com/document/d/1JluScSVuuTK9wMS2gK6ygd-4tRxCO73tvwR3lvDe1hI/edit?usp=sharing" />
   </div>
-  <Icon class="down" data={faChevronDown} link="#about" title="next page" />
+  <Icon
+    class="down"
+    data={faChevronDown}
+    inverse
+    link="#about"
+    title="next page" />
 </div>
