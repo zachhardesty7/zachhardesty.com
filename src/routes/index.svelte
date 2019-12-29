@@ -1,6 +1,13 @@
 <script>
   import { apps, data, experiences, skills, websites } from "../data";
+  import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+  import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
   import Hero from "../components/Hero.svelte";
+  import Icons from "../components/Icons.svelte";
+  import Icon from "../components/Icon.svelte";
+
+  import items from "../data/icons";
 
   let display = "apps";
 </script>
@@ -67,7 +74,7 @@
 
 <Hero />
 <div class="page">
-  <section>
+  <section id="about">
     <h3>About Me</h3>
     <div>
       <img class="portrait" alt="portrait" src="/portrait.jpg" />
@@ -81,6 +88,9 @@
       {`What does the future entail for me? Cryptocurrency, machine learning, and web and mobile app development all pique my interests. That being said, I find it difficult to commit to a particular path this early and stay open to all possibilities. Please do not to hesitate to contact me with opportunities or inquiries and connect with me on LinkedIn!`}
     </p>
 
+  </section>
+  <section>
+    <Icons {items} />
   </section>
   <!-- <section
       label
@@ -118,13 +128,15 @@
       <button
         type="button"
         class:active={display === 'apps'}
-        on:click={() => (display = 'apps')}>
+        on:click={() => (display = 'apps')}
+      >
         Apps
       </button>
       <button
         type="button"
         class:active={display === 'website'}
-        on:click={() => (display = 'website')}>
+        on:click={() => (display = 'website')}
+      >
         Websites
       </button>
     </div>
