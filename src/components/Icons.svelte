@@ -1,6 +1,8 @@
 <script>
   import Icon from "../components/Icon.svelte";
 
+  let className;
+  export { className as class };
   export let inverse;
   export let icons;
 </script>
@@ -25,6 +27,6 @@
 
 <div>
   {#each icons as icon}
-    <Icon {inverse} {...icon} />
+    <Icon {inverse} class={className} {...icon} />
   {/each}
 </div>
