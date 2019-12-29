@@ -1,15 +1,10 @@
 <script>
-  import {
-    faBriefcase,
-    faEnvelope,
-    faChevronDown
-  } from "@fortawesome/free-solid-svg-icons";
-  import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+  import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
   import Icons from "../components/Icons.svelte";
   import Icon from "../components/Icon.svelte";
 
-  import items from "../data/icons";
+  import { icons } from "../data";
 </script>
 
 <style>
@@ -24,7 +19,7 @@
 
   h1 {
     color: var(--secondary);
-    text-shadow: 0px 2px 3px darkgrey;
+    text-shadow: 0px 2px 3px var(--dark);
     font-family: "Roboto Condensed", sans-serif;
   }
 
@@ -40,7 +35,7 @@
 
 <div class="hero">
   <h1>zach hardesty</h1>
-  <Icons inverse {items} />
+  <Icons inverse {icons} />
   <Icon
     class="down"
     data={faChevronDown}

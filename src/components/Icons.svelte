@@ -2,7 +2,7 @@
   import Icon from "../components/Icon.svelte";
 
   export let inverse;
-  export let items;
+  export let icons;
 </script>
 
 <style>
@@ -24,7 +24,7 @@
 </style>
 
 <div>
-  {#each items as item}
-    <Icon {inverse} {...item} />
+  {#each icons as icon}
+    <Icon {inverse} {...icon} />
   {/each}
 </div>

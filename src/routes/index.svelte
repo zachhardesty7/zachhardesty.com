@@ -1,13 +1,9 @@
 <script>
-  import { apps, data, experiences, skills, websites } from "../data";
-  import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-  import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-
   import Hero from "../components/Hero.svelte";
   import Icons from "../components/Icons.svelte";
   import Icon from "../components/Icon.svelte";
 
-  import items from "../data/icons";
+  import { apps, data, experiences, icons, skills, websites } from "../data";
 
   let display = "apps";
 </script>
@@ -90,7 +86,7 @@
 
   </section>
   <section>
-    <Icons {items} />
+    <Icons {icons} />
   </section>
   <!-- <section
       label
