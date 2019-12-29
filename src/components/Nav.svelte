@@ -72,7 +72,8 @@
           class:active={segment === 'selected'}
           href="#{page}"
           offset={-60}
-          tabIndex="0">
+          tabIndex="0"
+        >
           {page}
         </a>
       {/each}
@@ -87,7 +88,8 @@
             fill="none"
             stroke="#fff"
             stroke-linecap="round"
-            stroke-width="60" />
+            stroke-width="60"
+          />
           <circle
             cx="467"
             cy="467"
@@ -97,7 +99,8 @@
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-miterlimit="10"
-            stroke-width="60" />
+            stroke-width="60"
+          />
         </svg>
       </a>
     </li>
@@ -108,7 +111,8 @@
           class:active={segment === 'selected'}
           href="#{page}"
           offset={-60}
-          tabIndex="0">
+          tabIndex="0"
+        >
           {page}
         </a>
       {/each}

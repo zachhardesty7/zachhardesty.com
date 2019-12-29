@@ -15,7 +15,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 0.5em;
 
     opacity: 0.7;
     transition: opacity 0.3s ease;
@@ -24,13 +23,6 @@
   a:hover {
     opacity: 1;
     transition: opacity 0.3s ease;
-  }
-
-  a:first-child {
-    padding-left: 0;
-  }
-  a:last-child {
-    padding-right: 0;
   }
 
   a div {
@@ -42,7 +34,8 @@
   class={className}
   {title}
   href={link}
-  style="color: var(--{inverse ? 'secondary' : 'text'})">
+  style="color: var(--{inverse ? 'secondary' : 'text'})"
+>
   <FAIcon {data} scale="1.5" {inverse} label={title} />
   {#if label}
     <div>{label}</div>
