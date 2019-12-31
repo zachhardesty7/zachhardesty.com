@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "sapper dev --no-hot",
     "build": "sapper build --legacy",
+    "serve": "node __sapper__/build",
     "export": "sapper export --legacy",
-    "start": "node __sapper__/build",
+    "start": "yarn dev",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run"
@@ -16,7 +17,7 @@
     "compression": "^1.7.4",
     "polka": "next",
     "sirv": "^0.4.2",
-    "styled-components": "^5.0.0-rc.2"
+    "styled-components": "^5.0.0-rc.3"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
