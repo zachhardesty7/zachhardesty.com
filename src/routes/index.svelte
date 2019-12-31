@@ -82,7 +82,6 @@
   <section>
     <h3>Projects</h3>
     <Portfolio items={display === 'website' ? websites : apps} />
-    <p>{display}</p>
   </section>
 </div>
 <!-- <Footer /> -->
