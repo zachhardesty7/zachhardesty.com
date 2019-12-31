@@ -76,9 +76,9 @@
       <p>{skills.familiar.join(', ')}</p>
     </div>
   </section>
-  <section>
+  <!-- <section>
     <Experience data={experiences} />
-  </section>
+  </section> -->
   <section>
     <h3>Projects</h3>
     <Portfolio items={display === 'website' ? websites : apps} />
