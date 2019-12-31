@@ -77,24 +77,16 @@
   {
     "title": "coinaged.io",
     "description": "A massive project to facilitate new user acquisition for investment in the cryptocurrency markets. Upon completion, this app serves as the back-end of an investment firm for cryptocurrencies. The philosophy of the company: crypto will eventually reach widespread adoption and the time is now to get in at the floor. Written in Python and using MongoDB, the back-end stores user information, trades, and deposits and withdrawals. It serves this information to the front-end dashboard through a private API. More info coming soon.",
-    "link": "http://coinaged.io/",
+    "link": "",
     "github": "https://github.com/zachhardesty7/coinaged.io-backend",
-    "skills": [
-      "Python",
-      "MongoDB",
-      "Flask"
-    ]
+    "skills": ["Python", "MongoDB", "Flask"]
   },
   {
     "title": "Greasemonkey Scripts Collection",
     "description": "The Github repo hosts a handful of different script files that Tampermonkey injects into the relevant websites. Certain websites just seem to be missing something or a simple change could really improve the functionality. I took it upon myself to add these features in the most seamless way possible. Check out the Github for a beautifully well-executed readme.md file that makes me proud.",
     "link": "",
     "github": "https://github.com/zachhardesty7/tamper-monkey-scripts-collection",
-    "skills": [
-      "JavaScript",
-      "JavaScript Standard Style",
-      "CryptoCompare API"
-    ]
+    "skills": ["JavaScript", "JavaScript Standard Style", "CryptoCompare API"]
   },
   {
     "title": "WooCommerce Widget",
@@ -102,35 +94,21 @@
     "image": "mpl-widget.png",
     "link": "http://mpl.zachhardesty.com/",
     "github": "https://github.com/zachhardesty7/woocommerce-widget",
-    "skills": [
-      "JavaScript",
-      "PHP",
-      "HTML5",
-      "CSS"
-    ]
+    "skills": ["JavaScript", "PHP", "HTML5", "CSS"]
   },
   {
     "title": "WooCommerce Widget Interface",
     "description": "An extension to the WooCommerce embed widget featuring a simple React app that allows a user to generate a snippet from their chosen settings. Express mode enables only affiliate tracking while locking the other values to their dynamic setting. Advanced enables customization of all attributes such as size and category of products to include. Custom serves as a middle ground between the two. (Project is not currently publicly accessible)",
     "link": "",
     "github": "https://github.com/zachhardesty7/woocommerce-widget-interface",
-    "skills": [
-      "React",
-      "JavaScript",
-      "SCSS",
-      "WooCommerce API"
-    ]
+    "skills": ["React", "JavaScript", "SCSS", "WooCommerce API"]
   },
   {
     "title": "GroupMe Notifier",
     "description": "Uses a little python script hosted on Heroku to poll a given GroupMe group chat for keywords and emails a summary to you. Can be handy for giant groups that often have chatter interspersed between important notifications.",
     "link": "",
     "github": "https://github.com/zachhardesty7/group-me-notifier",
-    "skills": [
-      "Python",
-      "Heroku",
-      "GroupMe API"
-    ]
+    "skills": ["Python", "Heroku", "GroupMe API"]
   },
   {
     "title": "WooCommerce MPL Plugin",
@@ -138,24 +116,14 @@
     "image": "mpl-plugin.png",
     "link": "https://markporterlive.com",
     "github": "https://github.com/zachhardesty7/woocommerce-mpl",
-    "skills": [
-      "WordPress Plugin",
-      "PHP",
-      "jQuery",
-      "JavaScript"
-    ]
+    "skills": ["WordPress Plugin", "PHP", "jQuery", "JavaScript"]
   },
   {
     "title": "UT Austin Web Tweaks",
     "description": "A Chrome browser extension that adds additional features to the University of Texas's website. The objective is to making registering for classes through UT's outdated interface much easier and intuitive. It provides numerous quick links and options to speed up, simplify the process, and eliminate stress. A handful of other tweaks are also included and configurable through the options page. In the future the project could be extended to include an interface to UT's new schedule generator and a easy scheduler.",
     "link": "https://chrome.google.com/webstore/detail/ut-austin-website-tweaks/kmedjmjpdobbbepllffnimejfmbdicef",
     "github": "https://github.com/zachhardesty7/UT-Austin-Website-Tweaks",
-    "skills": [
-      "JavaScript",
-      "CSS",
-      "Materialize CSS",
-      "Chrome Extension"
-    ]
+    "skills": ["JavaScript", "CSS", "Materialize CSS", "Chrome Extension"]
   },
   {
     "title": "QCI Mobile App",
