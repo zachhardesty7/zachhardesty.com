@@ -68,12 +68,8 @@
   <ul>
     <li>
       {#each pages.slice(0, pages.length / 2) as page}
-        <a
-          class:active={segment === 'selected'}
-          href="#{page}"
-          offset={-60}
-          tabIndex="0"
-        >
+        <!-- TODO: offset={-60} pixels -->
+        <a class:active={segment === 'selected'} href="#{page}" tabIndex="0">
           {page}
         </a>
       {/each}
