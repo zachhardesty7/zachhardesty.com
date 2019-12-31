@@ -1,8 +1,5 @@
 <script>
-  import Hero from "../components/Hero.svelte";
-  import Icons from "../components/Icons.svelte";
-  import Icon from "../components/Icon.svelte";
-
+  import { Experience, Hero, Icons, Icon, Portfolio } from "../components";
   import { apps, data, experiences, icons, skills, websites } from "../data";
 
   let display = "apps";
@@ -29,26 +26,6 @@
     width: 15rem;
     border-radius: 100%;
     text-align: center;
-  }
-
-  button {
-    background-color: transparent;
-    border: none;
-    color: var(--primary);
-    transition: border 0.4s;
-    font-size: 1.25rem;
-    margin: 0 10px;
-    padding: 10px 0;
-    border-bottom: 0px solid var(--accent);
-  }
-  button.active {
-    border-bottom-width: 2px;
-  }
-  button:hover {
-    border-bottom-width: 5px;
-  }
-  button:focus {
-    outline: none;
   }
 
   #skills {
@@ -88,21 +65,6 @@
   <section>
     <Icons {icons} />
   </section>
-  <!-- <section
-      label
-      padded="top"
-      color="rgba(0,0,0,.7)"
-      colorHover="rgba(0,0,0,1)"
-      size="big"
-      justify="center">
-      <div name="Mail" link="mailto:hello@zachhardesty.com" />
-      <div name="Github" link="https://github.com/zachhardesty7" />
-      <div name="LinkedIn" link="https://www.linkedin.com/in/zachhardesty7" />
-      <div
-        name="briefcase"
-        label="Resume"
-        link="https://docs.google.com/document/d/1JluScSVuuTK9wMS2gK6ygd-4tRxCO73tvwR3lvDe1hI/edit?usp=sharing" />
-    </section> -->
   <section id="skills">
     <h5>Skills</h5>
     <div>
@@ -115,28 +77,11 @@
     </div>
   </section>
   <section>
-    <!-- <Experience data={experiences} /> -->
-
+    <Experience data={experiences} />
   </section>
   <section>
     <h3>Projects</h3>
-    <div>
-      <button
-        type="button"
-        class:active={display === 'apps'}
-        on:click={() => (display = 'apps')}
-      >
-        Apps
-      </button>
-      <button
-        type="button"
-        class:active={display === 'website'}
-        on:click={() => (display = 'website')}
-      >
-        Websites
-      </button>
-    </div>
-    <!-- <Portfolio items={display === 'website' ? websites : apps} {images} /> -->
+    <Portfolio items={display === 'website' ? websites : apps} />
     <p>{display}</p>
   </section>
 </div>

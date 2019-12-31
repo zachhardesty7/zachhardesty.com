@@ -1,5 +1,5 @@
 <script>
-  import Icon from "../components/Icon.svelte";
+  import { Icon } from "../components";
 
   let className;
   export { className as class };

@@ -1,9 +1,6 @@
 <script>
   import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-
-  import Icons from "../components/Icons.svelte";
-  import Icon from "../components/Icon.svelte";
-
+  import { Icons, Icon } from "../components";
   import { icons } from "../data";
 </script>
 
