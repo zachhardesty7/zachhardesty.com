@@ -99,13 +99,13 @@
 
   <div class="card-stacked">
     <div class="content">
-      <h5 class="title">
+      <h4 class="title">
         {#if link || github}
           <a class="title-link" href={link || github} target="blank_">
             {title}
           </a>
         {:else}{title}{/if}
-      </h5>
+      </h4>
       <p>{description}</p>
       <div class="skills">
         <ul>

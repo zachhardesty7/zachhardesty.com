@@ -1,13 +1,30 @@
 <script>
   import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-  import { Icons, Icon, Card } from "../components";
   import { experiences } from "../data";
 </script>
 
 <style>
+  .content {
+    margin-bottom: 2.5rem;
+  }
+  h4 {
+    font-size: 1.64rem;
+    line-height: 110%;
+    margin: 0.82rem 0 0 0;
+  }
+  h3 {
+    font-size: 2.28rem;
+    line-height: 110%;
+    margin: 0.5rem 0 0.5rem 0;
+  }
+  p {
+    margin-top: 0px;
+  }
   ul {
-    width: fit-content;
-    margin: auto;
+    padding-left: 2em;
+  }
+  li {
+    list-style-type: disc;
   }
   li::marker {
     color: var(--primary);
@@ -16,28 +33,16 @@
 </style>
 
 <div>
-  <h3>Experience</h3>
   {#each experiences as job (job.employer)}
-    <Card
-      description={job.description}
-      link=""
-      github=""
-      skills="[]"
-      image
-      title=""
-    >
-      <div class="card-stacked">
-        <div class="content">
-          <h5 class="position">{`${job.position}`}</h5>
-          <h5 class="position">{`${job.employer} (${job.location})`}</h5>
-          <p class="date">{job.date}</p>
-          <ul>
-            {#each job.bullets as bullet (bullet)}
-              <li>{bullet}</li>
-            {/each}
-          </ul>
-        </div>
-      </div>
-    </Card>
+      <div class="content">
+        <h4 class="position">{`${job.position}`}</h4>
+        <h3 class="employer">{`${job.employer} (${job.location})`}</h3>
+        <p class="date">{job.date}</p>
+        <ul>
+          {#each job.bullets as bullet (bullet)}
+            <li>{bullet}</li>
+          {/each}
+        </ul>
+    </div>
   {/each}
 </div>
