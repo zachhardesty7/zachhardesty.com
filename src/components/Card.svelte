@@ -47,6 +47,13 @@
     text-align: left;
   }
 
+  .title {
+    color: var(--primary);
+    font-size: 2rem;
+    line-height: 110%;
+    margin: 1.14rem 0 0.912rem 0;
+  }
+
   .title-link {
     color: var(--primary);
   }

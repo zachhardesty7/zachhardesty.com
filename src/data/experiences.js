@@ -1,4 +1,4 @@
-const experiences = [
+export default [
   {
     employer: "Ticom Geomatics, Inc.",
     position: "Front End Software Engineer",
@@ -25,5 +25,3 @@ const experiences = [
     ]
   }
 ];
-
-export default experiences;

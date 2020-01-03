@@ -1,5 +1,5 @@
-{
-  "proficient": [
+export default {
+  proficient: [
     "React",
     "JavaScript (incl. ES6+)",
     "WordPress",
@@ -10,7 +10,7 @@
     "REST",
     "GraphQL"
   ],
-  "familiar": [
+  familiar: [
     "Python",
     "Java",
     "Webpack",
@@ -21,4 +21,4 @@
     "PHP",
     "MongoDB"
   ]
-}
+};

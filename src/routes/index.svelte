@@ -1,8 +1,6 @@
 <script>
   import { Experience, Hero, Icons, Icon, Portfolio } from "../components";
   import { apps, data, experiences, icons, skills, websites } from "../data";
-
-  let display = "apps";
 </script>
 
 <style>
@@ -88,7 +86,7 @@
   </section>
   <section>
     <h2>Projects</h2>
-    <Portfolio items={display === 'website' ? websites : apps} />
+    <Portfolio items={data} />
   </section>
 </div>
 <!-- <Footer /> -->

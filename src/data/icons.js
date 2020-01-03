@@ -1,7 +1,7 @@
 import { faBriefcase, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-const icons = [
+export default [
   {
     data: faEnvelope,
     title: "email",
@@ -28,5 +28,3 @@ const icons = [
       "https://docs.google.com/document/d/1JluScSVuuTK9wMS2gK6ygd-4tRxCO73tvwR3lvDe1hI/edit?usp=sharing"
   }
 ];
-
-export default icons;

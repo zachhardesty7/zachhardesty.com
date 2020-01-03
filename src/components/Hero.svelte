@@ -18,6 +18,9 @@
     color: var(--secondary);
     text-shadow: 0px 2px 3px var(--dark);
     font-family: "Roboto Condensed", sans-serif;
+    font-size: 4.2rem;
+    line-height: 110%;
+    margin: 2.1rem 0 1.68rem 0;
   }
 
   :global(.down) {

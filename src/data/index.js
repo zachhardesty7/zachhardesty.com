@@ -1,15 +1,8 @@
-import apps from "../data/apps.json"
-import data from "../data/data.json"
-import experiences from "../data/experiences"
-import icons from "../data/icons"
-import skills from "../data/skills.json"
-import websites from "../data/websites.json"
+import apps from "./apps";
+import data from "./data";
+import experiences from "./experiences";
+import icons from "./icons";
+import skills from "./skills";
+import websites from "./websites";
 
-export {
-  apps,
-  data,
-  experiences,
-  icons,
-  skills,
-  websites,
-}
+export { apps, data, experiences, icons, skills, websites };
