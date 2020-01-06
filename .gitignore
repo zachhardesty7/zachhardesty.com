@@ -73,6 +73,9 @@ typings/
 # Optional REPL history
 .node_repl_history
 
+# holder
+src/temp
+
 # svelte added
 .DS_Store
 /src/node_modules/@sapper/

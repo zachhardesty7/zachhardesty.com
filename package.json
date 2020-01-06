@@ -4,7 +4,7 @@
   "homepage": "https://zachhardesty.com",
   "private": true,
   "scripts": {
-    "dev": "sapper dev",
+    "dev": "sapper dev --no-hot",
     "build": "sapper build --legacy",
     "export": "sapper export --legacy",
     "start": "node __sapper__/build",
@@ -16,23 +16,23 @@
     "compression": "^1.7.4",
     "polka": "next",
     "sirv": "^0.4.2",
-    "styled-components": "^5.0.0-beta.9"
+    "styled-components": "^5.0.0-rc.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/plugin-transform-runtime": "^7.6.2",
-    "@babel/preset-env": "^7.6.3",
-    "@babel/runtime": "^7.6.3",
-    "@fortawesome/free-brands-svg-icons": "^5.11.2",
-    "@fortawesome/free-solid-svg-icons": "^5.11.2",
-    "@quickbaseoss/babel-plugin-styled-components-css-namespace": "^1.0.0-rc3",
-    "file-loader": "^4.2.0",
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/runtime": "^7.7.7",
+    "@fortawesome/free-brands-svg-icons": "^5.12.0",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@quickbaseoss/babel-plugin-styled-components-css-namespace": "^1.0.0-rc4",
+    "file-loader": "^4.3.0",
     "npm-run-all": "^4.1.5",
     "sapper": "^0.27.9",
-    "svelte": "^3.12.1",
-    "svelte-awesome": "^2.2.0",
+    "svelte": "^3.16.7",
+    "svelte-awesome": "^2.2.1",
     "svelte-loader": "^2.13.6",
-    "webpack": "^4.41.2"
+    "webpack": "^4.41.5"
   }
 }
