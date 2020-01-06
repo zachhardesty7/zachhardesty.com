@@ -1,5 +1,12 @@
 <script>
-  import { Experience, Hero, Icons, Icon, Portfolio } from "../components";
+  import {
+    Experience,
+    Footer,
+    Hero,
+    Icons,
+    Icon,
+    Portfolio
+  } from "../components";
   import { apps, data, experiences, icons, skills, websites } from "../data";
 </script>
 
@@ -89,4 +96,4 @@
     <Portfolio items={data} />
   </section>
 </div>
-<!-- <Footer /> -->
+<Footer />
