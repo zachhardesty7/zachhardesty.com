@@ -20,14 +20,15 @@
     flex-direction: column;
   }
 
-  #contact a {
+  a {
     display: block;
     margin: auto;
+    margin-top: 5px;
     width: fit-content;
     color: var(--light);
   }
 
-  #contact a:hover {
+  a:hover {
     color: #fff;
   }
 

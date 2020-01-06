@@ -7,7 +7,7 @@
   export let data;
   export let title;
   export let link;
-  export let label;
+  export let label = "";
 </script>
 
 <style>

@@ -1,8 +1,13 @@
 # Zach Hardesty's Web Portfolio
 
-Here lies the source code for my web portfolio, currently built with [React](https://github.com/facebook/react) and [Create React App](https://github.com/facebookincubator/create-react-app) in order to easily edit or add more data by updating JSON.
+Here lies the source code for my web portfolio, currently built with
+[Svelte](https://github.com/sveltejs/svelte) and [Sapper](https://github.com/sveltejs/sapper) in
+order to easily edit or add more data by updating JSON. These libraries function very similarly to
+React and Gatsby/Nextjs respectively. Svelte differentiates itself via direct DOM interaction,
+avoiding the introduction of a virtual DOM. Svelte delivers lightning-fast performance and
+simplifies & accelerates the development process.
 
-*Copyright (c) 2018 || Zach Hardesty || [zachhardesty.com](http://zachhardesty.com)*
+_Copyright (c) 2018 || Zach Hardesty || [zachhardesty.com](http://zachhardesty.com)_
 
 ## Change Log
 

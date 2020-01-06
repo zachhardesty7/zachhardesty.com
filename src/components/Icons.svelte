@@ -1,10 +1,10 @@
 <script>
   import { Icon } from "../components";
 
-  let className;
+  let className = "";
   export { className as class };
-  export let inverse;
-  export let icons;
+  export let inverse = false;
+  export let icons = [];
 </script>
 
 <style>
