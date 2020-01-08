@@ -1,0 +1,8 @@
+plugins:
+  # https://github.com/munter/netlify-plugin-checklinks
+  - type: netlify-plugin-checklinks
+  - type: netlify-plugin-image-optim
+  # https://github.com/munter/netlify-plugin-subfont#configuration
+  - type: netlify-plugin-subfont
+  # https://github.com/munter/netlify-plugin-hashfiles
+  - type: netlify-plugin-hashfiles
