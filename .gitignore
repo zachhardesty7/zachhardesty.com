@@ -12,6 +12,7 @@ jspm_packages/
 # Package manager files / optional directories
 .npm
 .yarn-integrity
+.pnp
 
 # Optional eslint cache
 .eslintcache

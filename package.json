@@ -40,5 +40,8 @@
     "svelte-awesome": "^2.2.1",
     "svelte-loader": "^2.13.6",
     "webpack": "^4.41.5"
+  },
+  "installConfig": {
+    "pnp": true
   }
 }
