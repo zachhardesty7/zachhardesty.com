@@ -1,8 +1,11 @@
-plugins:
-  # https://github.com/munter/netlify-plugin-checklinks
-  - package: netlify-plugin-checklinks
-  - package: netlify-plugin-image-optim
-  # https://github.com/munter/netlify-plugin-subfont#configuration
-  - package: netlify-plugin-subfont
-  # https://github.com/munter/netlify-plugin-hashfiles
-  - package: netlify-plugin-hashfiles
+# plugins:
+# https://github.com/munter/netlify-plugin-checklinks
+# - package: netlify-plugin-checklinks
+# - package: netlify-plugin-image-optim
+# https://github.com/munter/netlify-plugin-subfont#configuration
+# - package: netlify-plugin-subfont
+# https://github.com/munter/netlify-plugin-hashfiles
+# - package: netlify-plugin-hashfiles
+# - package: netlify-plugin-lighthouse
+#   config:
+#     url: "https://zachhardesty.com"
