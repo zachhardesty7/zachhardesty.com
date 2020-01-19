@@ -13,6 +13,7 @@ jspm_packages/
 .npm
 .yarn-integrity
 .pnp
+.pnp.js
 
 # Optional eslint cache
 .eslintcache
