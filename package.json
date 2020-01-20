@@ -1,6 +1,6 @@
 {
   "name": "zachhardesty-web-portfolio",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "homepage": "https://zachhardesty.com",
   "private": true,
   "scripts": {
@@ -39,8 +39,5 @@
     "svelte-awesome": "^2.2.1",
     "svelte-loader": "^2.13.6",
     "webpack": "^4.41.5"
-  },
-  "installConfig": {
-    "pnp": true
   }
 }
