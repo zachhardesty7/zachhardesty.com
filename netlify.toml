@@ -11,6 +11,12 @@
   force = true
 
 [[redirects]]
+  from = "https://zachhardesty.me/*"
+  to = "https://zachhardesty.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/go/resume"
   to = "https://docs.google.com/document/d/1JluScSVuuTK9wMS2gK6ygd-4tRxCO73tvwR3lvDe1hI"
 
