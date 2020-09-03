@@ -34,7 +34,7 @@
     "netlify-plugin-subfont": "^3.0.1",
     "npm-run-all": "^4.1.5",
     "sanitize.css": "^11.0.0",
-    "sapper": "^0.27.9",
+    "sapper": "^0.27.11",
     "svelte": "^3.17.1",
     "svelte-awesome": "^2.2.1",
     "svelte-loader": "^2.13.6",
