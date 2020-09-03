@@ -5,7 +5,7 @@
     Hero,
     Icons,
     Icon,
-    Portfolio
+    Portfolio,
   } from "../components";
   import { apps, data, experiences, icons, skills, websites } from "../data";
 </script>
@@ -67,15 +67,13 @@
 <div class="page">
   <section id="about">
     <h2>About Me</h2>
-    <div>
-      <img class="portrait" alt="portrait" src="/portrait.jpg" />
-    </div>
+    <div><img class="portrait" alt="portrait" src="/portrait.jpg" /></div>
 
     <p>
       {`First, allow me to tell you my story. I am now enrolled in the University of Texas at Austin's computer science degree plan but my journey began much earlier. From a young age, understanding the “why” and the “how” of everything from common items to modern marvels fascinated me. Naturally, once I received my parents' old computer I began tinkering and familiarizing myself. Learning to program daunted me but I hesitantly began exploring the basics of HTML, CSS, and JavaScript in my spare time. After getting a job with my neighbor, I started tinkering around in WordPress. There, I uncovered my fascination with web development and the rest is history.`}
     </p>
     <p>
-      {`What does the future entail for me? Cryptocurrency, machine learning, and web and mobile app development all pique my interests. That being said, I find it difficult to commit to a particular path this early and stay open to all possibilities. Please do not to hesitate to contact me with opportunities or inquiries and connect with me on LinkedIn!`}
+      {`What does the future entail for me? Cryptocurrency, machine learning, and web and mobile app development all pique my interests. That being said, I find it difficult to commit to a particular path this early and stay open to all possibilities. Please do not to hesita me with opportunities or inquiries and connect with me on LinkedIn!`}
     </p>
     <div class="skills">
       <b>Proficient with:</b>
@@ -87,11 +85,11 @@
   <section>
     <Icons {icons} />
   </section>
-  <section>
+  <section id="experience">
     <h2>Experience</h2>
     <Experience data={experiences} />
   </section>
-  <section>
+  <section id="projects">
     <h2>Projects</h2>
     <Portfolio items={data} />
   </section>
