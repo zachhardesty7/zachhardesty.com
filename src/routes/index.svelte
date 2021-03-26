@@ -3,6 +3,10 @@
   import { data, icons, skills } from "../data";
 </script>
 
+<svelte:head>
+  <title>Zach Hardesty Web Portfolio</title>
+</svelte:head>
+
 <Hero />
 <div class="page">
   <section id="about" class="container">
@@ -39,224 +43,73 @@
 </div>
 <Footer />
 
-<svelte:head>
-  <title>Zach Hardesty Web Portfolio</title>
-  <style>
-    @import "~sanitize.css";
-    @import "~sanitize.css/forms.css";
-    @import "~sanitize.css/typography.css";
+<style>
+  @import "../global.css";
 
-    :root {
-      --primary: #0b3c5d;
-      --secondary: #fafafa;
-      --accent: #d9b310;
-      --dark: #2c2c34;
-      --light: #cccccc;
-      --text: rgba(0, 0, 0, 0.87);
-    }
+  .page {
+    max-width: 60rem;
+    margin: auto;
+  }
 
-    *,
-    :after,
-    :before {
-      box-sizing: inherit;
-    }
+  section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    margin-top: 2rem;
+    margin: auto;
+  }
+  section.container {
+    max-width: 40rem;
+    justify-content: center;
+  }
 
-    html,
-    body {
-      height: 100%;
-    }
+  .portrait {
+    width: 15rem;
+    border-radius: 100%;
+    text-align: center;
+  }
 
-    html {
-      /* NOTE: when moving this from 14px -> 18px, I updated most `rem` values to be 16/18 of their previous size to average between maintaining and adjusting since body font size was the main problem. this kinda presumes I nailed spacing the first time... */
-      font-size: 18px;
-      box-sizing: border-box;
-      line-height: 1.5;
-      font-family: "Roboto", sans-serif;
-      font-weight: normal;
-      color: var(--text);
-      scroll-padding-top: 60px; height of sticky header
-    }
+  .skills {
+    padding-top: 2rem;
+    display: block;
+    text-align: left;
+  }
+  .skills p {
+    margin-top: 0.3em;
+  }
 
-    body {
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-      min-width: 320px;
-      font-size: 18px;
-      line-height: 1.4285em;
-      color: var(--text);
-      font-family: "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif;
-    }
+  #about,
+  #projects,
+  #experience {
+    padding-top: 1rem;
+    margin-top: 2rem;
+  }
 
-    body::selection {
-      background-color: var(--accent);
-      color: #ffffff;
-    }
+  #about > p {
+    text-align: left;
+  }
 
-    li,
-    ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
+  #skills {
+    padding-top: 2rem;
+  }
 
-    a {
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
+  #skills div {
+    text-align: left;
+  }
 
-    a,
-    .link,
-    button {
-      cursor: pointer;
-    }
+  #skills div p {
+    margin-top: 0.3em;
+  }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-weight: 400;
-      line-height: 1.1;
-      margin: 0;
-      padding: 0;
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translate(-50%, 0);
     }
-
-    h1 {
-      font-size: 3.73rem;
-      line-height: 110%;
-      margin: 1.87rem 0 1.49rem 0;
+    50% {
+      transform: translate(-50%, 40%);
     }
-    h2 {
-      font-size: 3.17rem;
-      line-height: 110%;
-      margin: 1.58rem 0 1.27rem 0;
-      color: var(--primary);
-      position: relative;
-      margin-right: auto;
-      padding-bottom: 1.42rem;
-    }
-
-    h2::before {
-      content: "";
-      position: absolute;
-      bottom: 8px;
-      left: -20px;
-      height: 55%;
-      width: 100%;
-      z-index: -1;
-      background-color: var(--accent);
-    }
-    h3 {
-      color: var(--primary);
-      font-size: 2.31rem;
-      line-height: 110%;
-      margin: 1.3rem 0 1.04rem 0;
-    }
-
-    h4 {
-      font-size: 2.03rem;
-      line-height: 110%;
-      margin: 1.01rem 0 0.81rem 0;
-    }
-
-    h5 {
-      font-size: 1.46rem;
-      line-height: 110%;
-      margin: 0.73rem 0 0.58rem 0;
-    }
-
-    h6 {
-      font-size: 0.89rem;
-      line-height: 110%;
-      margin: 0.44rem 0 0.36rem 0;
-    }
-
-    button {
-      border: none;
-      color: var(--primary);
-      transition: border 0.4s;
-      font-size: 1.11rem;
-      margin: 0 10px;
-      padding: 10px 0;
-      border-bottom: 0px solid var(--accent);
-    }
-    button.active {
-      border-bottom-width: 2px;
-    }
-    button:hover {
-      border-bottom-width: 5px;
-    }
-    button:focus {
-      outline: none;
-    }
-
-    .page {
-      max-width: 60rem;
-      margin: auto;
-    }
-    
-    section {
-      padding-left: 2rem;
-      padding-right: 2rem;
-      display: flex;
-      flex-direction: column;
-      padding-top: 1rem;
-      margin-top: 2rem;
-      margin: auto;
-    }
-    section.container {
-      max-width: 40rem;
-      justify-content: center;
-    }
-
-    .portrait {
-      width: 15rem;
-      border-radius: 100%;
-      text-align: center;
-    }
-
-    .skills {
-      padding-top: 2rem;
-      display: block;
-      text-align: left;
-    }
-    .skills p {
-      margin-top: 0.3em;
-    }
-
-    #about,
-    #projects,
-    #experience {
-      padding-top: 1rem;
-      margin-top: 2rem;
-    }
-
-    #about > p {
-      text-align: left;
-    }
-
-    #skills {
-      padding-top: 2rem;
-    }
-
-    #skills div {
-      text-align: left;
-    }
-
-    #skills div p {
-      margin-top: 0.3em;
-    }
-
-    @keyframes bounce {
-      0%,
-      100% {
-        transform: translate(-50%, 0);
-      }
-      50% {
-        transform: translate(-50%, 40%);
-      }
-    }
-  </style>
-</svelte:head>
+  }
+</style>
