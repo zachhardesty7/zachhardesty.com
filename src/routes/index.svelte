@@ -1,18 +1,11 @@
 <script>
-  import {
-    Experience,
-    Footer,
-    Hero,
-    Icons,
-    Icon,
-    Portfolio,
-  } from "../components";
-  import { apps, data, experiences, icons, skills, websites } from "../data";
+  import { Experience, Footer, Hero, Icons, Portfolio } from "../components";
+  import { data, icons, skills } from "../data";
 </script>
 
 <Hero />
 <div class="page">
-  <section id="about">
+  <section id="about" class="container">
     <h2>About Me</h2>
     <div><img class="portrait" alt="portrait" src="/portrait.jpg" /></div>
 
@@ -35,7 +28,7 @@
   <section>
     <Icons {icons} />
   </section>
-  <section id="experience">
+  <section id="experience" class="container">
     <h2>Experience</h2>
     <Experience />
   </section>
@@ -49,7 +42,95 @@
 <svelte:head>
   <title>Zach Hardesty Web Portfolio</title>
   <style>
+    @import "~sanitize.css";
+    @import "~sanitize.css/forms.css";
+    @import "~sanitize.css/typography.css";
+
+    :root {
+      --primary: #0b3c5d;
+      --secondary: #fafafa;
+      --accent: #d9b310;
+      --dark: #2c2c34;
+      --light: #cccccc;
+      --text: rgba(0, 0, 0, 0.87);
+    }
+
+    *,
+    :after,
+    :before {
+      box-sizing: inherit;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    html {
+      font-size: 18px;
+      box-sizing: border-box;
+      line-height: 1.5;
+      font-family: "Roboto", sans-serif;
+      font-weight: normal;
+      color: var(--text);
+      scroll-padding-top: 60px; height of sticky header
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      min-width: 320px;
+      font-size: 18px;
+      line-height: 1.4285em;
+      color: var(--text);
+      font-family: "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    }
+
+    body::selection {
+      background-color: var(--accent);
+      color: #ffffff;
+    }
+
+    li,
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a,
+    .link,
+    button {
+      cursor: pointer;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 400;
+      line-height: 1.1;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-size: 4.2rem;
+      line-height: 110%;
+      margin: 2.1rem 0 1.68rem 0;
+    }
     h2 {
+      font-size: 3.56rem;
+      line-height: 110%;
+      margin: 1.78rem 0 1.424rem 0;
       color: var(--primary);
       position: relative;
       margin-right: auto;
@@ -66,19 +147,67 @@
       z-index: -1;
       background-color: var(--accent);
     }
-
-    .page {
-      width: 70%;
-      margin: auto;
+    h3 {
+      color: var(--primary);
+      font-size: 2.92rem;
+      line-height: 110%;
+      margin: 1.46rem 0 1.168rem 0;
     }
 
-    section {
-      width: 60%;
+    h4 {
+      font-size: 2.28rem;
+      line-height: 110%;
+      margin: 1.14rem 0 0.912rem 0;
+    }
+
+    h5 {
+      font-size: 1.64rem;
+      line-height: 110%;
+      margin: 0.82rem 0 0.656rem 0;
+    }
+
+    h6 {
+      font-size: 1rem;
+      line-height: 110%;
+      margin: 0.5rem 0 0.4rem 0;
+    }
+
+    button {
+      border: none;
+      color: var(--primary);
+      transition: border 0.4s;
+      font-size: 1.25rem;
+      margin: 0 10px;
+      padding: 10px 0;
+      border-bottom: 0px solid var(--accent);
+    }
+    button.active {
+      border-bottom-width: 2px;
+    }
+    button:hover {
+      border-bottom-width: 5px;
+    }
+    button:focus {
+      outline: none;
+    }
+
+    .page {
+      max-width: 60rem;
       margin: auto;
+    }
+    
+    section {
+      padding-left: 2rem;
+      padding-right: 2rem;
       display: flex;
       flex-direction: column;
       padding-top: 1rem;
       margin-top: 2rem;
+      margin: auto;
+    }
+    section.container {
+      max-width: 40rem;
+      justify-content: center;
     }
 
     .portrait {
@@ -94,6 +223,39 @@
     }
     .skills p {
       margin-top: 0.3em;
+    }
+
+    #about,
+    #projects,
+    #experience {
+      padding-top: 1rem;
+      margin-top: 2rem;
+    }
+
+    #about > p {
+      text-align: left;
+    }
+
+    #skills {
+      padding-top: 2rem;
+    }
+
+    #skills div {
+      text-align: left;
+    }
+
+    #skills div p {
+      margin-top: 0.3em;
+    }
+
+    @keyframes bounce {
+      0%,
+      100% {
+        transform: translate(-50%, 0);
+      }
+      50% {
+        transform: translate(-50%, 40%);
+      }
     }
   </style>
 </svelte:head>
