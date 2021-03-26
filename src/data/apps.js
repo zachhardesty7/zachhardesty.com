@@ -5,7 +5,7 @@ export default [
     description:
       "Using Gatsby, Contentful, and Netlify, I created a server side rendered (SSR) progressive web app to display variable information about a startup by the name of Gulf Corp. Contentful allows the client to edit almost every single piece of content. Additionally, this website uses Gatsby-Image to render images using the new <picture> tags to display a dynamically sized and formatted image based on browser and browser size. Components are styled with styled-components based on the SemanticUI framework and using Font Awesome icons. The website conforms to all standard A11y requirements.",
     image: "gulfcorp.png",
-    link: "https://gulfcorpusa.com",
+    link: "https://gulf-corp.netlify.app/",
     github: "https://github.com/zachhardesty7/gulf-corp",
     skills: [
       "Gatsby",
@@ -36,7 +36,7 @@ export default [
     description:
       "Using Gatsby, Contentful, and Netlify, I created a server side rendered (SSR) progressive web app to display variable information about a startup by the name of ConnectDoor. Contentful allows the client to edit almost every single piece of content. Additionally, this website uses Gatsby-Image to render images using the new <picture> tags to display a dynamically sized and formatted image based on browser and browser size. Components are styled based on the SemanticUI framework and using Font Awesome icons. The website conforms to all standard A11y requirements.",
     image: "theconnectdoor.png",
-    link: "https://theconnectdoor.com",
+    link: "https://connectdoor.netlify.app",
     github: "https://github.com/zachhardesty7/connect-door",
     skills: [
       "Gatsby",
