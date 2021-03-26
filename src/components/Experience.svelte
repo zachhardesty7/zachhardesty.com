@@ -21,6 +21,9 @@
   .content {
     margin-bottom: 2.22rem;
   }
+  .content:last-child {
+    margin-bottom: 0;
+  }
   h4 {
     font-size: 1.46rem;
     line-height: 110%;

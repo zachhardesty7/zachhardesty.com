@@ -11,7 +11,7 @@
 <div class="page">
   <section id="about" class="container">
     <h2>About Me</h2>
-    <div><img class="portrait" alt="portrait" src="/portrait.jpg" /></div>
+    <img class="portrait" alt="portrait" src="/portrait.jpg" />
 
     <p>{about.background}</p>
     <p>{about.plans}</p>
@@ -60,6 +60,7 @@
 
   .portrait {
     width: 15rem;
+    max-width: 100%;
     border-radius: 100%;
     text-align: center;
   }
