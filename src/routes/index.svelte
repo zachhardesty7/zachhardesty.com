@@ -67,6 +67,7 @@
     }
 
     html {
+      /* NOTE: when moving this from 14px -> 18px, I updated most `rem` values to be 16/18 of their previous size to average between maintaining and adjusting since body font size was the main problem. this kinda presumes I nailed spacing the first time... */
       font-size: 18px;
       box-sizing: border-box;
       line-height: 1.5;
@@ -123,18 +124,18 @@
     }
 
     h1 {
-      font-size: 4.2rem;
+      font-size: 3.73rem;
       line-height: 110%;
-      margin: 2.1rem 0 1.68rem 0;
+      margin: 1.87rem 0 1.49rem 0;
     }
     h2 {
-      font-size: 3.56rem;
+      font-size: 3.17rem;
       line-height: 110%;
-      margin: 1.78rem 0 1.424rem 0;
+      margin: 1.58rem 0 1.27rem 0;
       color: var(--primary);
       position: relative;
       margin-right: auto;
-      padding-bottom: 1.6rem;
+      padding-bottom: 1.42rem;
     }
 
     h2::before {
@@ -149,34 +150,34 @@
     }
     h3 {
       color: var(--primary);
-      font-size: 2.92rem;
+      font-size: 2.31rem;
       line-height: 110%;
-      margin: 1.46rem 0 1.168rem 0;
+      margin: 1.3rem 0 1.04rem 0;
     }
 
     h4 {
-      font-size: 2.28rem;
+      font-size: 2.03rem;
       line-height: 110%;
-      margin: 1.14rem 0 0.912rem 0;
+      margin: 1.01rem 0 0.81rem 0;
     }
 
     h5 {
-      font-size: 1.64rem;
+      font-size: 1.46rem;
       line-height: 110%;
-      margin: 0.82rem 0 0.656rem 0;
+      margin: 0.73rem 0 0.58rem 0;
     }
 
     h6 {
-      font-size: 1rem;
+      font-size: 0.89rem;
       line-height: 110%;
-      margin: 0.5rem 0 0.4rem 0;
+      margin: 0.44rem 0 0.36rem 0;
     }
 
     button {
       border: none;
       color: var(--primary);
       transition: border 0.4s;
-      font-size: 1.25rem;
+      font-size: 1.11rem;
       margin: 0 10px;
       padding: 10px 0;
       border-bottom: 0px solid var(--accent);

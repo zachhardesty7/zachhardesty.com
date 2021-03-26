@@ -19,17 +19,17 @@
 
 <style>
   .content {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.22rem;
   }
   h4 {
-    font-size: 1.64rem;
+    font-size: 1.46rem;
     line-height: 110%;
-    margin: 0.82rem 0 0 0;
+    margin: 0.73rem 0 0 0;
   }
   h3 {
-    font-size: 2.28rem;
+    font-size: 2.03rem;
     line-height: 110%;
-    margin: 0.5rem 0 0.5rem 0;
+    margin: 0.44rem 0 0.44rem 0;
   }
   p {
     margin-top: 0px;

@@ -93,9 +93,9 @@
 
   .title {
     color: var(--primary);
-    font-size: 2rem;
+    font-size: 1.78rem;
     line-height: 110%;
-    margin: 1.14rem 0 0.912rem 0;
+    margin: 1.01rem 0 0.811rem 0;
   }
 
   .title-link {

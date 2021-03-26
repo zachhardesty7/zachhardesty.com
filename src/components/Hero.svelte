@@ -1,8 +1,7 @@
 <script>
   import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-  import { Icon,Icons } from "../components";
+  import { Icon, Icons } from "../components";
   import { icons } from "../data";
-
 </script>
 
 <div class="hero">
@@ -31,9 +30,9 @@
     color: var(--secondary);
     text-shadow: 0px 2px 3px var(--dark);
     font-family: "Roboto Condensed", sans-serif;
-    font-size: 4.2rem;
+    font-size: 3.73rem;
     line-height: 110%;
-    margin: 2.1rem 0 1.68rem 0;
+    margin: 1.87rem 0 1.49rem 0;
   }
 
   :global(.down) {

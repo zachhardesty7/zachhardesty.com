@@ -13,6 +13,7 @@
 
 <style>
   footer {
+    margin-top: 1rem;
     background-color: rgb(0, 0, 0);
     background: linear-gradient(180deg, var(--primary), #000);
     grid-row: 3 / 3;
