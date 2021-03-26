@@ -1,7 +1,21 @@
 <script>
-  import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
   import { experiences } from "../data";
 </script>
+
+<div>
+  {#each experiences as job (job.employer)}
+    <div class="content">
+      <h4 class="position">{`${job.position}`}</h4>
+      <h3 class="employer">{`${job.employer} (${job.location})`}</h3>
+      <p class="date">{job.date}</p>
+      <ul>
+        {#each job.bullets as bullet (bullet)}
+          <li>{bullet}</li>
+        {/each}
+      </ul>
+    </div>
+  {/each}
+</div>
 
 <style>
   .content {
@@ -31,18 +45,3 @@
     background-color: var(--primary);
   }
 </style>
-
-<div>
-  {#each experiences as job (job.employer)}
-    <div class="content">
-      <h4 class="position">{`${job.position}`}</h4>
-      <h3 class="employer">{`${job.employer} (${job.location})`}</h3>
-      <p class="date">{job.date}</p>
-      <ul>
-        {#each job.bullets as bullet (bullet)}
-          <li>{bullet}</li>
-        {/each}
-      </ul>
-    </div>
-  {/each}
-</div>

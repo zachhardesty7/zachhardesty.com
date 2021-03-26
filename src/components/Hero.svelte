@@ -1,8 +1,21 @@
 <script>
   import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-  import { Icons, Icon } from "../components";
+  import { Icon,Icons } from "../components";
   import { icons } from "../data";
+
 </script>
+
+<div class="hero">
+  <h1>zach hardesty</h1>
+  <Icons inverse {icons} />
+  <Icon
+    class="down"
+    data={faChevronDown}
+    inverse
+    link="#about"
+    title="next page"
+  />
+</div>
 
 <style>
   .hero {
@@ -32,15 +45,3 @@
     animation: bounce 4s ease-in-out infinite;
   }
 </style>
-
-<div class="hero">
-  <h1>zach hardesty</h1>
-  <Icons inverse {icons} />
-  <Icon
-    class="down"
-    data={faChevronDown}
-    inverse
-    link="#about"
-    title="next page"
-  />
-</div>

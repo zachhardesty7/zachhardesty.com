@@ -8,7 +8,7 @@ export default {
     "SCSS",
     "Git",
     "REST",
-    "GraphQL"
+    "GraphQL",
   ],
   familiar: [
     "Python",
@@ -19,6 +19,6 @@ export default {
     "CLI",
     "C/C++",
     "PHP",
-    "MongoDB"
-  ]
+    "MongoDB",
+  ],
 };

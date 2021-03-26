@@ -7,6 +7,12 @@
   export let icons = [];
 </script>
 
+<div>
+  {#each icons as icon}
+    <Icon {inverse} class={className} {...icon} />
+  {/each}
+</div>
+
 <style>
   div {
     align-self: center;
@@ -25,9 +31,3 @@
     padding-right: 0;
   }
 </style>
-
-<div>
-  {#each icons as icon}
-    <Icon {inverse} class={className} {...icon} />
-  {/each}
-</div>

@@ -7,13 +7,4 @@ import Icon from "../components/Icon.svelte";
 import Nav from "../components/Nav.svelte";
 import Portfolio from "../components/Portfolio.svelte";
 
-export {
-  Card,
-  Experience,
-  Footer,
-  Hero,
-  Icons,
-  Icon,
-  Nav,
-  Portfolio,
-}
+export { Card, Experience, Footer, Hero, Icons, Icon, Nav, Portfolio };

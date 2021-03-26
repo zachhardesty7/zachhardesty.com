@@ -1,7 +1,15 @@
 <script>
-  import { Icons, Icon } from "../components";
+  import { Icons } from "../components";
   import { icons } from "../data";
 </script>
+
+<footer>
+  <div id="contact">
+    <Icons inverse {icons} />
+    <a href="mailto:hello@zachhardesty.com">hello@zachhardesty.com</a>
+  </div>
+  <p>website designed and developed by zach hardesty || copyright 2020</p>
+</footer>
 
 <style>
   footer {
@@ -41,11 +49,3 @@
     justify-content: center;
   }
 </style>
-
-<footer>
-  <div id="contact">
-    <Icons inverse {icons} />
-    <a href="mailto:hello@zachhardesty.com">hello@zachhardesty.com</a>
-  </div>
-  <p>website designed and developed by zach hardesty || copyright 2020</p>
-</footer>

@@ -6,25 +6,25 @@ export default [
     data: faEnvelope,
     title: "email",
     label: "Email",
-    link: "mailto:hello@zachhardesty.com"
+    link: "mailto:hello@zachhardesty.com",
   },
   {
     data: faGithub,
     title: "github",
     label: "Github",
-    link: "https://github.com/zachhardesty7"
+    link: "https://github.com/zachhardesty7",
   },
   {
     data: faLinkedin,
     title: "linkedIn",
     label: "LinkedIn",
-    link: "https://www.linkedin.com/in/zachhardesty7"
+    link: "https://www.linkedin.com/in/zachhardesty7",
   },
   {
     data: faBriefcase,
     title: "resume",
     label: "Resume",
     link:
-      "https://docs.google.com/document/d/1JluScSVuuTK9wMS2gK6ygd-4tRxCO73tvwR3lvDe1hI/edit?usp=sharing"
-  }
+      "https://docs.google.com/document/d/1JluScSVuuTK9wMS2gK6ygd-4tRxCO73tvwR3lvDe1hI/edit?usp=sharing",
+  },
 ];

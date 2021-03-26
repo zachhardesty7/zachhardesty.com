@@ -7,6 +7,50 @@
   export let image;
 </script>
 
+<div class="card">
+  {#if image}
+    {#if link}
+      <a class="link" href={link} target="blank_">
+        <div class="thumbnail link">
+          <img src="/{image}" alt={image} />
+        </div>
+      </a>
+    {:else}
+      <div class="thumbnail">
+        <img src="/{image}" alt={image} />
+      </div>
+    {/if}
+  {/if}
+
+  <div class="card-stacked">
+    <div class="content">
+      <h4 class="title">
+        {#if link || github}
+          <a class="title-link" href={link || github} target="blank_">
+            {title}
+          </a>
+        {:else}{title}{/if}
+      </h4>
+      <p>{description}</p>
+      <div class="skills">
+        <ul>
+          {#each skills as skill}
+            <li class="skill" key={skill}>{skill}</li>
+          {/each}
+        </ul>
+      </div>
+    </div>
+    <div class="actions">
+      {#if link}
+        <a href={link} target="blank_">View Project</a>
+      {/if}
+      {#if github}
+        <a href={github} target="blank_">View Source Code</a>
+      {/if}
+    </div>
+  </div>
+</div>
+
 <style>
   .card {
     display: flex;
@@ -88,47 +132,3 @@
     opacity: 0.75;
   }
 </style>
-
-<div class="card">
-  {#if image}
-    {#if link}
-      <a class="link" href={link} target="blank_">
-        <div class="thumbnail link">
-          <img src="/{image}" alt={image} />
-        </div>
-      </a>
-    {:else}
-      <div class="thumbnail">
-        <img src="/{image}" alt={image} />
-      </div>
-    {/if}
-  {/if}
-
-  <div class="card-stacked">
-    <div class="content">
-      <h4 class="title">
-        {#if link || github}
-          <a class="title-link" href={link || github} target="blank_">
-            {title}
-          </a>
-        {:else}{title}{/if}
-      </h4>
-      <p>{description}</p>
-      <div class="skills">
-        <ul>
-          {#each skills as skill}
-            <li class="skill" key={skill}>{skill}</li>
-          {/each}
-        </ul>
-      </div>
-    </div>
-    <div class="actions">
-      {#if link}
-        <a href={link} target="blank_">View Project</a>
-      {/if}
-      {#if github}
-        <a href={github} target="blank_">View Source Code</a>
-      {/if}
-    </div>
-  </div>
-</div>

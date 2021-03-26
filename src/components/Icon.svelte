@@ -10,6 +10,18 @@
   export let label = "";
 </script>
 
+<a
+  class={className}
+  {title}
+  href={link}
+  style="color: var(--{inverse ? 'secondary' : 'text'})"
+>
+  <FAIcon {data} scale="1.5" {inverse} label={title} />
+  {#if label}
+    <div>{label}</div>
+  {/if}
+</a>
+
 <style>
   a {
     display: flex;
@@ -29,15 +41,3 @@
     margin-top: 0.5em;
   }
 </style>
-
-<a
-  class={className}
-  {title}
-  href={link}
-  style="color: var(--{inverse ? 'secondary' : 'text'})"
->
-  <FAIcon {data} scale="1.5" {inverse} label={title} />
-  {#if label}
-    <div>{label}</div>
-  {/if}
-</a>

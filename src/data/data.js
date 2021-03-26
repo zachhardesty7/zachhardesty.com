@@ -14,7 +14,7 @@ export default [
       "JavaScript",
       "CSS Grid",
       "HTML5",
-      "Webpack"
+      "Webpack",
     ],
     case: {
       overview: [],
@@ -24,8 +24,8 @@ export default [
       process: [],
       insight: [],
       solution: [],
-      results: []
-    }
+      results: [],
+    },
   },
   {
     title: "Missive GCal Export Widget",
@@ -34,16 +34,26 @@ export default [
     image: "missive.jpg",
     link: "https://gcal.netlify.com/",
     github: "https://github.com/zachhardesty7/missive-gcal-export-integration",
-    skills: ["JavaScript", "React", "Missive", "Email", "Google Calendar"]
+    skills: ["JavaScript", "React", "Missive", "Email", "Google Calendar"],
   },
   {
     title: "Phinder",
     description:
       "Mobile app proof-of-concept that helps organizations and students on campus connect with each other. Uses React Native and Expo to accelerate the app development process.",
     image: "phinder.jpg",
-    link: "https://expo.io/appetize-simulator?url=https://expo.io/@zachhardesty7/phinder",
+    link:
+      "https://expo.io/appetize-simulator?url=https://expo.io/@zachhardesty7/phinder",
     github: "https://github.com/zachhardesty7/phinder",
-    skills: ["JavaScript", "React", "React Native", "Expo", "Android", "Apple", "Mobile", "App"]
+    skills: [
+      "JavaScript",
+      "React",
+      "React Native",
+      "Expo",
+      "Android",
+      "Apple",
+      "Mobile",
+      "App",
+    ],
   },
   {
     title: "Semantic Styled UI",
@@ -51,7 +61,13 @@ export default [
       "A UI component library for React that styles content based on Semantic UI but improves the default styles with Styled Components. It allows for easy plug and play in projects looking to take advantage of Styled Components without dealing with the hassle of integrating Semantic UI styles manually. It also includes some useful components and prebuilt components for rapid web app development.",
     link: "",
     github: "https://github.com/zachhardesty7/semantic-styled-ui",
-    skills: ["JavaScript", "React", "SemanticUI", "Style Components", "CSS-in-JS"]
+    skills: [
+      "JavaScript",
+      "React",
+      "SemanticUI",
+      "Style Components",
+      "CSS-in-JS",
+    ],
   },
   {
     title: "Tampermonkey / Greasemonkey Scripts Collection",
@@ -59,7 +75,14 @@ export default [
       "This repo hosts a handful of different script files that Tampermonkey injects into the relevant websites. Certain websites just seemed to be missing something or something simple could really improve the functionality. I took it upon myself to add these features in the most seamless way possible. Uses Standard JS formatting.",
     link: "https://openuserjs.org/users/zachhardesty7/scripts",
     github: "https://github.com/zachhardesty7/tamper-monkey-scripts-collection",
-    skills: ["JavaScript", "Greasemonkey", "Tampermonkey", "User Script", "Content Script", "Extension"]
+    skills: [
+      "JavaScript",
+      "Greasemonkey",
+      "Tampermonkey",
+      "User Script",
+      "Content Script",
+      "Extension",
+    ],
   },
   {
     title: "GroupMe Notifier",
@@ -67,6 +90,6 @@ export default [
       "Uses a little python script hosted on Heroku to poll a given GroupMe group chat for keywords and emails a summary to you. Can be handy for giant groups that often have chatter interspersed between important notifications.",
     link: "",
     github: "https://github.com/zachhardesty7/group-me-notifier",
-    skills: ["Python", "Heroku", "GroupMe API"]
-  }
+    skills: ["Python", "Heroku", "GroupMe API"],
+  },
 ];

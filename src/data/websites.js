@@ -7,7 +7,7 @@ export default [
     image: "mpl.png",
     link: "https://markporterlive.com",
     github: "",
-    skills: ["WordPress", "CSS", "Divi", "PHP", "WordPress Plugin"]
+    skills: ["WordPress", "CSS", "Divi", "PHP", "WordPress Plugin"],
   },
   {
     title: "TSA Roadie",
@@ -16,7 +16,7 @@ export default [
     image: "tsaroadie.png",
     link: "http://tsaroadie.com",
     github: "",
-    skills: ["WordPress", "CSS", "Divi"]
+    skills: ["WordPress", "CSS", "Divi"],
   },
   {
     title: "shehatesme",
@@ -25,7 +25,7 @@ export default [
     image: "shm.png",
     link: "http://shehatesme.zachhardesty.com",
     github: "",
-    skills: ["WordPress", "CSS", "Divi"]
+    skills: ["WordPress", "CSS", "Divi"],
   },
   {
     title: "Keynote Community",
@@ -34,6 +34,6 @@ export default [
     image: "keynote.png",
     link: "http://keynotecommunity.com",
     github: "",
-    skills: ["WordPress", "CSS", "Divi"]
-  }
+    skills: ["WordPress", "CSS", "Divi"],
+  },
 ];
