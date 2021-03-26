@@ -24,6 +24,7 @@
     align-items: center;
     height: 100vh;
     background-color: var(--primary);
+    text-align: center;
   }
 
   h1 {
