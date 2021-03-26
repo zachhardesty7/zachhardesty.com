@@ -76,6 +76,7 @@
   }
 
   li {
+    /* font-size: ; */
     display: flex;
     flex: 0;
     align-items: center;

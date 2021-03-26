@@ -26,12 +26,9 @@
   }
   h4 {
     font-size: 1.46rem;
-    line-height: 110%;
     margin: 0.73rem 0 0 0;
   }
   h3 {
-    font-size: 2.03rem;
-    line-height: 110%;
     margin: 0.44rem 0 0.44rem 0;
   }
   p {

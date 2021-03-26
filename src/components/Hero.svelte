@@ -33,7 +33,6 @@
     color: var(--secondary);
     text-shadow: 0px 2px 3px var(--dark);
     font-family: "Roboto Condensed", sans-serif;
-    font-size: 3.73rem;
     line-height: 110%;
     margin: 1.87rem 0 1.49rem 0;
   }
