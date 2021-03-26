@@ -22,7 +22,7 @@
       <p>{skills.familiar.join(", ")}</p>
     </div>
   </section>
-  <section>
+  <section class="container">
     <Icons {icons} />
   </section>
   <section id="experience" class="container">
@@ -52,10 +52,6 @@
     padding-top: 1rem;
     margin-top: 2rem;
     margin: auto;
-  }
-  section.container {
-    max-width: 40rem;
-    justify-content: center;
   }
 
   .portrait {

@@ -6,7 +6,9 @@
 
 <div class="hero">
   <h1>zach hardesty</h1>
-  <Icons inverse {icons} />
+  <div class="container">
+    <Icons inverse {icons} />
+  </div>
   <Icon
     class="down"
     data={faChevronDown}
@@ -43,5 +45,6 @@
     right: 50%;
     width: fit-content;
     animation: bounce 4s ease-in-out infinite;
+    transform: translateX(-50%);
   }
 </style>

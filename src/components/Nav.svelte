@@ -58,12 +58,15 @@
 
 <style>
   nav {
+    font-size: 16px;
     top: 0;
     position: fixed;
     display: flex;
     width: 100%;
     z-index: 9;
     background-color: var(--primary);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   ul {
