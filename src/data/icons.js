@@ -24,7 +24,6 @@ export default [
     data: faBriefcase,
     title: "resume",
     label: "Resume",
-    link:
-      "https://docs.google.com/document/d/1JluScSVuuTK9wMS2gK6ygd-4tRxCO73tvwR3lvDe1hI/edit?usp=sharing",
+    link: "/go/resume",
   },
 ];

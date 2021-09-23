@@ -1,9 +1,20 @@
 export default [
   {
     employer: "International Business Machines (IBM)",
-    position: "Front End Software Engineer",
+    position: "Front End Software Developer",
     location: "Austin, TX",
-    date: "June 2019 – Present",
+    date: "September 2020 – Present",
+    bullets: [
+      "Rewrote 7k+ lines of ancient AngularJS code to Typescript React from scratch",
+      "Mentored and helped bring four newly-hired employees on the team up to speed",
+      "Lead effort to update three-year-old Angular & Carbon Components React UI packages",
+    ],
+  },
+  {
+    employer: "International Business Machines (IBM)",
+    position: "Front End Software Developer Intern",
+    location: "Austin, TX",
+    date: "June 2019 – August 2020",
     bullets: [
       "Released public React (Typescript) IBM Cloud Identity user registration starter app",
       "Built React IBM Cloud Identity FIDO2 password-less authentication demo",
