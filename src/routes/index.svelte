@@ -81,18 +81,6 @@
     text-align: left;
   }
 
-  #skills {
-    padding-top: 2rem;
-  }
-
-  #skills div {
-    text-align: left;
-  }
-
-  #skills div p {
-    margin-top: 0.3em;
-  }
-
   @keyframes bounce {
     0%,
     100% {
