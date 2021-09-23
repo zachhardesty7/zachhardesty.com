@@ -6,6 +6,6 @@
 
 <Nav {segment} />
 
-<main>
+<main id="top">
   <slot />
 </main>

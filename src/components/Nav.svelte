@@ -15,7 +15,7 @@
       {/each}
     </li>
     <li>
-      <a class:active={segment === "selected"} href="#title">
+      <a class:active={segment === "selected"} href="#top">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 934 934">
           <path
             stroke-linejoin="round"
