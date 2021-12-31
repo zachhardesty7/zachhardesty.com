@@ -3,7 +3,7 @@
 </script>
 
 <div>
-  {#each experiences as job (job.employer)}
+  {#each experiences as job (job.date)}
     <div class="content">
       <h4 class="position">{`${job.position}`}</h4>
       <h3 class="employer">{`${job.employer} (${job.location})`}</h3>
