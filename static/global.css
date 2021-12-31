@@ -1,10 +1,25 @@
 :root {
-  --primary: #0b3c5d;
-  --secondary: #fafafa;
-  --accent: #d9b310;
-  --dark: #2c2c34;
-  --light: #cccccc;
-  --text: rgba(0, 0, 0, 0.87);
+  /* immutable brand colors to keep single definition */
+  --navy: #0b3c5d;
+  --deep-navy: hsl(204.15deg, 35%, 7%);
+  --gold: #d9b310;
+
+  --grey-0: #ffffff;
+  --grey-1: #fafafa;
+  --grey-2: #cccccc;
+  --grey-3: #2c2c34;
+  --grey-4: #121212;
+
+  --text-1: rgba(0, 0, 0, 0.87);
+  --text-2: rgba(255, 255, 255, 0.7);
+
+  /* variables for pallette swapping or something maybe */
+  --primary: var(--navy);
+  --secondary: var(--grey-1);
+  --accent: var(--gold);
+  --dark: var(--grey-3);
+  --light: var(--grey-2);
+  --text: var(--text-1);
 }
 
 *,
@@ -43,7 +58,7 @@ body {
 
 body::selection {
   background-color: var(--accent);
-  color: #ffffff;
+  color: var(--grey-0);
 }
 
 li,
@@ -130,4 +145,11 @@ button:focus {
   padding-right: 2rem;
   max-width: 40rem;
   justify-content: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: var(--text-2);
+    background-color: var(--deep-navy);
+  }
 }

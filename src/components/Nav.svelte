@@ -92,7 +92,7 @@
   }
 
   a {
-    color: #fff;
+    color: var(--grey-0);
     text-shadow: 0px 2px 4px black;
     padding: 5px;
   }

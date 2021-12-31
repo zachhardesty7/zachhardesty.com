@@ -20,7 +20,7 @@
     grid-column: 1 / 4;
     font-size: 0.9rem;
     padding-top: 20px;
-    color: #fff;
+    color: var(--grey-0);
   }
 
   #contact {
@@ -38,7 +38,7 @@
   }
 
   a:hover {
-    color: #fff;
+    color: var(--grey-0);
   }
 
   p {

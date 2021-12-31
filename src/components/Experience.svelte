@@ -45,4 +45,10 @@
     color: var(--primary);
     background-color: var(--primary);
   }
+
+  @media (prefers-color-scheme: dark) {
+    h3 {
+      color: var(--grey-0);
+    }
+  }
 </style>

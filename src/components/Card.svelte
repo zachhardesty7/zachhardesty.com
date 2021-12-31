@@ -61,7 +61,7 @@
     transition: box-shadow 0.25s;
     box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
       0 15px 40px rgba(166, 173, 201, 0.2);
-    background-color: #fff;
+    background-color: var(--grey-0);
   }
 
   .thumbnail {
@@ -111,7 +111,7 @@
     padding: 5px 10px;
     margin: 5px 10px 5px 0;
     background-color: var(--accent);
-    color: #fff;
+    color: var(--grey-0);
     border-radius: 4px;
   }
 
@@ -130,5 +130,36 @@
 
   .actions a:hover {
     opacity: 0.75;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .card {
+      background-color: var(--grey-4);
+      color: var(--text-2);
+      /* not sure what this does */
+      transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+        0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+      background-image: linear-gradient(
+        rgba(255, 255, 255, 0.05),
+        rgba(255, 255, 255, 0.05)
+      );
+      /* doesn't this do the same as above bg color/image? */
+      /* background-color: hsl(0deg, 0%, 12.06%); */
+    }
+
+    .title,
+    .title-link,
+    .actions a {
+      color: var(--grey-0);
+    }
+
+    .skill {
+      color: var(--grey-4);
+    }
+
+    .actions {
+      border-top: 1px solid rgba(80, 80, 80, 0.6);
+    }
   }
 </style>
