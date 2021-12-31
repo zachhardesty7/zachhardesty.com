@@ -42,10 +42,10 @@
     </div>
     <div class="actions">
       {#if link}
-        <a href={link} target="blank_">View Project</a>
+        <button href={link} target="blank_">View Project</button>
       {/if}
       {#if github}
-        <a href={github} target="blank_">View Source Code</a>
+        <button href={github} target="blank_">View Source Code</button>
       {/if}
     </div>
   </div>
@@ -122,14 +122,24 @@
     padding: 16px 24px;
   }
 
-  .actions a {
+  .actions button {
     color: var(--primary);
-    margin: 0 12px;
     text-transform: uppercase;
+    padding: 6px 8px;
+    border-radius: 4px;
+    -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   }
 
-  .actions a:hover {
-    opacity: 0.75;
+  .actions button:hover {
+    text-decoration: none;
+    background-color: rgba(25, 118, 210, 0.04);
   }
 
   @media (prefers-color-scheme: dark) {
@@ -150,7 +160,7 @@
 
     .title,
     .title-link,
-    .actions a {
+    .actions button {
       color: var(--grey-0);
     }
 
@@ -160,6 +170,11 @@
 
     .actions {
       border-top: 1px solid rgba(80, 80, 80, 0.6);
+    }
+
+    .actions button:hover {
+      text-decoration: none;
+      background-color: rgba(144, 202, 249, 0.08);
     }
   }
 </style>
