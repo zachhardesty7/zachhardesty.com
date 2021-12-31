@@ -49,4 +49,10 @@
     align-items: center;
     justify-content: center;
   }
+
+  @media (prefers-color-scheme: dark) {
+    footer {
+      background: linear-gradient(180deg, var(--deep-navy), #000);
+    }
+  }
 </style>
