@@ -54,6 +54,24 @@
     margin: auto;
   }
 
+  section h2 {
+    color: var(--primary);
+    position: relative;
+    margin-right: auto;
+    padding-bottom: 1.42rem;
+  }
+
+  section h2::before {
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    left: -20px;
+    height: 55%;
+    width: 100%;
+    z-index: -1;
+    background-color: var(--accent);
+  }
+
   .portrait {
     width: 15rem;
     max-width: 100%;

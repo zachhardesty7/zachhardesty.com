@@ -29,6 +29,7 @@
     margin: 0.73rem 0 0 0;
   }
   h3 {
+    color: var(--primary);
     margin: 0.44rem 0 0.44rem 0;
   }
   p {
