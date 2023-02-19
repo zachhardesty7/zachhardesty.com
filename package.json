@@ -8,7 +8,7 @@
     "build": "sapper build",
     "serve": "node __sapper__/build",
     "export": "sapper export",
-    "start": "yarn dev",
+    "start": "npm run dev",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run"

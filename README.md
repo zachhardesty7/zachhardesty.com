@@ -3,13 +3,28 @@
 Here lies the source code for my web portfolio, currently built with
 [Svelte](https://github.com/sveltejs/svelte) and [Sapper](https://github.com/sveltejs/sapper) in
 order to easily edit or add more data by updating JSON. These libraries function very similarly to
-React and Gatsby/Nextjs respectively. Svelte differentiates itself via direct DOM interaction,
+React and Gatsby/Nextjs, respectively. Svelte differentiates itself via direct DOM interaction,
 avoiding the introduction of a virtual DOM. Svelte delivers lightning-fast performance and
 simplifies & accelerates the development process.
 
-_Copyright (c) 2018 || Zach Hardesty || [zachhardesty.com](http://zachhardesty.com)_
+_Copyright (c) 2018-2023 || Zach Hardesty || [zachhardesty.com](http://zachhardesty.com)_
 
 ## Change Log
+
+<!-- https://github.com/sveltejs/sapper-template/blob/master/scripts/setupTypeScript.js -->
+<!-- https://github.com/sveltejs/language-tools/blob/a513c5aed04685f704aa8121ded83a8c65c6b70e/docs/preprocessors/typescript.md#troubleshooting--faq -->
+
+- 5.x.x: convert to TypeScript (upcoming)
+
+<!-- https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md -->
+
+- 5.0.0: convert to SvelteKit (upcoming)
+
+<!-- https://codesandbox.io/s/recipereviewcard-material-demo-forked-s01cs?file=/demo.js -->
+<!-- https://mui.com/components/icons/ -->
+<!-- https://mui.com/customization/dark-mode/ -->
+
+- 4.3.0: add dark mode
 
 - 4.0.0 overhaul: rm Gatsby, convert to Svelte
 
