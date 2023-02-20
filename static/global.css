@@ -11,7 +11,7 @@
   --grey-4: #121212;
 
   --text-1: rgba(0, 0, 0, 0.87);
-  --text-2: rgba(255, 255, 255, 0.7);
+  --text-2: rgba(255, 255, 255, 0.8);
 
   /* variables for pallette swapping or something maybe */
   --primary: var(--navy);

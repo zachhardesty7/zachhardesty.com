@@ -2,7 +2,7 @@ export default [
   {
     title: "My Personal Portfolio Website",
     description:
-      "This is the website you're looking at right now! It's built with Svelte to allow projects to be easily added, removed, and updated by just modifying a simple JSON data file. Svelte enables reactivity without the overhead of a virtual DOM by running entirely at compile time. Sapper renders the final HTML server-side (SSR) before serving it via Netlify. This works very similar to the React SSR library previously used for this website, Gatsby.",
+      "This is the website you’re looking at right now! It’s built with React.js to allow me to easily add, remove, and update projects by simply modifying a JSON file. This project builds off of create-react-app to take advantage of Webpack and implements SCSS styling inspired by material design standards and semi-dynamically sized images for quick loading. This website dramatically improves on my first website back when I thought DreamWeaver was a good idea.",
     image: "website.png",
     link: "https://zachhardesty.com",
     github: "https://github.com/zachhardesty7/zachhardesty.com",
@@ -41,8 +41,7 @@ export default [
     description:
       "Mobile app proof-of-concept that helps organizations and students on campus connect with each other. Uses React Native and Expo to accelerate the app development process.",
     image: "phinder.jpg",
-    link:
-      "https://expo.io/appetize-simulator?url=https://expo.io/@zachhardesty7/phinder",
+    link: "https://expo.io/appetize-simulator?url=https://expo.io/@zachhardesty7/phinder",
     github: "https://github.com/zachhardesty7/phinder",
     skills: [
       "JavaScript",
@@ -58,7 +57,7 @@ export default [
   {
     title: "Semantic Styled UI",
     description:
-      "A UI component library for React that styles content based on Semantic UI but improves the default styles with Styled Components. It allows for easy plug and play in projects looking to take advantage of Styled Components without dealing with the hassle of integrating Semantic UI styles manually. It also includes some useful components and prebuilt components for rapid web app development.",
+      "A UI component library for React that styles content based on Semantic UI but improves the default styles with Styled Components. It allows for easy plug and play in projects looking to take advantage of Styled Components without dealing with the hassle of integrating Semantic UI styles manually. It also includes some useful components and pre-built components for rapid web app development.",
     link: "",
     github: "https://github.com/zachhardesty7/semantic-styled-ui",
     skills: [
@@ -72,7 +71,7 @@ export default [
   {
     title: "Tampermonkey / Greasemonkey Scripts Collection",
     description:
-      "This repo hosts a handful of different script files that Tampermonkey injects into the relevant websites. Certain websites just seemed to be missing something or something simple could really improve the functionality. I took it upon myself to add these features in the most seamless way possible. Uses Standard JS formatting.",
+      "A GitHub repo of a handful of different script files that Tampermonkey can inject into the relevant websites. Certain websites often seem to either overlook something, or a simple change could really improve their functionality. I took it upon myself to add these features in the most seamless way possible.",
     link: "https://openuserjs.org/users/zachhardesty7/scripts",
     github: "https://github.com/zachhardesty7/tamper-monkey-scripts-collection",
     skills: [
@@ -87,7 +86,7 @@ export default [
   {
     title: "GroupMe Notifier",
     description:
-      "Uses a little python script hosted on Heroku to poll a given GroupMe group chat for keywords and emails a summary to you. Can be handy for giant groups that often have chatter interspersed between important notifications.",
+      "A little python script hosted on Heroku that polls a specific GroupMe group chat for keywords and email you a summary of the matching messages. It can be handy for giant groups that often have chatter interspersed with important notifications.",
     link: "",
     github: "https://github.com/zachhardesty7/group-me-notifier",
     skills: ["Python", "Heroku", "GroupMe API"],

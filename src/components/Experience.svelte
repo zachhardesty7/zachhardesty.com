@@ -50,5 +50,9 @@
     h3 {
       color: var(--grey-0);
     }
+    li::marker {
+      color: var(--accent);
+      background-color: var(--accent);
+    }
   }
 </style>
