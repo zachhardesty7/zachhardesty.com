@@ -59,7 +59,8 @@
     margin: 0.5rem 0 1rem 0;
     border-radius: 2px;
     transition: box-shadow 0.25s;
-    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    box-shadow:
+      0 5px 10px rgba(154, 160, 185, 0.05),
       0 15px 40px rgba(166, 173, 201, 0.2);
     background-color: var(--grey-0);
   }
@@ -127,11 +128,13 @@
     text-transform: uppercase;
     padding: 6px 8px;
     border-radius: 4px;
-    -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    -webkit-transition:
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
       box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
       border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
       color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    transition:
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
       box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
       border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
       color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -148,8 +151,10 @@
       color: var(--text-2);
       /* not sure what this does */
       transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-      box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
-        0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+      box-shadow:
+        0px 2px 1px -1px rgb(0 0 0 / 20%),
+        0px 1px 1px 0px rgb(0 0 0 / 14%),
+        0px 1px 3px 0px rgb(0 0 0 / 12%);
       background-image: linear-gradient(
         rgba(255, 255, 255, 0.05),
         rgba(255, 255, 255, 0.05)

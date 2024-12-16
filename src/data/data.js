@@ -60,13 +60,7 @@ export default [
       "A UI component library for React that styles content based on Semantic UI but improves the default styles with Styled Components. It allows for easy plug and play in projects looking to take advantage of Styled Components without dealing with the hassle of integrating Semantic UI styles manually. It also includes some useful components and pre-built components for rapid web app development.",
     link: "",
     github: "https://github.com/zachhardesty7/semantic-styled-ui",
-    skills: [
-      "JavaScript",
-      "React",
-      "SemanticUI",
-      "Style Components",
-      "CSS-in-JS",
-    ],
+    skills: ["JavaScript", "React", "SemanticUI", "Style Components", "CSS-in-JS"],
   },
   {
     title: "Tampermonkey / Greasemonkey Scripts Collection",

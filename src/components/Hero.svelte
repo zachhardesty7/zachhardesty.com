@@ -9,13 +9,7 @@
   <div class="container">
     <Icons inverse {icons} />
   </div>
-  <Icon
-    class="down"
-    data={faChevronDown}
-    inverse
-    link="#about"
-    title="next page"
-  />
+  <Icon class="down" data={faChevronDown} inverse link="#about" title="next page" />
 </div>
 
 <style>
