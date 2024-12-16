@@ -2,7 +2,7 @@ export default [
   {
     title: "My Personal Portfolio Website",
     description:
-      "This is the website you’re looking at right now! It’s built with React.js to allow me to easily add, remove, and update projects by simply modifying a JSON file. This project builds off of create-react-app to take advantage of Webpack and implements SCSS styling inspired by material design standards and semi-dynamically sized images for quick loading. This website dramatically improves on my first website back when I thought DreamWeaver was a good idea.",
+      "This is the website you’re looking at right now! It’s built with Svelte and their SSR framework Sapper to allow me to easily add, remove, and update projects by simply modifying a JSON file. This project  implements CSS styling inspired by material design standards and semi-dynamically sized images for quick loading. This website dramatically improves on my first website back when I thought DreamWeaver was a good idea.",
     image: "website.png",
     link: "https://zachhardesty.com",
     github: "https://github.com/zachhardesty7/zachhardesty.com",
