@@ -42,10 +42,10 @@
     </div>
     <div class="actions">
       {#if link}
-        <button href={link} target="blank_">View Project</button>
+        <a href={link} target="blank_">View Project</a>
       {/if}
       {#if github}
-        <button href={github} target="blank_">View Source Code</button>
+        <a href={github} target="blank_">View Source Code</a>
       {/if}
     </div>
   </div>
@@ -123,10 +123,14 @@
     padding: 16px 24px;
   }
 
-  .actions button {
+  .actions a {
     color: var(--primary);
     text-transform: uppercase;
-    padding: 6px 8px;
+    font-weight: 500;
+    font-size: 0.8525rem;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    padding: 10px 8px;
     border-radius: 4px;
     -webkit-transition:
       background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
@@ -140,7 +144,7 @@
       color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   }
 
-  .actions button:hover {
+  .actions a:hover {
     text-decoration: none;
     background-color: rgba(25, 118, 210, 0.04);
   }
@@ -165,7 +169,7 @@
 
     .title,
     .title-link,
-    .actions button {
+    .actions a {
       color: var(--grey-0);
     }
 
@@ -177,7 +181,7 @@
       border-top: 1px solid rgba(80, 80, 80, 0.6);
     }
 
-    .actions button:hover {
+    .actions a:hover {
       text-decoration: none;
       background-color: rgba(144, 202, 249, 0.08);
     }
