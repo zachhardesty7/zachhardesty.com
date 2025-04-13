@@ -1,10 +1,5 @@
-# #region - external domain redirects
-[[redirects]]
-from = "https://zachhardesty.netlify.com/*"
-to = "https://zachhardesty.com/:splat"
-status = 301
-force = true
-
+# #region - domain redirects
+# NOTE: usage of redirecting external domains this way requires also adding each domain to the Netlify dashboard and setting records at the domain registrar to point to Netlify.
 [[redirects]]
 from = "https://zachhardesty.netlify.app/*"
 to = "https://zachhardesty.com/:splat"
@@ -24,9 +19,11 @@ status = 301
 force = true
 # #endregion
 
+# #region - go links
 [[redirects]]
 from = "https://zachhardesty.com/go/resume/"
 to = "https://docs.google.com/document/d/1JluScSVuuTK9wMS2gK6ygd-4tRxCO73tvwR3lvDe1hI"
+# endregion
 
 # plugins:
 # https://github.com/munter/netlify-plugin-checklinks
