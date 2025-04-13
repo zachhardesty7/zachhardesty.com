@@ -32,7 +32,7 @@ export default [
     description:
       "Adds an integration to the Missive mail app that parses emails for dates/times and displays them to export to Google Calendar if desired. Clicking the export button will automatically open Google Calendar's \"New Event\" page and allow you to customize fields' content.",
     image: "missive.jpg",
-    link: "https://gcal.netlify.com/",
+    link: "https://gcal.netlify.app",
     github: "https://github.com/zachhardesty7/missive-gcal-export-integration",
     skills: ["JavaScript", "React", "Missive", "Email", "Google Calendar"],
   },
@@ -41,6 +41,7 @@ export default [
     description:
       "Mobile app proof-of-concept that helps organizations and students on campus connect with each other. Uses React Native and Expo to accelerate the app development process.",
     image: "phinder.jpg",
+    // FIXME: broken link
     link: "https://expo.io/appetize-simulator?url=https://expo.io/@zachhardesty7/phinder",
     github: "https://github.com/zachhardesty7/phinder",
     skills: [
