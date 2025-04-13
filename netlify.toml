@@ -1,5 +1,6 @@
 # #region - domain redirects
 # NOTE: usage of redirecting external domains this way requires also adding each domain to the Netlify dashboard and setting records at the domain registrar to point to Netlify.
+# NOTE: an alternate option is to use the domain registrar's "domain redirect" feature, but some don't support `https` redirects (name.com). To work around this, you can point the nameservers to Cloudflare and use their "Page Rules" feature to set up the redirect.
 [[redirects]]
 from = "https://zachhardesty.netlify.app/*"
 to = "https://zachhardesty.com/:splat"
@@ -14,6 +15,18 @@ force = true
 
 [[redirects]]
 from = "https://www.zachhardesty.me/*"
+to = "https://zachhardesty.com/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://hardesty.consulting/*"
+to = "https://zachhardesty.com/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://www.hardesty.consulting/*"
 to = "https://zachhardesty.com/:splat"
 status = 301
 force = true
