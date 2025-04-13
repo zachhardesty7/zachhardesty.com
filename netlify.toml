@@ -1,3 +1,4 @@
+# #region - external domain redirects
 [[redirects]]
 from = "https://zachhardesty.netlify.com/*"
 to = "https://zachhardesty.com/:splat"
@@ -15,6 +16,13 @@ from = "https://zachhardesty.me/*"
 to = "https://zachhardesty.com/:splat"
 status = 301
 force = true
+
+[[redirects]]
+from = "https://www.zachhardesty.me/*"
+to = "https://zachhardesty.com/:splat"
+status = 301
+force = true
+# #endregion
 
 [[redirects]]
 from = "https://zachhardesty.com/go/resume/"
