@@ -32,6 +32,18 @@ status = 301
 force = true
 
 [[redirects]]
+from = "https://hardesty.dev/*"
+to = "https://zachhardesty.com/:splat"
+status = 302
+force = true
+
+[[redirects]]
+from = "https://www.hardesty.dev/*"
+to = "https://zachhardesty.com/:splat"
+status = 302
+force = true
+
+[[redirects]]
 from = "https://hardesty.consulting/*"
 to = "https://zachhardesty.com/:splat"
 status = 302
