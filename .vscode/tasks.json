@@ -6,6 +6,12 @@
       "type": "npm",
       "script": "dev",
       "problemMatcher": [],
+      "options": {
+        "env": {
+          // FIXME: node v20.19 doesn't support ssl type old webpack uses
+          "NODE_OPTIONS": "--openssl-legacy-provider"
+        }
+      },
       "group": {
         "kind": "test",
         "isDefault": true
