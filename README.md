@@ -7,7 +7,7 @@ React and Gatsby/Nextjs, respectively. Svelte differentiates itself via direct D
 avoiding the introduction of a virtual DOM. Svelte delivers lightning-fast performance and
 simplifies & accelerates the development process.
 
-_Copyright (c) 2018-2023 || Zach Hardesty || [zachhardesty.com](http://zachhardesty.com)_
+_Copyright © 2018-2025 Zach Hardesty ([zachhardesty.com](http://zachhardesty.com)). All rights reserved._
 
 ## Change Log
 

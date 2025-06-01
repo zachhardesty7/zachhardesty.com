@@ -8,7 +8,7 @@
     <Icons inverse {icons} />
     <a href="mailto:hello@zachhardesty.com">hello@zachhardesty.com</a>
   </div>
-  <p>website designed and developed by zach hardesty || copyright 2021</p>
+  <p>designed and developed by zach hardesty · copyright 2021–2025 zach hardesty</p>
 </footer>
 
 <style>
