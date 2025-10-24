@@ -2,20 +2,11 @@ export default [
   {
     title: "My Personal Portfolio Website",
     description:
-      "This is the website you’re looking at right now! It’s built with Svelte and their SSR framework Sapper to allow me to easily add, remove, and update projects by simply modifying a JSON file. This project  implements CSS styling inspired by material design standards and semi-dynamically sized images for quick loading. This website dramatically improves on my first website back when I thought DreamWeaver was a good idea.",
+      "This is the website you’re looking at right now! It’s built with Svelte and their SSR/SSG framework Sapper to statically generate the output HTML, JS, and CSS. I wired the repo up to Netlify to allow me to easily add, remove, and update projects by simply modifying a JSON file and committing it. This project implements CSS styling inspired by Material Design standards and semi-dynamically sized images for quick loading. This website dramatically improves on my first website back when I thought DreamWeaver was a good idea.",
     image: "website.png",
     link: "https://zachhardesty.com",
     github: "https://github.com/zachhardesty7/zachhardesty.com",
-    skills: [
-      "Svelte",
-      "Sapper",
-      "React",
-      "Gatsby",
-      "JavaScript",
-      "CSS Grid",
-      "HTML5",
-      "Webpack",
-    ],
+    skills: ["Svelte", "Sapper", "JavaScript", "CSS Grid", "HTML5", "Webpack"],
     case: {
       overview: [],
       context: [],
