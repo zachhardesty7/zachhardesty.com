@@ -6,7 +6,7 @@ export default [
     image: "website.png",
     link: "https://zachhardesty.com",
     github: "https://github.com/zachhardesty7/zachhardesty.com",
-    skills: ["Svelte", "Sapper", "JavaScript", "CSS Grid", "HTML5", "Webpack"],
+    skills: ["Svelte", "Sapper", "JavaScript", "CSS", "CSS Grid", "HTML5", "Webpack"],
     case: {
       overview: [],
       context: [],
@@ -42,6 +42,7 @@ export default [
       "Expo",
       "Android",
       "Apple",
+      "iOS",
       "Mobile",
       "App",
     ],
@@ -52,7 +53,7 @@ export default [
       "A UI component library for React that styles content based on Semantic UI, but improves the default styles with Styled Components. It allows for easy plug-and-play in projects looking to take advantage of Styled Components, without dealing with the hassle of integrating Semantic UI styles manually. It also includes some useful components and pre-built components for rapid web app development.",
     link: "",
     github: "https://github.com/zachhardesty7/semantic-styled-ui",
-    skills: ["JavaScript", "React", "SemanticUI", "Style Components", "CSS-in-JS"],
+    skills: ["JavaScript", "React", "SemanticUI", "Styled Components", "CSS-in-JS"],
   },
   {
     title: "Tampermonkey / Greasemonkey Scripts Collection",
@@ -60,14 +61,7 @@ export default [
       "A GitHub repo of a handful of different script files that Tampermonkey can inject into the relevant websites. Certain websites often seem to either overlook something, or a simple change could really improve their functionality. I took it upon myself to add these features in the most seamless way possible.",
     link: "https://openuserjs.org/users/zachhardesty7/scripts",
     github: "https://github.com/zachhardesty7/tamper-monkey-scripts-collection",
-    skills: [
-      "JavaScript",
-      "Greasemonkey",
-      "Tampermonkey",
-      "User Script",
-      "Content Script",
-      "Extension",
-    ],
+    skills: ["JavaScript", "Tampermonkey", "Greasemonkey", "Userscript", "Extension"],
   },
   {
     title: "GroupMe Notifier",
