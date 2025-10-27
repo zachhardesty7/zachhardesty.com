@@ -33,7 +33,8 @@ export default [
       "Mobile app proof-of-concept that helps organizations and students on campus connect with each other. Uses React Native and Expo to accelerate the app development process.",
     image: "phinder.jpg",
     // FIXME: broken link
-    link: "https://expo.io/appetize-simulator?url=https://expo.io/@zachhardesty7/phinder",
+    // link: "https://expo.io/appetize-simulator?url=https://expo.io/@zachhardesty7/phinder",
+    link: "",
     github: "https://github.com/zachhardesty7/phinder",
     skills: [
       "JavaScript",
