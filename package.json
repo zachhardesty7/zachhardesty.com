@@ -4,10 +4,10 @@
   "homepage": "https://zachhardesty.com",
   "private": true,
   "scripts": {
-    "dev": "sapper dev --no-hot",
-    "build": "sapper build",
+    "dev": "NODE_OPTIONS='--openssl-legacy-provider' sapper dev --no-hot",
+    "build": "NODE_OPTIONS='--openssl-legacy-provider' sapper build",
     "serve": "node __sapper__/build",
-    "export": "sapper export",
+    "export": "NODE_OPTIONS='--openssl-legacy-provider' sapper export",
     "start": "npm run dev",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
