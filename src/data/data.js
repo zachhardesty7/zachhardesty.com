@@ -1,5 +1,13 @@
 export default [
   {
+    title: "JSDoc Comment Toggler",
+    description:
+      "Quickly & intelligently add, remove, or convert comments to JSDoc via VSCode extension.",
+    link: "https://marketplace.visualstudio.com/items?itemName=zachhardesty.jsdoc-comment-toggler",
+    github: "https://github.com/zachhardesty7/jsdoc-comment-toggler",
+    skills: ["TypeScript", "JavaScript", "VSCode", "Extension"],
+  },
+  {
     title: "Tampermonkey / Greasemonkey Userscripts Collection",
     description:
       "A GitHub repo of a handful of different script files that Tampermonkey can inject into specific websites. Many websites often seem to either overlook something or a simple change could really improve their functionality. I took it upon myself to add these missing features in the most seamless way possible.",
