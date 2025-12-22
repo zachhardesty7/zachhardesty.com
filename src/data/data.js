@@ -1,8 +1,8 @@
 export default [
   {
-    title: "Tampermonkey / Greasemonkey Scripts Collection",
+    title: "Tampermonkey / Greasemonkey Userscripts Collection",
     description:
-      "A GitHub repo of a handful of different script files that Tampermonkey can inject into the relevant websites. Certain websites often seem to either overlook something, or a simple change could really improve their functionality. I took it upon myself to add these features in the most seamless way possible.",
+      "A GitHub repo of a handful of different script files that Tampermonkey can inject into specific websites. Many websites often seem to either overlook something or a simple change could really improve their functionality. I took it upon myself to add these missing features in the most seamless way possible.",
     link: "https://openuserjs.org/users/zachhardesty7/scripts",
     github: "https://github.com/zachhardesty7/tamper-monkey-scripts-collection",
     skills: ["JavaScript", "Tampermonkey", "Greasemonkey", "Userscript", "Extension"],
