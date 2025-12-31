@@ -1,6 +1,6 @@
 export default [
   {
-    employer: "International Business Machines (IBM)",
+    employer: "IBM",
     position: "Front End Software Developer",
     location: "Austin, TX",
     date: "September 2020 – Present",
@@ -17,7 +17,7 @@ export default [
     ],
   },
   {
-    employer: "International Business Machines (IBM)",
+    employer: "IBM",
     position: "Front End Software Developer Intern",
     location: "Austin, TX",
     date: "June 2019 – August 2020",
