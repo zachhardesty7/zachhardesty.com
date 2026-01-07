@@ -21,7 +21,10 @@ export default {
     "Swift",
     "C/C++",
     "Svelte",
+    "SQL",
     "PHP",
+    "Mocha",
+    "Docker",
     "GraphQL",
   ],
 };
