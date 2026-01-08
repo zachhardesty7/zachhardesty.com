@@ -23,10 +23,11 @@
     <p>{about.background}</p>
     <p>{about.plans}</p>
     <div class="skills">
-      <b>Proficient with:</b>
-      <p>{skills.proficient.join(", ")}</p>
-      <b>Familiar with:</b>
-      <p>{skills.familiar.join(", ")}</p>
+      <h3>Skills</h3>
+      {#each skills as skill}
+        <b>{skill.category}</b>
+        <p>{skill.items.join(", ")}</p>
+      {/each}
     </div>
   </section>
   <section class="container">
@@ -87,7 +88,7 @@
   }
 
   .skills {
-    padding-top: 2rem;
+    padding-top: 1rem;
     display: block;
     text-align: left;
   }
