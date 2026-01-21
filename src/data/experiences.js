@@ -13,7 +13,7 @@ export default [
       "Designed & developed responsive, accessible React components adopted across Verify teams",
       "Cohosted weekly code reviews, fostering culture of continuous learning & technical excellence",
       "Mentored junior developers for 3.5+ years, providing guidance and promoting team growth",
-      "Published 5 disclosures on inventive technical solutions to everyday problems on IP .com",
+      "Published 5 disclosures on inventive technical solutions to everyday problems on IP.com",
     ],
   },
   {
