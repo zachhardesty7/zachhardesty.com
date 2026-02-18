@@ -36,7 +36,7 @@
     margin-top: 0px;
   }
   ul {
-    padding-left: 2em;
+    padding-left: 1em;
   }
   li {
     list-style-type: disc;
