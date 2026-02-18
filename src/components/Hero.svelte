@@ -31,6 +31,17 @@
     margin: 1.87rem 0 1.49rem 0;
   }
 
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translate(-50%, 0);
+    }
+    50% {
+      transform: translate(-50%, 40%);
+    }
+  }
+
+  /* class passed as prop isn't compiled by Svelte */
   :global(.down) {
     position: absolute;
     bottom: 5%;

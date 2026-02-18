@@ -107,16 +107,6 @@
     text-align: left;
   }
 
-  @keyframes bounce {
-    0%,
-    100% {
-      transform: translate(-50%, 0);
-    }
-    50% {
-      transform: translate(-50%, 40%);
-    }
-  }
-
   @media (prefers-color-scheme: dark) {
     section h2 {
       color: var(--grey-0);
