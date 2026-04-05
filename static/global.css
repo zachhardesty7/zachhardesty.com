@@ -1,4 +1,6 @@
 :root {
+  color-scheme: light dark;
+
   /* immutable brand colors to keep single definition */
   --navy: #0b3c5d;
   --deep-navy: hsl(204.15deg, 35%, 7%);
@@ -19,7 +21,7 @@
   --accent: var(--gold);
   --dark: var(--grey-3);
   --light: var(--grey-2);
-  --text: var(--text-1);
+  --text: light-dark(var(--text-1), var(--text-2));
 }
 
 *,
@@ -53,6 +55,7 @@ body {
   font-size: 18px;
   line-height: 1.4285em;
   color: var(--text);
+  background-color: light-dark(initial, var(--deep-navy));
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -166,11 +169,4 @@ button {
   padding-right: 2rem;
   max-width: 40rem;
   justify-content: center;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    color: var(--text-2);
-    background-color: var(--deep-navy);
-  }
 }
